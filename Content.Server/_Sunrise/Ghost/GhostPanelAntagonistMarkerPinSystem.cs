@@ -1,4 +1,3 @@
-﻿using Content.Server._Mini.BloodCult;
 using Content.Shared._Mini.Ghost;
 using Content.Shared.Zombies;
 
@@ -20,12 +19,8 @@ public sealed class GhostPanelAntagonistMarkerPinSystem : EntitySystem
 
         #endregion
 
-        #region Blood cult
 
-        SubscribeLocalEvent<PentagramComponent, ComponentInit>(OnCultistAscent);
-        SubscribeLocalEvent<PentagramComponent, ComponentRemove>(OnCultistDescent);
 
-        #endregion
     }
 
     #region Zombie
@@ -39,26 +34,6 @@ public sealed class GhostPanelAntagonistMarkerPinSystem : EntitySystem
         marker.Priority = 50;
 
         Dirty(ent.Owner, marker);
-    }
-
-    #endregion
-
-    #region Blood cult
-
-    private void OnCultistAscent(Entity<PentagramComponent> ent, ref ComponentInit args)
-    {
-        var marker = EnsureComp<GhostPanelAntagonistMarkerComponent>(ent);
-
-        marker.Name = "ghost-panel-antagonist-cult-name";
-        marker.Description = "ghost-panel-antagonist-cult-description";
-        marker.Priority = 30;
-
-        Dirty(ent.Owner, marker);
-    }
-
-    private void OnCultistDescent(Entity<PentagramComponent> ent, ref ComponentRemove args)
-    {
-        RemComp<GhostPanelAntagonistMarkerComponent>(ent);
     }
 
     #endregion

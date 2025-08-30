@@ -4,11 +4,11 @@ namespace Content.Client._Mini.UserInterface.Controls;
 
 public sealed class RichTextButton : Button
 {
-    public new MiniRichTextLabel Label { get; }
+    public new RichTextLabel Label { get; }
 
     public RichTextButton()
     {
-        Label = new MiniRichTextLabel();
+        Label = new RichTextLabel();
 
         AddChild(Label);
     }
