@@ -7,30 +7,29 @@
     - BaseStationRecords
     - BaseStationGateway
     - TypanStationShuttles
-    - BaseStationAlertLevels
+    - BaseTypanStationAlertLevels
     - BaseStationMagnet
     - BaseStationExpeditions
-    - BaseStationSiliconLawNTDefault # Corvax-NTDefault
-    - BaseStationAllEventsEligible
+    # - BaseStationAllEventsEligible
     - BaseStationSiliconTypanStatic
     # - BaseStationSOGCall
     - BaseStationERTCall
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
-    # - type: TTStationHandleJob
-    #   jobs:
-    #   - TypanAtmosTech
-    #   - TypanBotanist
-    #   - TypanCargotech
-    #   - TypanChef
-    #   - TypanMedic
-    #   - TypanRD
-    #   - TypanScience
-    #   - TypanOfficer
-    #   - TypanBorg
-    #   - TypanBorgMedic
-    #   - TypanCommander
+    - type: TTStationHandleJob
+      jobs:
+      - TypanAtmosTech
+      - TypanBotanist
+      - TypanCargotech
+      - TypanChef
+      - TypanMedic
+      - TypanRD
+      - TypanScience
+      - TypanOfficer
+      - TypanBorg
+      - TypanBorgMedic
+      - TypanCommander
 
 - type: entity
   id: TypanStationShuttles
@@ -53,3 +52,10 @@
   components:
   - type: SiliconLawProvider
     laws: TypanStatic
+
+- type: entity
+  id: BaseTypanStationAlertLevels
+  abstract: true
+  components:
+    - type: AlertLevel
+      alertLevelPrototype: typanStationAlerts
