@@ -216,15 +216,6 @@
     Plasma: 50
 
 - type: latheRecipe
-  id: GrenadeFlashBang
-  parent: TypanBaseExplosiveRecipe
-  result: GrenadeFlashBang
-  materials:
-    Steel: 100
-    Glass: 100
-    Plastic: 50
-
-- type: latheRecipe
   id: SmokeGrenade
   parent: TypanBaseExplosiveRecipe
   result: SmokeGrenade
@@ -288,27 +279,6 @@
     Uranium: 100
 
 # Ammo
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineBoxAntiMateriel
-  result: MagazineBoxAntiMateriel
-  materials:
-    Steel: 1200
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazinePistolCaselessRifle
-  result: MagazinePistolCaselessRifle
-  materials:
-    Steel: 300
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineLightRifleBox
-  result: MagazineLightRifleBox
-  materials:
-    Steel: 1500
 
 # Gloves
 - type: latheRecipe

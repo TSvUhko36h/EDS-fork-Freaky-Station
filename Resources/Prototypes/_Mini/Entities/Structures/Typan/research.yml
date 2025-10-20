@@ -27,7 +27,7 @@
       shader: unshaded
       map: ["enum.AnomalyGeneratorVisualLayers.Base"]
   - type: AnomalyGenerator
-    spawnerPrototype: RandomAnomalyExtendedSpawner
+    spawnerPrototype: RandomAnomalySpawner
   - type: ActiveRadio
     channels:
     - Typan

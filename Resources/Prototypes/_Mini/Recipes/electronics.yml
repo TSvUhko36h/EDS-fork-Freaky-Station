@@ -105,21 +105,6 @@
   result: OreProcessorIndustrialMachineCircuitboardTypan
 
 - type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
-  id: CloningPodMachineCircuitboard
-  result: CloningPodMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
-  id: MedicalScannerMachineCircuitboard
-  result: MedicalScannerMachineCircuitboard
-
-- type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
-  id: CloningConsoleComputerCircuitboard
-  result: CloningConsoleComputerCircuitboard
-
-- type: latheRecipe
   parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: TypanHolopadMachineCircuitboard
   result: TypanHolopadMachineCircuitboard

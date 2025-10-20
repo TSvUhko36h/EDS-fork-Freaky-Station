@@ -32,7 +32,7 @@
         anchored: false
       completed:
       - !type:SpawnPrototype
-        prototype: SheetTitanium1
+        prototype: SheetSteel
         amount: 4
       - !type:DeleteEntity {}
       steps:
@@ -227,7 +227,7 @@
     - to: glassAirlock
       completed:
       - !type:GivePrototype
-        prototype: SheetTitanium1
+        prototype: SheetSteel
         amount: 2
       conditions:
       - !type:WirePanel {}
@@ -240,7 +240,7 @@
     - to: airlock
       completed:
       - !type:GivePrototype
-        prototype: SheetTitanium1
+        prototype: SheetSteel
         amount: 2
       conditions:
       - !type:WirePanel {}
@@ -253,7 +253,7 @@
     - to: highSecDoor
       completed:
       - !type:GivePrototype
-        prototype: SheetTitanium1
+        prototype: SheetSteel
         amount: 2
       conditions:
       - !type:WirePanel {}

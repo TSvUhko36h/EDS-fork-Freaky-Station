@@ -18,3 +18,22 @@
     radius: 1.5
     energy: 0.5
     castShadows: false
+
+# This one handles all spawns, latejoin and roundstart.
+- type: entity
+  parent: CryogenicSleepUnitTypan
+  id: CryogenicSleepUnitSpawnerTypan
+  suffix: Спавнер, Раундстарт
+  components:
+  - type: ContainerSpawnPoint
+    containerId: storage
+
+# This one only handles latejoin spawns.
+- type: entity
+  parent: CryogenicSleepUnitTypan
+  id: CryogenicSleepUnitSpawnerLateJoinTypan
+  suffix: Спавнер, Позднее присоединение
+  components:
+    - type: ContainerSpawnPoint
+      containerId: storage
+      spawnType: LateJoin

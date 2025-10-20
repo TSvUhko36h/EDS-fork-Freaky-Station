@@ -169,14 +169,31 @@
   - type: Item
     heldPrefix: borg-head
 
+# - type: entity
+#   id: TypanTorsoBorg
+#   parent: TypanPartSilicon
+#   name: туловище киборга
+#   suffix: Тайпан
+#   components:
+#   - type: BodyPart
+#     partType: Torso
+#   - type: Sprite
+#     state: borg_chest
+#   - type: Icon
+#     state: borg_chest
+#   - type: Tag
+#     tags:
+#     - Trash
+#     - TypanBorgTorso
+#   - type: Item
+#     heldPrefix: borg-chest
+
 - type: entity
+  parent: [ TypanPartSilicon, BaseChestInorganic ]
   id: TypanTorsoBorg
-  parent: TypanPartSilicon
   name: туловище киборга
   suffix: Тайпан
   components:
-  - type: BodyPart
-    partType: Torso
   - type: Sprite
     state: borg_chest
   - type: Icon
@@ -187,3 +204,20 @@
     - TypanBorgTorso
   - type: Item
     heldPrefix: borg-chest
+  - type: BodyPart
+    children:
+      right arm:
+        id: right arm
+        type: Arm
+      left arm:
+        id: left arm
+        type: Arm
+      head:
+        id: head
+        type: Head
+      right leg:
+        id: right leg
+        type: Leg
+      left leg:
+        id: left leg
+        type: Leg

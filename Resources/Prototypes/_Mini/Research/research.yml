@@ -3,6 +3,11 @@
 - type: technology
   id: TypanBasicRobotics
   name: research-technology-basic-robotics
+   # Goobstation R&D Console rework start
+  position: 0,1
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   icon:
     sprite: _Mini/Structures/Machines/Typan/exosuit_fabricator.rsi
     state: fab-idle
@@ -15,6 +20,11 @@
 - type: technology
   id: TypanBasicAnomalousResearch
   name: research-technology-basic-anomalous-research
+   # Goobstation R&D Console rework start
+  position: 0,2
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   icon:
     sprite: Objects/Specific/Research/anomalyscanner.rsi
     state: icon
@@ -30,6 +40,11 @@
 
 - type: technology
   id: TypanBasicXenoArcheology
+   # Goobstation R&D Console rework start
+  position: 0,3
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-basic-xenoarcheology
   icon:
     sprite: Structures/Machines/artifact_analyzer.rsi
@@ -44,6 +59,11 @@
 
 - type: technology
   id: TypanMagnetsTech
+   # Goobstation R&D Console rework start
+  position: 0,4
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-magnets-tech
   icon:
     sprite: Clothing/Shoes/Boots/magboots-syndicate.rsi
@@ -57,6 +77,11 @@
 
 - type: technology
   id: TypanEnergyDaggers
+   # Goobstation R&D Console rework start
+  position: 0,-1
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-energy-daggers
   icon:
     sprite: Objects/Weapons/Melee/e_dagger.rsi
@@ -71,6 +96,11 @@
 
 - type: technology
   id: TypanAbnormalArtifactManipulation
+   # Goobstation R&D Console rework start
+  position: 0,-2
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-abnormal-artifact-manipulation
   icon:
     sprite: Structures/Machines/artifact_crusher.rsi
@@ -84,6 +114,11 @@
 
 - type: technology
   id: TypanAdvancedAnomalyResearch
+   # Goobstation R&D Console rework start
+  position: 0,-3
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-advanced-anomaly-research
   icon:
     sprite: Structures/Machines/anomaly_sync.rsi
@@ -102,6 +137,11 @@
 
 - type: technology
   id: TypanDeterrenceTechnologies
+   # Goobstation R&D Console rework start
+  position: 0,-4
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-deterrence
   icon:
     sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
@@ -115,6 +155,11 @@
 
 - type: technology
   id: TypanChameleonProjector
+   # Goobstation R&D Console rework start
+  position: 0,-5
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-chameleon-projector
   icon:
     sprite: Objects/Devices/chameleon_projector.rsi
@@ -127,6 +172,11 @@
 
 - type: technology
   id: TypanEnergyWeapons
+   # Goobstation R&D Console rework start
+  position: 0,-6
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-energy-weapons
   icon:
     sprite: Objects/Weapons/Melee/e_sword.rsi
@@ -144,6 +194,11 @@
 
 - type: technology
   id: TypanEmag
+   # Goobstation R&D Console rework start
+  position: 0,-7
+  technologyPrerequisites:
+  - IndustrialEngineering
+  # Goobstation R&D Console rework end
   name: research-technology-emag
   icon:
     sprite: _Mini/Objects/Devices/idcards.rsi
@@ -156,6 +211,11 @@
 
 - type: technology
   id: TypanAdvancedMagnetsTech
+   # Goobstation R&D Console rework start
+  position: 0,-8
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-advanced-magnets-tech
   icon:
     sprite: _ADT/Clothing/Shoes/Boots/advanced.rsi
@@ -170,6 +230,11 @@
 
 - type: technology
   id: TypanEliteEnergyWeapons
+   # Goobstation R&D Console rework start
+  position: 0,-9
+  technologyPrerequisites:
+  - SpaceScanning
+  # Goobstation R&D Console rework end
   name: research-technology-elite-energy-weapons
   icon:
     sprite: Objects/Weapons/Melee/e_sword_double.rsi
