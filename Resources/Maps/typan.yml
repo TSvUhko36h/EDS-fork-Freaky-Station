@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/21/2025 15:35:31
-  entityCount: 6849
+  time: 10/21/2025 22:24:55
+  entityCount: 6841
 maps:
 - 1
 grids:
@@ -6602,7 +6602,7 @@ entities:
       pos: 1.5,-0.5
       parent: 5000
     - type: Door
-      secondsUntilStateChange: -32401.396
+      secondsUntilStateChange: -32525.666
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6646,7 +6646,7 @@ entities:
       pos: -21.5,12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -7618.356
+      secondsUntilStateChange: -7742.625
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6860,7 +6860,7 @@ entities:
       pos: 4.5,13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -7030.39
+      secondsUntilStateChange: -7154.659
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7184,7 +7184,7 @@ entities:
       pos: 24.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -44910.38
+      secondsUntilStateChange: -45034.65
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -33079,6 +33079,11 @@ entities:
     - type: Transform
       pos: 39.5,20.5
       parent: 2
+  - uid: 4295
+    components:
+    - type: Transform
+      pos: 42.5,8.5
+      parent: 2
   - uid: 4350
     components:
     - type: Transform
@@ -40707,65 +40712,6 @@ entities:
     - type: Transform
       pos: 1.5,10.5
       parent: 5416
-- proto: SpawnPointLatejoinTypanAtmos
-  entities:
-  - uid: 2563
-    components:
-    - type: Transform
-      pos: 15.5,-30.5
-      parent: 2
-- proto: SpawnPointLatejoinTypanCargotech
-  entities:
-  - uid: 5970
-    components:
-    - type: Transform
-      pos: 15.5,-31.5
-      parent: 2
-- proto: SpawnPointLatejoinTypanChef
-  entities:
-  - uid: 5975
-    components:
-    - type: Transform
-      pos: 13.5,-30.5
-      parent: 2
-- proto: SpawnPointLatejoinTypanMedic
-  entities:
-  - uid: 5974
-    components:
-    - type: Transform
-      pos: 13.5,-29.5
-      parent: 2
-- proto: SpawnPointLatejoinTypanPatrol
-  entities:
-  - uid: 5977
-    components:
-    - type: Transform
-      pos: 15.5,-32.5
-      parent: 2
-- proto: SpawnPointLatejoinTypanRD
-  entities:
-  - uid: 5973
-    components:
-    - type: Transform
-      pos: 14.5,-31.5
-      parent: 2
-- proto: SpawnPointLatejoinTypanScience
-  entities:
-  - uid: 4959
-    components:
-    - type: Transform
-      pos: 14.5,-29.5
-      parent: 2
-  - uid: 4962
-    components:
-    - type: Transform
-      pos: 15.5,-29.5
-      parent: 2
-  - uid: 5976
-    components:
-    - type: Transform
-      pos: 13.5,-31.5
-      parent: 2
 - proto: SpawnTypanAtmos
   entities:
   - uid: 6845
@@ -42478,6 +42424,11 @@ entities:
       parent: 2
 - proto: VendingMachineMedicalTypan
   entities:
+  - uid: 2563
+    components:
+    - type: Transform
+      pos: 28.5,-13.5
+      parent: 2
   - uid: 4415
     components:
     - type: Transform
@@ -42517,13 +42468,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,18.5
-      parent: 2
-- proto: VendingMachineSyndieContraband
-  entities:
-  - uid: 4295
-    components:
-    - type: Transform
-      pos: 28.5,-13.5
       parent: 2
 - proto: VendingMachineSyndieDrobe
   entities:
