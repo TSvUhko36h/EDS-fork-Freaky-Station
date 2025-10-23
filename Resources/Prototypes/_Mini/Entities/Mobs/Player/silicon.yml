@@ -12,17 +12,20 @@
       - PositronicBrain
       borg_module:
       - BorgModuleTool
-      # - BorgModuleDefibrillator
+      - BorgModuleRescue
       - BorgModuleSyndicateWeapon
-      # - BorgModuleAdvancedTreatment
+      - BorgModuleAdvancedChemical
       - BorgModuleAdvancedSurgery
   - type: ItemSlots
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellHyper
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrainTypan"
+    silent: true
   - type: Access
-    access:
+    tags:
       - TypanArmory
       - TypanAtmospherics
       - TypanCargo
@@ -39,4 +42,12 @@
       - TypanVault
       - TypanExternal
       - SyndicateAgent
-    accessOverride: true
+
+- type: entity
+  parent: BaseMindRole
+  id: MindRoleSiliconBrainTypan
+  name: Borg Brain Role Typan
+  components:
+  - type: MindRole
+    roleType: Silicon
+  - type: SiliconBrainRole

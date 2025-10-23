@@ -195,3 +195,47 @@
   - type: SpawnPoint
     job_id: TypanPatrol
     spawn_type: Job
+
+- type: entity
+  name: спавн раундстарт борга синдиката
+  id: SpawnTypanBorg
+  parent: SpawnPointJobBase
+  components:
+  - type: Sprite
+    state: green
+  - type: SpawnPoint
+    job_id: TypanBorg
+    spawn_type: Job
+
+- type: entity
+  name: спавн позднее присоединение борга синдиката
+  id: SpawnTypanBorgLateJoin
+  parent: SpawnPointJobBase
+  components:
+  - type: Sprite
+    state: green
+  - type: SpawnPoint
+    job_id: TypanBorg
+    spawn_type: LateJoin
+
+- type: entity
+  name: спавн раундстарт медицинского борга синдиката
+  id: SpawnTypanBorgMedic
+  parent: SpawnPointJobBase
+  components:
+  - type: Sprite
+    state: green
+  - type: SpawnPoint
+    job_id: TypanBorgMedic
+    spawn_type: Job
+
+- type: entity
+  name: спавн позднее присоединение медицинского борга синдиката
+  id: SpawnTypanBorgMedicLateJoin
+  parent: SpawnPointJobBase
+  components:
+  - type: Sprite
+    state: green
+  - type: SpawnPoint
+    job_id: TypanBorgMedic
+    spawn_type: LateJoin

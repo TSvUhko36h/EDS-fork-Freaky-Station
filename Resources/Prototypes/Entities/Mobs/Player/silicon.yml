@@ -551,6 +551,24 @@
 # - type: Mimicry
   - type: PointLight
     color: "#FFFFFFFF"
+  - type: Access
+    tags:
+      - TypanArmory
+      - TypanAtmospherics
+      - TypanCargo
+      - TypanCommand
+      - TypanCommunicationsOfficer
+      - TypanEngineering
+      - TypanMaint
+      - TypanMedical
+      - TypanProtection
+      - TypanResearchDirector
+      - TypanScience
+      - TypanService
+      - TypanTechnicalOperationsSupervisor
+      - TypanVault
+      - TypanExternal
+      - SyndicateAgent
 
 - type: entity
   id: Mimicry
