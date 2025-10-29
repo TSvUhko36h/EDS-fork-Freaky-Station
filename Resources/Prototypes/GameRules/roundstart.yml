@@ -269,6 +269,12 @@
         - Surgery
         - MedicalEquipment
         - Butchering
+      # Mini edit start
+      - type: GhostPanelAntagonistMarker
+        name: ghost-panel-antagonist-nukeops-name
+        description: ghost-panel-antagonist-nukeops-description
+        priority: 10
+      # Mini edit end
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:

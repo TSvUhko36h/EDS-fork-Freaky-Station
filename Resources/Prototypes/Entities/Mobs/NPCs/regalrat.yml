@@ -162,6 +162,12 @@
   description: He's da rat. He make da roolz.
   components:
   - type: VentCrawler # goobstation - Ventcrawl
+  # Mini edit start
+  - type: GhostPanelAntagonistMarker
+    name: ghost-panel-antagonist-rats-name
+    description: ghost-panel-antagonist-rats-description
+    priority: 110
+  # Mini edit end
   - type: CombatMode
   - type: MovementSpeedModifier
     baseWalkSpeed : 4.00
@@ -364,6 +370,12 @@
   categories: [ HideSpawnMenu ] #Must be configured to a King or the AI breaks.
   components:
   - type: VentCrawler # goobstation - Ventcrawl
+  # Mini edit start
+  - type: GhostPanelAntagonistMarker
+    name: ghost-panel-antagonist-rats-name
+    description: ghost-panel-antagonist-rats-description
+    priority: 110
+  # Mini edit end
   - type: CombatMode
   - type: MovementSpeedModifier
     baseWalkSpeed : 4.0
