@@ -220,7 +220,7 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Headset
-    color: "#1563bd"
+    color: "#bc1515"
 
 - type: entity
   parent: [ClothingHeadsetAltLoudspeaker, BaseCommandContraband] # goob

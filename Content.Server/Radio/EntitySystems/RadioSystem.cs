@@ -194,8 +194,8 @@ public sealed class RadioSystem : EntitySystem
             ("name", name),
             ("message", content),
             ("headset-color", headsetColor),
-            ("job", job),
-            ("language", language));
+            ("job", job));
+        // ("language", language));
         // var wrappedMessage = WrapRadioMessage(messageSource, channel, name, content, language); // Einstein Engines - Language
 
         // most radios are relayed to chat, so lets parse the chat message beforehand
