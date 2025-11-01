@@ -258,6 +258,8 @@
       startingGear: SyndicateCommanderGearFull
       unequipOldGear: true
       chaosScore: 300 # Goobstation
+      skills: # CorvaxGoob-Skills
+      - All
       roleLoadout:
       - RoleSurvivalNukie
       components:
@@ -291,6 +293,8 @@
       startingGear: SyndicateOperativeMedicFull
       unequipOldGear: true
       chaosScore: 300 # Goobstation
+      skills: # CorvaxGoob-Skills
+      - All
       roleLoadout:
       - RoleSurvivalNukie
       components:
@@ -328,6 +332,8 @@
       chaosScore: 300 # Goobstation
       startingGear: SyndicateOperativeGearFull
       unequipOldGear: true
+      skills: # CorvaxGoob-Skills
+      - All
       roleLoadout:
       - RoleSurvivalNukie
       components:
@@ -367,15 +373,6 @@
   # TODO: uplink in yml
   - type: AntagSelection
     agentName: traitor-round-end-agent-name
-    components:
-      - type: Skills # CorvaxGoob-Skills
-        skills:
-        - ShuttleControl
-        - Shooting
-        - AdvancedBuilding
-        - Surgery
-        - MedicalEquipment
-        - Butchering
 
 - type: entity
   abstract: true
@@ -420,21 +417,14 @@
       max: 8
       playerRatio: 10
       chaosScore: 150 # Goobstation
+      skills: # CorvaxGoob-Skills
+      - All
       blacklist:
         components:
         - CommandStaff # Goobstation
         - AntagImmune
         - Changeling # Goobstation
       lateJoinAdditional: true
-      components:
-      - type: Skills # CorvaxGoob-Skills
-        skills:
-        - ShuttleControl
-        - Shooting
-        - AdvancedBuilding
-        - Surgery
-        - MedicalEquipment
-        - Butchering
       mindRoles:
       - MindRoleTraitor
 
@@ -452,6 +442,8 @@
     - prefRoles: [ HeadRev ]
       max: 3
       playerRatio: 15
+      skills: # CorvaxGoob-Skills
+      - All
       blacklist:
         components:
         - CommandStaff # Goobstation
@@ -464,14 +456,6 @@
       components:
       - type: Revolutionary
       - type: HeadRevolutionary
-      - type: Skills # CorvaxGoob-Skills
-        skills:
-        - ShuttleControl
-        - Shooting
-        - AdvancedBuilding
-        - Surgery
-        - MedicalEquipment
-        - Butchering
       mindRoles:
       - MindRoleHeadRevolutionary
 
@@ -560,6 +544,8 @@
       max: 4
       playerRatio: 15
       jobBlacklist: [ Chaplain ] # Goobstation
+      skills: # CorvaxGoob-Skills
+      - All
       blacklist:
         components:
         - CommandStaff # Goobstation
@@ -573,14 +559,6 @@
       - type: ZombifyOnDeath
       - type: IncurableZombie
       - type: InitialInfected
-      - type: Skills # CorvaxGoob-Skills
-        skills:
-        - ShuttleControl
-        - Shooting
-        - AdvancedBuilding
-        - Surgery
-        - MedicalEquipment
-        - Butchering
       mindRoles:
       - MindRoleInitialInfected
 

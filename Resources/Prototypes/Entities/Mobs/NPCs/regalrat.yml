@@ -262,6 +262,8 @@
     - MindRoleGhostRoleSoloAntagonist
     raffle:
       settings: default
+    skills: # CorvaxGoob-Skills
+    - Butchering
     requirements: # Goobstation - ghost roles requirements
     - !type:OverallPlaytimeRequirement
       time: 18000 #5 hours
@@ -311,9 +313,6 @@
     coefficient: 0.5
   - type: CombatPower # Goobstation
     factor: 2
-  - type: Skills # CorvaxGoob-Skills
-    skills:
-    - Butchering
   - type: PassiveDamage #passive Healing
     allowedStates:
     - Alive
