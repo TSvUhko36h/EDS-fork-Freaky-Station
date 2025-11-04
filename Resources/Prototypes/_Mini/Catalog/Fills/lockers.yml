@@ -273,6 +273,7 @@
     - id: ClothingHandsGlovesColorBlack
     - id: ClothingMaskGasSyndicate
     - id: WeaponPistolViper
+    - id: ToolboxElectricalTurretTypan
     - id: MagazinePistol
       amount: 2
 

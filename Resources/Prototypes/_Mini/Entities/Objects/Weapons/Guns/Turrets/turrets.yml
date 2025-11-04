@@ -94,6 +94,8 @@
 - type: entity
   parent: BaseStructure
   id: WeaponTurretBaseLaser
+  name: лазерная турель
+  description: Автоматическая турель лазерного поражения, имеет встроенную батарею самозарядки.
   abstract: true
   components:
     - type: Clickable
@@ -155,14 +157,14 @@
       autoRecharge: true
       autoRechargeRate: 80
     - type: Gun
-      fireRate: 1
+      fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/laser.ogg
     - type: HitscanBatteryAmmoProvider
       proto: RedHeavyLaser
-      fireCost: 200
+      fireCost: 100
     - type: Battery
       maxCharge: 2000
       startingCharge: 2000
@@ -207,3 +209,70 @@
   - type: NpcFactionMember
     factions:
     - SimpleHostile
+
+- type: entity
+  name: ящик с раскладной турелью
+  suffix: Тайпан, Турель
+  parent: ToolboxElectrical
+  id: ToolboxElectricalTurretTypan
+  description: Переносная турель лазерного поражения, имеет встроенную батарею самозарядки.
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_syn.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Tools/Toolboxes/toolbox_syn.rsi
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 1
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              WeaponTurretLaserTypan:
+                min: 1
+                max: 1
+  - type: StaticPrice
+    price: 1350
+
+- type: entity
+  name: ящик с раскладной турелью
+  suffix: ОБР, Турель, Лазерная
+  parent: ToolboxElectrical
+  id: ToolboxElectricalTurretNanotrasen
+  description: Переносная турель лазерного поражения, имеет встроенную батарею самозарядки.
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 1
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              WeaponTurretLaserNanoTrasen:
+                min: 1
+                max: 1
+  - type: StaticPrice
+    price: 1350

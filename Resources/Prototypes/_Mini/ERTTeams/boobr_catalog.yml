@@ -109,6 +109,17 @@
   categories:
   - ADTUplinkERTMisc
 
+- type: listing
+  id: ADTBoberTurret
+  name: Раскладная турель
+  description: Переносная турель лазерного поражения, имеет встроенную батарею самозарядки.
+  icon: { sprite: _Mini/Objects/Weapons/Guns/Turrets/turrets.rsi, state: full }
+  productEntity: ToolboxElectricalTurretNanotrasen
+  cost:
+    Productunit: 10
+  categories:
+  - ADTUplinkERTMisc
+
 #- type: listing
 #  id: ADTBoberGrapplingGun
 #  name: boobr-grappling-gun-name
