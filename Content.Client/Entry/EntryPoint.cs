@@ -253,6 +253,7 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("codewordFaction");
             _prototypeManager.RegisterIgnore("story"); // Goobstation
             _prototypeManager.RegisterIgnore("storyBeat"); // Goobstation
+            _prototypeManager.RegisterIgnore("sponsorGroup"); // Sponsor think
 
             _prototypeManager.RegisterIgnore("sponsorGroup"); // Sponsor think
             _prototypeManager.RegisterIgnore("ertTeams"); // mini ERT Teams

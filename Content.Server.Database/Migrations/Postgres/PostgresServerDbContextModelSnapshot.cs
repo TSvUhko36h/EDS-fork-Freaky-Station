@@ -1209,6 +1209,58 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.ToTable("server_ban_hit", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ServerDbContext+SponsorDataRaw", b =>
+                {
+                    b.Property<Guid>("PlayerUserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("player_user_id");
+
+                    b.Property<string>("Color")
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)")
+                        .HasColumnName("color");
+
+                    b.Property<int>("ExtraCharSlots")
+                        .HasColumnType("integer")
+                        .HasColumnName("extra_char_slots");
+
+                    b.Property<bool>("ServerPriorityJoin")
+                        .HasColumnType("boolean")
+                        .HasColumnName("server_priority_join");
+
+                    b.HasKey("PlayerUserId")
+                        .HasName("PK_sponsors_list");
+
+                    b.ToTable("sponsors_list", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ServerDbContext+SponsorPrototypeData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("sponsors_prototypes_id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<Guid>("PlayerUserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("player_user_id");
+
+                    b.Property<string>("Prototype")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)")
+                        .HasColumnName("prototype");
+
+                    b.HasKey("Id")
+                        .HasName("PK_sponsors_prototypes");
+
+                    b.HasIndex("PlayerUserId");
+
+                    b.ToTable("sponsors_prototypes", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.ServerRoleBan", b =>
                 {
                     b.Property<int>("Id")
@@ -1899,6 +1951,32 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Navigation("Connection");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ServerDbContext+SponsorDataRaw", b =>
+                {
+                    b.HasOne("Content.Server.Database.Player", "Player")
+                        .WithOne("SponsorData")
+                        .HasForeignKey("Content.Server.Database.ServerDbContext+SponsorDataRaw", "PlayerUserId")
+                        .HasPrincipalKey("Content.Server.Database.Player", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_sponsors_list_player_player_user_id");
+
+                    b.Navigation("Player");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ServerDbContext+SponsorPrototypeData", b =>
+                {
+                    b.HasOne("Content.Server.Database.Player", "Player")
+                        .WithMany("Prototypes")
+                        .HasForeignKey("PlayerUserId")
+                        .HasPrincipalKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_sponsors_prototypes_player_player_id");
+
+                    b.Navigation("Player");
+                });
+
             modelBuilder.Entity("Content.Server.Database.ServerRoleBan", b =>
                 {
                     b.HasOne("Content.Server.Database.Player", "CreatedBy")
@@ -2067,6 +2145,10 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Navigation("AdminWatchlistsReceived");
 
                     b.Navigation("JobWhitelists");
+
+                    b.Navigation("Prototypes");
+
+                    b.Navigation("SponsorData");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Preference", b =>
