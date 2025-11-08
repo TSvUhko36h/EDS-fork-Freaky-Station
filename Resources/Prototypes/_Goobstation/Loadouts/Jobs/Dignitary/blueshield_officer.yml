@@ -30,6 +30,10 @@
   equipment:
     head: ClothingHeadHelmetSwat
 
+- type: loadout
+  id: BlueshieldOfficerBeretAlt
+  equipment:
+    head: ClothingHeadHatBeretBlueshieldAlt
 
 - type: loadout
   id: BlueshieldOfficerBeret
@@ -164,6 +168,12 @@
     proto: SeniorBlueshieldOfficer
   equipment:
     mask: FoodSnackLollypopBlueshield
+
+# Mask
+- type: loadout
+  id: BlueshieldOfficerMaskGaiter
+  equipment:
+    mask: ClothingMaskNeckGaiter
 
 # Back
 - type: loadout

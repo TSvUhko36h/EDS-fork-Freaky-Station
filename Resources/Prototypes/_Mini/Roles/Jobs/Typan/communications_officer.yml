@@ -7,6 +7,8 @@
   icon: "JobIconSyndicateFormal"
   supervisors: job-supervisors-typan-syndicate
   canBeAntag: false
+  skills: # CorvaxGoob-Skills
+    - All
   requirements:
     - !type:DepartmentTimeRequirement
       department: Typan
@@ -33,12 +35,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: Skills # Corvax-Next-Skills
-        skills:
-        - ShuttleControl
-        - Shooting
-        - MedicalEquipment
-        - Surgery
       - type: AntagImmune
       - type: NpcFactionMember
         factions:

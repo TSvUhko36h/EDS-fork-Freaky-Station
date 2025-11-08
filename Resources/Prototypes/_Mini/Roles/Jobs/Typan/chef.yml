@@ -15,13 +15,12 @@
   - TypanService
   - SyndicateAgent
   - TypanMaint
+  skills: # CorvaxGoob-Skills
+    - Shooting
+    - Butchering
   special:
   - !type:AddComponentSpecial
     components:
-      - type: Skills # Corvax-Next-Skills
-        skills:
-        - Butchering
-        - Shooting
       - type: AntagImmune
       - type: NpcFactionMember
         factions:

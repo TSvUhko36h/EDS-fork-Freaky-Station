@@ -18,14 +18,13 @@
   - TypanMaint
   - SyndicateAgent
   - TypanExternal
+  skills: # CorvaxGoob-Skills
+    - Shooting
+    - ShuttleControl
+    - Butchering
   special:
   - !type:AddComponentSpecial
     components:
-      - type: Skills # Corvax-Next-Skills
-        skills:
-        - ShuttleControl
-        - Shooting
-        - Butchering
       - type: AntagImmune
       - type: NpcFactionMember
         factions:

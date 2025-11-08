@@ -34,9 +34,9 @@ namespace Content.Shared.PDA
         public bool HasUplink;
         public bool CanPlayMusic;
         public string? Address;
-        public TimeSpan? ExpectedCountdownEnd;
-        public bool IsRoundEndRequested;
-        public TimeSpan? ShuttleDockTime;
+        // public TimeSpan? ExpectedCountdownEnd;
+        // public bool IsRoundEndRequested;
+        // public TimeSpan? ShuttleDockTime;
 
         public PdaUpdateState(
             List<NetEntity> programs,
@@ -48,10 +48,10 @@ namespace Content.Shared.PDA
             string? stationName,
             bool hasUplink = false,
             bool canPlayMusic = false,
-            string? address = null,
-            TimeSpan? expectedCountdownEnd = null,
-            bool isRoundEndRequested = false,
-            TimeSpan? shuttleDockTime = null)
+            string? address = null)
+            // TimeSpan? expectedCountdownEnd = null,
+            // bool isRoundEndRequested = false,
+            // TimeSpan? shuttleDockTime = null)
             : base(programs, activeUI)
         {
             FlashlightEnabled = flashlightEnabled;
@@ -62,9 +62,9 @@ namespace Content.Shared.PDA
             CanPlayMusic = canPlayMusic;
             StationName = stationName;
             Address = address;
-            ExpectedCountdownEnd = expectedCountdownEnd;
-            IsRoundEndRequested = isRoundEndRequested;
-            ShuttleDockTime = shuttleDockTime;
+            // ExpectedCountdownEnd = expectedCountdownEnd;
+            // IsRoundEndRequested = isRoundEndRequested;
+            // ShuttleDockTime = shuttleDockTime;
         }
     }
 

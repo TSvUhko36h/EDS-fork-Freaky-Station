@@ -120,10 +120,10 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
-using Content.Shared.CCVar;
-using Content.Server.RoundEnd;
-using Content.Server.Shuttles.Systems;
-using Robust.Shared.Configuration;
+// using Content.Shared.CCVar;
+// using Content.Server.RoundEnd;
+// using Content.Server.Shuttles.Systems;
+// using Robust.Shared.Configuration;
 
 namespace Content.Server.PDA
 {
@@ -139,9 +139,9 @@ namespace Content.Server.PDA
         [Dependency] private readonly UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
         [Dependency] private readonly ContainerSystem _containerSystem = default!;
         [Dependency] private readonly IdCardSystem _idCard = default!;
-        [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
-        [Dependency] private readonly IConfigurationManager _configManager = default!;
-        [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttleSystem = default!;
+        // [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
+        // [Dependency] private readonly IConfigurationManager _configManager = default!;
+        // [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttleSystem = default!;
 
         public override void Initialize()
         {
@@ -163,7 +163,7 @@ namespace Content.Server.PDA
             SubscribeLocalEvent<StationRenamedEvent>(OnStationRenamed);
             SubscribeLocalEvent<EntityRenamedEvent>(OnEntityRenamed, after: new[] { typeof(IdCardSystem) });
             SubscribeLocalEvent<AlertLevelChangedEvent>(OnAlertLevelChanged);
-            SubscribeLocalEvent<RoundEndSystemChangedEvent>(OnRoundEndChanged);
+            // SubscribeLocalEvent<RoundEndSystemChangedEvent>(OnRoundEndChanged);
             SubscribeLocalEvent<PdaComponent, InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent>>(ChameleonControllerOutfitItemSelected);
         }
 
@@ -174,16 +174,16 @@ namespace Content.Server.PDA
                 RaiseLocalEvent(ent.Comp.ContainedId.Value, args);
         }
 
-        public override void Update(float frameTime)
-        {
-            base.Update(frameTime);
-            if (_roundEndSystem.IsRoundEndRequested()) UpdateAllPdaUisOnStation();
-        }
+        // public override void Update(float frameTime)
+        // {
+        //     base.Update(frameTime);
+        //     if (_roundEndSystem.IsRoundEndRequested()) UpdateAllPdaUisOnStation();
+        // }
 
-        private void OnRoundEndChanged(RoundEndSystemChangedEvent ev)
-        {
-            UpdateAllPdaUisOnStation();
-        }
+        // private void OnRoundEndChanged(RoundEndSystemChangedEvent ev)
+        // {
+        //     UpdateAllPdaUisOnStation();
+        // }
 
         private void OnEntityRenamed(ref EntityRenamedEvent ev)
         {
@@ -315,11 +315,11 @@ namespace Content.Server.PDA
             if (!TryComp(uid, out CartridgeLoaderComponent? loader))
                 return;
 
-            var shuttleDockTime = TimeSpan.FromSeconds(_configManager.GetCVar(CCVars.EmergencyShuttleDockTime));
-            shuttleDockTime *= _emergencyShuttleSystem.Multiplier;
+            // var shuttleDockTime = TimeSpan.FromSeconds(_configManager.GetCVar(CCVars.EmergencyShuttleDockTime));
+            // shuttleDockTime *= _emergencyShuttleSystem.Multiplier;
 
-            var expectedCountdownEnd = _roundEndSystem.ExpectedCountdownEnd;
-            var isRoundEndRequested = _roundEndSystem.IsRoundEndRequested();
+            // var expectedCountdownEnd = _roundEndSystem.ExpectedCountdownEnd;
+            // var isRoundEndRequested = _roundEndSystem.IsRoundEndRequested();
 
             var programs = _cartridgeLoader.GetAvailablePrograms(uid, loader);
             var id = CompOrNull<IdCardComponent>(pda.ContainedId);
@@ -340,11 +340,7 @@ namespace Content.Server.PDA
                 pda.StationName,
                 showUplink,
                 hasInstrument,
-                address,
-                expectedCountdownEnd,
-                isRoundEndRequested,
-                shuttleDockTime
-                );
+                address);
 
             _ui.SetUiState(uid, PdaUiKey.Key, state);
         }

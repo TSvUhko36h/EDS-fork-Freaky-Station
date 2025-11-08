@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/01/2025 17:46:49
-  entityCount: 7722
+  time: 11/04/2025 22:41:31
+  entityCount: 7733
 maps:
 - 1
 grids:
@@ -6771,7 +6771,7 @@ entities:
       pos: 1.5,-0.5
       parent: 5000
     - type: Door
-      secondsUntilStateChange: -46915.133
+      secondsUntilStateChange: -48968.883
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6821,7 +6821,7 @@ entities:
       pos: -21.5,12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -22132.088
+      secondsUntilStateChange: -24185.836
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7042,7 +7042,7 @@ entities:
       pos: 4.5,13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -21544.121
+      secondsUntilStateChange: -23597.87
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7413,7 +7413,7 @@ entities:
       pos: 24.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -59424.117
+      secondsUntilStateChange: -61477.867
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -21096,23 +21096,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -11.556816,-0.3995431
       parent: 2
-- proto: ChallengeVictimSpawner
-  entities:
-  - uid: 7718
-    components:
-    - type: Transform
-      pos: 47.5,11.5
-      parent: 2
-  - uid: 7719
-    components:
-    - type: Transform
-      pos: 42.5,11.5
-      parent: 2
-  - uid: 7720
-    components:
-    - type: Transform
-      pos: 52.5,11.5
-      parent: 2
 - proto: CheapRollerBedSpawnFolded
   entities:
   - uid: 5861
@@ -22157,11 +22140,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: 29.5,-4.5
       parent: 2
-- proto: ComputerTechnologyDiskTerminal
+- proto: ComputerTechnologyDiskTerminalTypan
   entities:
-  - uid: 1160
+  - uid: 7720
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -3.5,-8.5
       parent: 2
 - proto: ComputerTypanComms
@@ -39175,6 +39159,13 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: NTVisitorSpawner
+  entities:
+  - uid: 1160
+    components:
+    - type: Transform
+      pos: 47.5,11.5
+      parent: 2
 - proto: NukeDiskFake
   entities:
   - uid: 4795
@@ -43362,6 +43353,28 @@ entities:
     - type: Transform
       pos: 62.5,17.5
       parent: 2
+  - uid: 7728
+    components:
+    - type: Transform
+      pos: 40.5,16.5
+      parent: 2
+  - uid: 7729
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 55.5,14.5
+      parent: 2
+  - uid: 7731
+    components:
+    - type: Transform
+      pos: 11.5,-10.5
+      parent: 2
+  - uid: 7733
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -16.5,4.5
+      parent: 2
 - proto: RandomArtifactSpawner
   entities:
   - uid: 2660
@@ -45377,6 +45390,13 @@ entities:
     - type: Transform
       pos: -7.5,-0.5
       parent: 2
+- proto: SpawnMobFireBot
+  entities:
+  - uid: 7719
+    components:
+    - type: Transform
+      pos: 48.5,15.5
+      parent: 2
 - proto: SpawnMobKangarooSalvage
   entities:
   - uid: 5900
@@ -46301,6 +46321,14 @@ entities:
     components:
     - type: Transform
       pos: -4.5,-3.5
+      parent: 2
+- proto: TableFancyRed
+  entities:
+  - uid: 7724
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 41.5,16.5
       parent: 2
 - proto: TableGlass
   entities:
@@ -47416,6 +47444,20 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: VisitingMedicalSpawner
+  entities:
+  - uid: 7718
+    components:
+    - type: Transform
+      pos: 42.5,11.5
+      parent: 2
+- proto: VisitorAlienSpawner
+  entities:
+  - uid: 7725
+    components:
+    - type: Transform
+      pos: 52.5,11.5
+      parent: 2
 - proto: WallPlastitanium
   entities:
   - uid: 10
@@ -52979,6 +53021,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 26.5,-3.5
       parent: 2
+  - uid: 7723
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 41.5,16.5
+      parent: 2
 - proto: WeaponGrapplingGun
   entities:
   - uid: 6643
@@ -53164,6 +53212,27 @@ entities:
     components:
     - type: Transform
       pos: 29.5,5.5
+      parent: 2
+  - uid: 7726
+    components:
+    - type: Transform
+      pos: 55.5,14.5
+      parent: 2
+  - uid: 7727
+    components:
+    - type: Transform
+      pos: 40.5,16.5
+      parent: 2
+  - uid: 7730
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 11.5,-10.5
+      parent: 2
+  - uid: 7732
+    components:
+    - type: Transform
+      pos: -16.5,4.5
       parent: 2
 - proto: WeaponTurretSyndicateBroken
   entities:

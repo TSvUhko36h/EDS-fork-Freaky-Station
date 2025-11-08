@@ -696,7 +696,7 @@ namespace Content.Server.GameTicking
             {
                 if (_webhookIdentifier == null)
                     return;
-
+                var playerCount = _playerManager.PlayerCount;
                 var duration = RoundDuration();
                 var gamemodeTitle = CurrentPreset != null ? Loc.GetString(CurrentPreset.ModeTitle) : string.Empty;
 
@@ -712,8 +712,8 @@ namespace Content.Server.GameTicking
                     ("minutes", duration.Minutes),
                     ("seconds", duration.Seconds),
                     ("gamemode", gamemodeTitle),
-                    ("manifest", manifest));
-
+                    ("manifest", manifest),
+                    ("playerCount", playerCount));
                 if (textEv.Text == String.Empty)
                 {
                     content = Loc.GetString("discord-round-notifications-end-no-manifest",
@@ -721,6 +721,7 @@ namespace Content.Server.GameTicking
                         ("hours", Math.Truncate(duration.TotalHours)),
                         ("minutes", duration.Minutes),
                         ("seconds", duration.Seconds),
+                        ("playerCount", playerCount),
                         ("gamemode", gamemodeTitle));
                 }
 
@@ -730,8 +731,7 @@ namespace Content.Server.GameTicking
 
                 if (DiscordRoundEndRole == null)
                     return;
-
-                content = Loc.GetString("discord-round-notifications-end-ping", ("roleId", DiscordRoundEndRole));
+                content = Loc.GetString("discord-round-notifications-end-ping", ("roleId", DiscordRoundEndRole), ("playerCount", playerCount));
                 payload = new WebhookPayload { Content = content };
                 payload.AllowedMentions.AllowRoleMentions();
 
@@ -796,8 +796,8 @@ namespace Content.Server.GameTicking
             {
                 if (_webhookIdentifier == null)
                     return;
-
-                var content = Loc.GetString("discord-round-notifications-new", ("roleId", DiscordRoundEndRole ?? "0"));
+                var playerCount = _playerManager.PlayerCount;
+                var content = Loc.GetString("discord-round-notifications-new", ("playerCount", playerCount), ("roleId", DiscordRoundEndRole ?? "0"));
 
                 var payload = new WebhookPayload { Content = content };
 
@@ -924,11 +924,14 @@ namespace Content.Server.GameTicking
             {
                 if (_webhookIdentifier == null)
                     return;
-
+                var playerCount = _playerManager.PlayerCount;
                 var mapName = _gameMapManager.GetSelectedMap()?.MapName ?? Loc.GetString("discord-round-notifications-unknown-map");
                 var gamemodeTitle = CurrentPreset != null ? Loc.GetString(CurrentPreset.ModeTitle) : string.Empty;
-                var content = Loc.GetString("discord-round-notifications-started", ("id", RoundId), ("map", mapName), ("gamemode", gamemodeTitle));
-
+                var content = Loc.GetString("discord-round-notifications-started",
+                    ("id", RoundId),
+                    ("map", mapName),
+                    ("gamemode", gamemodeTitle),
+                    ("playerCount", playerCount));
                 var payload = new WebhookPayload { Content = content };
 
                 await _discord.CreateMessage(_webhookIdentifier.Value, payload);

@@ -15,6 +15,11 @@
   - TypanMedical
   - SyndicateAgent
   - TypanMaint
+  skills: # CorvaxGoob-Skills
+    - Shooting
+    - Butchering
+    - Surgery
+    - MedicalEquipment
   special:
   - !type:AddComponentSpecial
     components:
@@ -24,10 +29,6 @@
     - type: SurgerySpeedModifier
       speedModifier: 2.5
     #end-_CorvaxNext: surgery
-    - type: Skills # Corvax-Next-Skills
-      skills:
-      - Surgery
-      - MedicalEquipment
     - type: AntagImmune
     - type: NpcFactionMember
       factions:
