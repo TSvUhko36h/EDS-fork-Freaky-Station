@@ -173,6 +173,8 @@
     - prefRoles: [ NukeopsCommander ]
       fallbackRoles: [ Nukeops, NukeopsMedic ]
       spawnerPrototype: SpawnPointNukeopsCommander
+      skills: # CorvaxGoob-Skills
+      - All
       playerRatio: 15
       startingGear: SyndicateCommanderGearFull
       unequipOldGear: true
@@ -190,6 +192,8 @@
     - prefRoles: [ NukeopsMedic ]
       fallbackRoles: [ Nukeops, NukeopsCommander ]
       spawnerPrototype: SpawnPointNukeopsMedic
+      skills: # CorvaxGoob-Skills
+      - All
       playerRatio: 15
       startingGear: SyndicateOperativeMedicFull
       unequipOldGear: true
@@ -209,6 +213,8 @@
     - prefRoles: [ Nukeops ]
       fallbackRoles: [ NukeopsCommander, NukeopsMedic ]
       spawnerPrototype: SpawnPointNukeopsOperative
+      skills: # CorvaxGoob-Skills
+      - All
       max: 10
       playerRatio: 20
       startingGear: SyndicateOperativeGearFull
