@@ -98,7 +98,7 @@ public sealed partial class NukeopsRuleComponent : Component
     ///     This amount of TC will be given to each nukie
     /// </summary>
     [DataField]
-    public int WarTcAmountPerNukie = 200;
+    public int WarTcAmountPerNukie = 40;
 
     // Goobstation start
     /// <summary>
@@ -113,21 +113,21 @@ public sealed partial class NukeopsRuleComponent : Component
     /// Total bonus is divided by number of operatives.
     /// </summary>
     [DataField]
-    public int WarTcPerPlayer = 20;
+    public int WarTcPerPlayer = 2;
 
     /// <summary>
     /// Compensation telecrystals granted per missing nuclear operative.
     /// Total bonus is divided by number of operatives.
     /// </summary>
     [DataField]
-    public int WarTcPerNukieMissing = 100;
+    public int WarTcPerNukieMissing = 10;
     // Goobstation end
 
     /// <summary>
     ///     Delay between war declaration and nuke ops arrival on station map. Gives crew time to prepare
     /// </summary>
     [DataField]
-    public TimeSpan WarNukieArriveDelay = TimeSpan.FromMinutes(15);
+    public TimeSpan WarNukieArriveDelay = TimeSpan.FromMinutes(10);
 
     /// <summary>
     ///     Time crew can't call emergency shuttle after war declaration.
@@ -139,7 +139,7 @@ public sealed partial class NukeopsRuleComponent : Component
     ///     Minimal operatives count for war declaration
     /// </summary>
     [DataField]
-    public int WarDeclarationMinOps = 2;
+    public int WarDeclarationMinOps = 1;
 
     [DataField]
     public WinType WinType = WinType.Neutral;
