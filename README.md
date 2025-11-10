@@ -1,10 +1,11 @@
 <p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
-CorvaxGoob - это активно модифицируемый и основывающийся форк от всем изестного репозитория Goob Station, направленный на его перевод и создание собственного контента.
+Братаааан, да это же Freaky Station, который является форком Mini Station, который является форком CorvaxGoob, который является форком Goob Station, который является форком Space Station 14.
 
 ## Ссылки
 
-[Наш Discord](https://discord.station14.ru) | [Наша Вики](https://wiki.station14.ru) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14) | [Основной репозиторий Goob Station](https://github.com/Goob-Station/Goob-Station)
+[Discord](https://discord.gg/euHpTeVYF8) | [Текущая Вики](https://wiki.station14.ru) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Официальный репозиторий](https://github.com/space-wizards/space-station-14) | [Основной репозиторий Goob Station](https://github.com/Goob-Station/Goob-Station) | [Репозиторий Mini Station](https://github.com/Goob-Station/Goob-Station)
+
 
 ## Документация
 

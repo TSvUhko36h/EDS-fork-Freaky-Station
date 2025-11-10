@@ -1,18 +1,13 @@
 # Last match in file takes precedence.
 
-# Ping for all PRs
-* @KillanGenifer
+# Хост, пинговать на все пры
+* @Egorql
 
-# Locale
-/Resources/Locale @Ko4ergaPunk
+# Владелец
+* @Casha
 
-# Textures
-/Resources/Textures/_CorvaxGoob @SonicHDC
+# Маппинг, спрайтинг
+* @Sherlook
 
-# Map files
-/Resources/Prototypes/_CorvaxGoob/Entities/Stations @kvant8
-/Resources/Prototypes/_CorvaxGoob/Maps @kvant8
-/Resources/Maps/_CorvaxGoob @kvant8
-
-# TTS
-/Content.*/_CorvaxGoob/TTS @Morb0
+# Разработка
+* @ANIvarm
