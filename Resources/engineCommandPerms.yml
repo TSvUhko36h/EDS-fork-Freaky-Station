@@ -127,7 +127,7 @@
 - Flags: FUN
   Commands:
   - tippy
-  - loadprototype # Goobstation
+#  - loadprototype # Goobstation # ебать фан
   - tip
 
 - Flags: SERVER
@@ -170,6 +170,7 @@
   Commands:
   - uploadfile
   - uploadfolder
+  - loadprototype # Freaky Station
 
 - Commands:
   - "|"
