@@ -1,6 +1,7 @@
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Utility;
 
 namespace Content.Server._Mini.DNALocker;
 
@@ -15,12 +16,16 @@ public sealed partial class DNALockerComponent : Component
 
     [DataField]
     public string DNA = String.Empty;
+    public bool IsLocked => DNA != string.Empty;
 
     [DataField]
     public bool DNAWasStored = false;
 
     [DataField]
     public bool Activated = false;
+
+    [DataField("actionIcon")]
+    public SpriteSpecifier? ActionIcon;
 
     /// <summary>
     /// Emag sound effects.

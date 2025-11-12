@@ -8,6 +8,7 @@ using Content.Shared.Database;
 using Timer = Robust.Shared.Timing.Timer;
 using Content.Shared.Forensics.Components;
 using Content.Server.Popups;
+using Content.Shared.Actions.Components;
 using Content.Shared.Actions;
 using Content.Shared._Mini.DNALocker;
 using Content.Shared.Interaction.Components;
@@ -19,6 +20,10 @@ using Robust.Shared.Audio.Systems;
 using Content.Shared.Speech.Components;
 using Content.Shared.Chat;
 using Robust.Shared.Audio;
+using Content.Shared.Verbs;
+using Robust.Shared.Graphics;
+using Robust.Shared.Utility;
+using Content.Server.Forensics;
 
 namespace Content.Server._Mini.DNALocker;
 
@@ -39,6 +44,7 @@ public sealed class DNALockerSystem : EntitySystem
         SubscribeLocalEvent<DNALockerComponent, GetItemActionsEvent>(OnGetActions);
         SubscribeLocalEvent<DNALockerComponent, StoreDNAActionEvent>(OnDNAStore);
         SubscribeLocalEvent<DNALockerComponent, GotEmaggedEvent>(OnEmagged);
+        SubscribeLocalEvent<DNALockerComponent, GetVerbsEvent<AlternativeVerb>>(OnAltVerb);
     }
 
     public void OnEquip(EntityUid uid, DNALockerComponent comp, GotEquippedEvent args)
@@ -211,5 +217,35 @@ public sealed class DNALockerSystem : EntitySystem
         EntityManager.RemoveComponent<DNALockerComponent>(uid);
 
         args.Handled = true;
+    }
+    private void OnAltVerb(EntityUid uid, DNALockerComponent component, GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!component.IsLocked)
+            return;
+
+        AlternativeVerb verbDNALock = new()
+        {
+            Act = () => MakeUnlocked(uid, component, args.User),
+            Text = Loc.GetString("dna-locker-verb-name"),
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/fold.svg.192dpi.png")),
+        };
+        args.Verbs.Add(verbDNALock);
+    }
+    private void MakeUnlocked(EntityUid uid, DNALockerComponent component, EntityUid userUid)
+    {
+        if (TryComp<DnaComponent>(userUid, out var userDNAComponent) && component.DNA == userDNAComponent.DNA)
+        {
+            var unlocked = Loc.GetString("dna-locker-unlock");
+            _audio.PlayPvs(component.LockSound, userUid);
+            _popupSystem.PopupEntity(unlocked, uid, userUid);
+            component.DNA = string.Empty;
+            component.DNAWasStored = false;
+        }
+        else
+        {
+            var denied = Loc.GetString("dna-locker-failure");
+            _audio.PlayPvs(component.DeniedSound, userUid);
+            _popupSystem.PopupEntity(denied, uid, userUid);
+        }
     }
 }
