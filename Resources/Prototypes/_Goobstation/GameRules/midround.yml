@@ -18,9 +18,9 @@
   id: TraitorMidround
   components:
   - type: StationEvent
-    earliestStart: 30
+    earliestStart: 4 # Freaky Station
     weight: 10
-    minimumPlayers: 15
+    minimumPlayers: 7 # Freaky Station
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -62,9 +62,9 @@
   id: ChangelingMidround
   components:
   - type: StationEvent
-    earliestStart: 20
+    earliestStart: 4 # Freaky Station
     weight: 3
-    minimumPlayers: 15
+    minimumPlayers: 8 # Freaky Station
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -108,9 +108,9 @@
   id: HereticMidround
   components:
   - type: StationEvent
-    earliestStart: 20
-    weight: 3
-    minimumPlayers: 30
+    earliestStart: 4 # Freaky Station
+    weight: 4 # Freaky Station
+    minimumPlayers: 9 # Freaky Station
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -155,7 +155,7 @@
   id: RevolutionaryMidround
   components:
   - type: StationEvent
-    earliestStart: 20
+    earliestStart: 6 # Freaky Station
     weight: 3
     minimumPlayers: 30
     maxOccurrences: 1
@@ -202,7 +202,7 @@
   - type: StationEvent
     weight: 5
     duration: 1
-    minimumPlayers: 15
+    minimumPlayers: 4 # Freaky Station
     chaos:
       Hostile: 40
       Medical: 40
@@ -222,9 +222,9 @@
   id: BlobMidround
   components:
   - type: StationEvent
-    weight: 1
-    earliestStart: 45
-    minimumPlayers: 50
+    weight: 2 # Freaky Station
+    earliestStart: 4 # Freaky Station
+    minimumPlayers: 13 # Freaky Station
     duration: null
     maxOccurrences: 1
     chaos:
