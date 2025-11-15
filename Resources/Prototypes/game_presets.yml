@@ -224,7 +224,7 @@
     - tator
   name: traitor-title
   description: traitor-description
-  showInVote: true
+  showInVote: false
   rules:
   - DummyNonAntagChance
   - Traitor
@@ -253,7 +253,7 @@
     - nukeops
   name: nukeops-title
   description: nukeops-description
-  showInVote: true
+  showInVote: false
   rules:
   - Nukeops
   - DummyNonAntagChance
@@ -271,7 +271,7 @@
     - revolutionaries
   name: rev-title
   description: rev-description
-  showInVote: true
+  showInVote: false
   rules:
   - DummyNonAntagChance
   - Revolutionary

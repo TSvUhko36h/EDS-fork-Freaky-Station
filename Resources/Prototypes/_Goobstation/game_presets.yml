@@ -202,7 +202,7 @@
     - entropy
   name: secretplus-mid-title
   description: secretplus-mid-description
-  showInVote: true
+  showInVote: false
   rules:
     - SecretPlusMid
 
@@ -227,7 +227,7 @@
     - survivalnew
   name: survivalplus-title
   description: survivalplus-description
-  showInVote: true
+  showInVote: false
   rules:
     - SecretPlusRampingMid
 
