@@ -20,7 +20,7 @@
   - type: StationEvent
     earliestStart: 4 # Freaky Station
     weight: 10
-    minimumPlayers: 7 # Freaky Station
+    minimumPlayers: 5 # Freaky Station
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -64,7 +64,7 @@
   - type: StationEvent
     earliestStart: 4 # Freaky Station
     weight: 3
-    minimumPlayers: 8 # Freaky Station
+    minimumPlayers: 5 # Freaky Station
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -110,7 +110,7 @@
   - type: StationEvent
     earliestStart: 4 # Freaky Station
     weight: 4 # Freaky Station
-    minimumPlayers: 9 # Freaky Station
+    minimumPlayers: 6 # Freaky Station
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -157,7 +157,7 @@
   - type: StationEvent
     earliestStart: 6 # Freaky Station
     weight: 3
-    minimumPlayers: 30
+    minimumPlayers: 10 # Freaky Station
     maxOccurrences: 1
     duration: null
     occursDuringRoundEnd: false
@@ -249,8 +249,8 @@
   components:
   - type: StationEvent
     weight: 15
-    earliestStart: 15
-    minimumPlayers: 15
+    earliestStart: 1 # Freaky Station
+    minimumPlayers: 5 # Freaky Station
     maxOccurrences: 2
     eventType: Neutral
   - type: GameRule

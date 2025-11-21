@@ -19,6 +19,8 @@
 #     - id: MobSkibidiToilet
 #       prob: 0.05
 
+# сука за что....
+
 - type: entity
   parent: BaseGameRule
   id: FloorGoblinSpawn

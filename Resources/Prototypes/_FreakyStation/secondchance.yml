@@ -10,8 +10,8 @@
         components:
         - MobState # admeme implanting a chair with tracking implant needs to give the chair mobstate so it can die first
     - type: SecondChance
-    
-    
+
+
 - type: entity
   id: SecondChanceImplanter
   name: имплантер второго шанса

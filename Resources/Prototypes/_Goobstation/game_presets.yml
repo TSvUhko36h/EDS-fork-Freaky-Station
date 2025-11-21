@@ -175,7 +175,7 @@
   name: guide-title
   description: guide-description
   showInVote: false
-  minPlayers: 15
+  minPlayers: 5 # Freaky Station
   rules:
     - CombatDynamic
     - SubGamemodesRule
@@ -239,7 +239,7 @@
   name: abductors-title
   description: abductors-description
   showInVote: false
-  minPlayers: 15
+  minPlayers: 5 # Freaky Station
   rules:
   - DuoAbductorRoundstart
   - SubGamemodesRule
