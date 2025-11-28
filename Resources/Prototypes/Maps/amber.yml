@@ -32,7 +32,7 @@
   id: Amber
   mapName: 'Amber'
   mapPath: /Maps/_Goobstation/amber.yml
-  minPlayers: 7
+  minPlayers: 0 # Freak, was 7
   maxPlayers: 50
   stations:
     Amber:

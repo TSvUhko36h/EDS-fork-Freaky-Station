@@ -33,7 +33,7 @@
   id: Omega
   mapName: 'Omega'
   mapPath: /Maps/_Goobstation/omega.yml # Goobstation
-  minPlayers: 7
+  minPlayers: 0 # Freak, was 7
   maxPlayers: 35
   stations:
     Omega:
