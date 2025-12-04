@@ -112,6 +112,7 @@
     inverted: true
     species:
     - Plasmaman
+    - Abductor # CorvaxGoob-Species
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -135,6 +136,7 @@
     inverted: true
     species:
     - Plasmaman
+    - Abductor # CorvaxGoob-Species
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -159,6 +161,7 @@
     inverted: true
     species:
     - Plasmaman
+    - Abductor # CorvaxGoob-Species
   guides: [ NuclearOperatives ]
 
 - type: startingGear
