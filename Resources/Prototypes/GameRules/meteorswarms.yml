@@ -334,11 +334,11 @@
       Intern:
         path: /Audio/_CorvaxGoob/Announcements/Announcers/Intern/irod.ogg
     # CorvaxGoob-CustomAnnouncers-End
-    weight: 2 # Freaky Station
+    weight: 3.5 # Freaky Station
     reoccurrenceDelay: 1
     duration: 30 # CorvaxGoob-CustomAnnouncers
-    earliestStart: 60 # Freaky Station
-    minimumPlayers: 8 # Freaky Station
+    earliestStart: 45 # Freaky Station
+    minimumPlayers: 15 # Freaky Station
     chaos: # Goobstation
       Power: 100
       Atmos: 100
