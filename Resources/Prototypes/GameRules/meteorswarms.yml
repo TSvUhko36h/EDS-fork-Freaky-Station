@@ -334,7 +334,7 @@
       Intern:
         path: /Audio/_CorvaxGoob/Announcements/Announcers/Intern/irod.ogg
     # CorvaxGoob-CustomAnnouncers-End
-    weight: 3.5 # Freaky Station
+    weight: 0.3 # Freaky Station
     reoccurrenceDelay: 1
     duration: 30 # CorvaxGoob-CustomAnnouncers
     earliestStart: 45 # Freaky Station
