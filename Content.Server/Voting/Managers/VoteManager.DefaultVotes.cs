@@ -631,7 +631,8 @@ namespace Content.Server.Voting.Managers
 
                 if(_playerManager.PlayerCount > (preset.MaxPlayers ?? int.MaxValue))
                     continue;
-
+                if(preset.ModeTitle == "nukeops-title" && _playerManager.PlayerCount<20)
+                    continue;
                 presets[preset.ID] = preset.ModeTitle;
             }
             return presets;
