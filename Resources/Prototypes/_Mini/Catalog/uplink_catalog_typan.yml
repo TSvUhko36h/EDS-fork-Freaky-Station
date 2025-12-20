@@ -1203,20 +1203,6 @@
   - TypanUplinkWearables
 
 - type: listing
-  id: TypanUplinkMagbootsAdv1
-  name: Кроваво-чёрные магнитные ботинки
-  description: Современные магнитные ботинки, которые немного ускоряют своего владельца. Сделано горлаксом для горлакса. Имеют увеличенный обьем.
-  icon: { sprite: /Textures/_Mini/Clothing/Shoes/Boots/advanced.rsi, state: icon }
-  productEntity: ClothingShoesBootsMagAdvSynd
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 6
-  cost:
-    Telecrystal: 8
-  categories:
-  - UplinkWearables
-
-- type: listing
   id: TypanUplinkMagbootsAdv
   name: Кроваво-чёрные магнитные ботинки
   description: Современные магнитные ботинки, которые немного ускоряют своего владельца. Сделано горлаксом для горлакса. Имеют увеличенный обьем.
