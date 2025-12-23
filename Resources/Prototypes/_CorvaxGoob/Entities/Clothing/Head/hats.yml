@@ -8,7 +8,7 @@
     sprite: _CorvaxGoob/Clothing/Head/Hats/white_beret.rsi
   - type: Clothing
     sprite: _CorvaxGoob/Clothing/Head/Hats/white_beret.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -34,7 +34,7 @@
     sprite: _CorvaxGoob/Clothing/Head/Hats/sheriff_beret.rsi
   - type: Clothing
     sprite: _CorvaxGoob/Clothing/Head/Hats/sheriff_beret.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -63,7 +63,7 @@
   - type: Tag
     tags:
     - HamsterWearable
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -92,7 +92,7 @@
   - type: Tag
     tags:
     - HamsterWearable
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -118,7 +118,7 @@
       sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_officer_black.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_officer_black.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -144,7 +144,7 @@
       sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_naval_cap.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_naval_cap.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -170,7 +170,7 @@
       sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_naval_beret.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/Head/Hats/centcom_naval_beret.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -196,7 +196,7 @@
       sprite: _CorvaxGoob/Clothing/Head/Hats/ERT_leader_beret.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/Head/Hats/ERT_leader_beret.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -222,7 +222,7 @@
       sprite: _CorvaxGoob/Clothing/Head/Hats/hoshat.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/Head/Hats/hoshat.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -248,7 +248,7 @@
       sprite: _CorvaxGoob/Clothing/Head/Hats/warden_alt.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/Head/Hats/warden_alt.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -274,7 +274,7 @@
       sprite: _CorvaxGoob/Clothing/Head/Hats/beret_security_medic.rsi
     - type: Clothing
       sprite: _CorvaxGoob/Clothing/Head/Hats/beret_security_medic.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -300,7 +300,7 @@
     sprite: _CorvaxGoob/Clothing/Head/Hats/caphat.rsi
   - type: Clothing
     sprite: _CorvaxGoob/Clothing/Head/Hats/caphat.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
@@ -326,7 +326,7 @@
     sprite: _CorvaxGoob/Clothing/Head/Hats/beret_pilot.rsi
   - type: Clothing
     sprite: _CorvaxGoob/Clothing/Head/Hats/beret_pilot.rsi
-  - type: Armor # Mini
+  - type: Armor # Freak
     coverage:
     - Head
     traumaDeductions:
