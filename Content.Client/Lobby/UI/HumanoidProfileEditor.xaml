@@ -139,6 +139,12 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                                 </BoxContainer> -->
                                 <!-- Corvax-Frontier-Barks-End -->
                             </BoxContainer>
+                            <!-- ERP Toggle (18+) -->
+                            <BoxContainer HorizontalExpand="True" Margin="0 8 0 0">
+                                <Label Text="ERP" />
+                                <Control HorizontalExpand="True"/>
+                                <OptionButton Name="ERPEnabledButton" HorizontalAlignment="Right"/>
+                            </BoxContainer>
                             <!-- Skin -->
                             <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">
                                 <Label Text="{Loc 'humanoid-profile-editor-skin-color-label'}" />

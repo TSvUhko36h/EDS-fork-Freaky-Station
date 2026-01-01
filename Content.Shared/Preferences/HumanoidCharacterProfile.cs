@@ -123,6 +123,9 @@ namespace Content.Shared.Preferences
         [DataField]
         public string FlavorText { get; set; } = string.Empty;
 
+        [DataField]
+        public ERPS ERPS { get; set; } = ERPS.No;
+
         /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
         /// </summary>
@@ -185,6 +188,7 @@ namespace Content.Shared.Preferences
         [DataField]
         public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
             PreferenceUnavailableMode.SpawnAsOverflow;
+
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
@@ -372,6 +376,11 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithSex(Sex sex)
         {
             return new(this) { Sex = sex };
+        }
+
+        public HumanoidCharacterProfile WithERP(ERPS erp)
+        {
+            return new(this) { ERPS = erp };
         }
 
         public HumanoidCharacterProfile WithGender(Gender gender)
@@ -722,8 +731,6 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavortext;
             Age = age;
-            // Height = height; // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            // Width = width; // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
             Sex = sex;
             Gender = gender;
             Appearance = appearance;
@@ -785,7 +792,7 @@ namespace Content.Shared.Preferences
                     continue;
 
                 //Sponsor think
-                if(traitProto.SponsorOnly && !sponsorPrototypes.Contains(trait.Id))
+                if (traitProto.SponsorOnly && !sponsorPrototypes.Contains(trait.Id))
                     continue;
 
                 // Always valid.
@@ -820,6 +827,7 @@ namespace Content.Shared.Preferences
             return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
         }
         // CorvaxGoob-TTS-End
+
         public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection, string[] sponsorPrototypes)
         {
             var profile = new HumanoidCharacterProfile(this);
@@ -827,8 +835,6 @@ namespace Content.Shared.Preferences
             return profile;
         }
 
-        // sorry this is kind of weird and duplicated,
-        /// working inside these non entity systems is a bit wack
         public static string GetName(string species, Gender gender)
         {
             var namingSystem = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<NamingSystem>();
@@ -850,8 +856,6 @@ namespace Content.Shared.Preferences
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
             hashCode.Add(Species);
-            // hashCode.Add(Height); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            // hashCode.Add(Width); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
             hashCode.Add(Age);
             hashCode.Add((int) Sex);
             hashCode.Add((int) Gender);
@@ -859,6 +863,7 @@ namespace Content.Shared.Preferences
             // hashCode.Add(BarkVoice); // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
             hashCode.Add((int) SpawnPriority);
             hashCode.Add((int) PreferenceUnavailable);
+            hashCode.Add((int) ERPS); // Добавлено в HashCode
             return hashCode.ToHashCode();
         }
 

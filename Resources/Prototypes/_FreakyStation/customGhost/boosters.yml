@@ -31,3 +31,12 @@
   alpha: 0.8
   ghostName: Vernya
   ghostDescription: НЕ уходил на рыбалку
+  
+- type: customGhost
+  id: TipuganGhost
+  ckey: Tipugan
+  sprite: /Textures/_FreakStation/Ghost/Booster/tipugan.rsi
+  scale: 0.5
+  alpha: 0.8
+  ghostName: BlackCat
+  ghostDescription: Мяу

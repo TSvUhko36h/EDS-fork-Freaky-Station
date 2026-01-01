@@ -778,7 +778,7 @@ namespace Content.Client.Stylesheets
             var directionIconHereTex = resCache.GetTexture("/Textures/Interface/VerbIcons/dot.svg.192dpi.png");
 
             // New: Glitch texture for overlay (assume a glitch noise texture exists or use procedural)
-            var glitchTexture = resCache.GetTexture("/Textures/Interface/Glitch/noise_overlay.png"); // Hypothetical glitch texture
+            // var glitchTexture = resCache.GetTexture("/Textures/Interface/Glitch/noise_overlay.png"); // Hypothetical glitch texture
 
             Stylesheet = new Stylesheet(BaseRules.Concat(new[]
             {
