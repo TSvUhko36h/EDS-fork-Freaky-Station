@@ -160,6 +160,7 @@
     - id: GasLeak
     - id: GreytideVirus
     - id: IonStorm # its calm like 90% of the time smh
+    - id: JobDistributionError
     - id: KudzuGrowth
     - id: MassHallucinations
     - id: MimicVendorRule
@@ -176,8 +177,9 @@
     - id: MothroachSpawn # DeltaV
     - id: DerelictCyborgSyndicateSpawn # Goobstation - usually calm
     - id: MalignRiftSpawn # DeltaV
-    - id: FloorGoblinSpawn # Goobstation
-    - id: HellGooseSpawn # Goobstation
+    - id: FloorGoblinMidRound # Goobstation
+    - id: ClownGoblinMigration # Goobstation - New Midrounds
+    - id: SantaClausSpawn # Goobstation, remove after new year
 
 - type: entityTable
   id: BasicAntagEventsTable
@@ -190,6 +192,8 @@
     - id: ParadoxCloneSpawn
     - id: RevenantSpawn  # Freaky Station
     - id: SleeperAgents
+    - id: HereticMidround # Goob
+    - id: ChangelingMidround # Goob
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
@@ -199,6 +203,16 @@
     - id: BingleSpawn #Goobstation - Bingle
     - id: SlaughterDemonMidround # Goobstation - Slaughter Demon
     - id: XenomorphsInfestation # WD EDIT
+    #- id: GreyTideAntagMidround # Goobstation - New Midrounds
+    #- id: SingulothKnightsMidround # Goobstation - New Midrounds
+    #- id: DarkLordMidround # Goobstation - New Midrounds
+    #- id: MimeAssassinMidround # Goobstation - New Midrounds
+    #- id: DarkPriestMidround # Goobstation - New Midrounds
+    #- id: VoxRaidersMidround # Goobstation - New Midrounds
+    #- id: TunnelClownMidround # Goobstation
+    #- id: WraithMidround # Goobstation - Wraith
+    #TODO when midrounds are "reviewed" by the chudmins add them back
+    #TODO When Slasher is Ready - id: SlasherSpawn # Goobstation - The Slasher
 
 - type: entity
   id: BaseStationEvent
@@ -275,7 +289,7 @@
   parent: BaseGameRule
   components:
   - type: StationEvent
-    weight: 2
+    weight: 2.5 # CorvaxGoob Changes: 2 > 2.5
     reoccurrenceDelay: 5
     earliestStart: 1
     duration: 1
@@ -362,7 +376,7 @@
   - type: StationEvent
     weight: 5
     duration: 1
-    minimumPlayers: 10
+    minimumPlayers: 30 # CorvaxGoob-SpawnRebalance: Changed to from 10
     eventType: Chaotic # Goobstation
   # Goobstation
   - type: GameRule
@@ -415,7 +429,7 @@
   id: NinjaSpawn
   components:
   - type: StationEvent
-    weight: 3 # Goobstation - was 6
+    weight: 3.5 # Goobstation Changes: 6 > 3 # CorvaxGoob Changes: 3 > 3.5
     duration: null
     earliestStart: 10 # Freaky Station
     #reoccurrenceDelay: 20 # Goobstation - no longer needed
@@ -525,45 +539,6 @@
         sound: /Audio/Misc/paradox_clone_greeting.ogg
       mindRoles:
       - MindRoleParadoxClone
-
-#- type: entity
-#  parent: BaseGameRule
-#  id: MindParadoxSpawn
-#  components:
-#  - type: StationEvent
-#    weight: 5
-#    duration: null
-#    earliestStart: 20
-#    reoccurrenceDelay: 20
-#    minimumPlayers: 15
-#    eventType: Chaotic # Goobstation
-#  # Goobstation
-#  - type: GameRule
-#    chaosScore: 80
-#  - type: MindParadoxRule
-#    objectiveBlacklist:
-#      tags:
-#      - ParadoxCloneObjectiveBlacklist
-#  - type: AntagObjectives
-#    objectives:
-#    - ParadoxCloneLivingObjective
-#  - type: AntagRandomSpawn # TODO: improve spawning so they only start in maints
-#  - type: AntagSelection
-#    agentName: paradox-clone-round-end-agent-name
-#    definitions:
-#    - spawnerPrototype: SpawnPointGhostMindParadox
-#      min: 1
-#      max: 1
-#      pickPlayer: false
-#      startingGear: ParadoxCloneGear
-#      roleLoadout:
-#      - RoleSurvivalVoxTank # give vox something to breath in case they don't get a copy
-#      briefing:
-#        text: paradox-clone-role-greeting
-#        color: lightblue
-#        sound: /Audio/Misc/paradox_clone_greeting.ogg
-#      mindRoles:
-#      - MindRoleParadoxClone
 
 - type: entity
   parent: BaseGameRule
@@ -784,9 +759,7 @@
   - type: VentCrittersRule
     table: !type:GroupSelector # DeltaV: EntityTable instead of spawn entries
       children:
-      - id: MobAdultSlimesBlueAngry
-      - id: MobAdultSlimesGreenAngry
-      - id: MobAdultSlimesYellowAngry
+      - id: XenobioSlimeBabySpawner # goob edit - nuke wizden slimes in favor of xenobio
 
 - type: entity
   id: SnakeSpawn
@@ -852,12 +825,13 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/_Reserve/Announcements/lifesigns.ogg
-      params:
-        volume: -4
-    earliestStart: 7 # Freaky Station
+      path: /Audio/Announcements/attention.ogg
+    announcersStartAudio: # CorvaxGoob-CustomAnnouncers
+      Intern:
+        path: /Audio/_CorvaxGoob/Announcements/Announcers/Intern/aliens.ogg
+    earliestStart: 5 # Freaky Station
     minimumPlayers: 7 # Freaky Station
-    weight: 5 # Freaky Station
+    weight: 4 # Goobstation Changes: 1.5 > 3 # CorvaxGoob Changes: 3 > 4
     duration: 30 # DeltaV: was 60, used as a delay now
     chaos: # Goobstation
       Hostile: 20

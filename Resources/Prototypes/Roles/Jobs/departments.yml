@@ -133,6 +133,7 @@
   - Visitor
   - Zookeeper
   - ServiceWorker
+  - PartyMaker # event-restricted, Goobstation
 
 - type: department
   id: CentralCommand
@@ -188,6 +189,7 @@
   - ERTEngineer
   - DeathSquad
   - HecuOperative
+  - CommandMaid # event-restricted, Goobstation
   primary: false
   weight: 100
 
@@ -215,7 +217,8 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
-  - Surgeon # Corvax-Next-Surgeon
+  - Surgeon # CorvaxGoob-Surgeon
+  - Virologist # Gooby goob ba gooby goob ba
 
 - type: department
   id: Security
@@ -231,7 +234,8 @@
   - Warden
   - Brigmedic # Goob
   - Pilot # Corvax-Pilot
-  - WardenHelper # Corvax-Next-WardenHelper
+  - WardenHelper # CorvaxGoob-WardenHelper
+  - SecurityClown # event-restricted, Goob
 
 - type: department
   id: Science
@@ -260,6 +264,7 @@
   color: "#9FED58"
   weight: 5  # Mini-weights
   roles:
+  - RadioHost # Goobstation
   - Boxer
   - Reporter
   - Zookeeper

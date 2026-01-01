@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 11/04/2025 22:41:31
-  entityCount: 7733
+  time: 12/19/2025 17:45:32
+  entityCount: 7740
 maps:
 - 1
 grids:
@@ -242,13 +242,6 @@ entities:
       chunkCollection:
         version: 2
         nodes:
-        - node:
-            angle: -1.5707963267948966 rad
-            color: '#FFFFFFFF'
-            id: Arrows
-          decals:
-            3905: 5,-8
-            3906: 5,-9
         - node:
             color: '#FFFFFFFF'
             id: Arrows
@@ -897,25 +890,50 @@ entities:
             3761: -23,7
             3988: 31,13
         - node:
+            color: '#63A657FF'
+            id: BrickTileSteelCornerNe
+          decals:
+            4028: 5,-7
+        - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelCornerNe
           decals:
             3997: 37,19
+        - node:
+            color: '#63A657FF'
+            id: BrickTileSteelCornerNw
+          decals:
+            4029: 4,-7
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelCornerNw
           decals:
             3998: 33,19
         - node:
+            color: '#63A657FF'
+            id: BrickTileSteelCornerSe
+          decals:
+            4030: 5,-9
+        - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelCornerSe
           decals:
             3999: 37,14
         - node:
+            color: '#63A657FF'
+            id: BrickTileSteelCornerSw
+          decals:
+            4031: 4,-9
+        - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelCornerSw
           decals:
             4000: 33,14
+        - node:
+            color: '#63A657FF'
+            id: BrickTileSteelLineE
+          decals:
+            4032: 5,-8
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineE
@@ -938,6 +956,11 @@ entities:
             4012: 34,14
             4013: 35,14
             4014: 36,14
+        - node:
+            color: '#63A657FF'
+            id: BrickTileSteelLineW
+          decals:
+            4033: 4,-8
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineW
@@ -4410,7 +4433,8 @@ entities:
           3,3:
             0: 65359
           3,-1:
-            0: 55519
+            0: 55503
+            2: 16
           4,0:
             0: 4607
           4,1:
@@ -4935,6 +4959,25 @@ entities:
           moles:
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14975
+          moles:
+          - 20.078888
+          - 75.53487
           - 0
           - 0
           - 0
@@ -6771,7 +6814,7 @@ entities:
       pos: 1.5,-0.5
       parent: 5000
     - type: Door
-      secondsUntilStateChange: -48968.883
+      secondsUntilStateChange: -49742.465
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6821,7 +6864,7 @@ entities:
       pos: -21.5,12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -24185.836
+      secondsUntilStateChange: -24959.416
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6866,11 +6909,6 @@ entities:
       parent: 5416
 - proto: AirlockTypanCargoLocked
   entities:
-  - uid: 969
-    components:
-    - type: Transform
-      pos: -9.5,12.5
-      parent: 2
   - uid: 6046
     components:
     - type: Transform
@@ -6886,19 +6924,8 @@ entities:
     - type: Transform
       pos: 0.5,8.5
       parent: 5000
-  - uid: 6588
-    components:
-    - type: Transform
-      pos: -2.5,8.5
-      parent: 2
 - proto: AirlockTypanCommandLocked
   entities:
-  - uid: 2561
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 22.5,-3.5
-      parent: 2
   - uid: 7721
     components:
     - type: Transform
@@ -6923,12 +6950,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -23.5,11.5
-      parent: 2
-  - uid: 6211
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -21.5,-8.5
       parent: 2
   - uid: 6244
     components:
@@ -7042,7 +7063,7 @@ entities:
       pos: 4.5,13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -23597.87
+      secondsUntilStateChange: -24371.45
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7063,42 +7084,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,-20.5
-      parent: 2
-  - uid: 5175
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 53.5,17.5
-      parent: 2
-  - uid: 5277
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 48.5,17.5
-      parent: 2
-  - uid: 5287
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 47.5,13.5
-      parent: 2
-  - uid: 5342
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 52.5,13.5
-      parent: 2
-  - uid: 5357
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 42.5,13.5
-      parent: 2
-  - uid: 5386
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 43.5,17.5
       parent: 2
 - proto: AirlockTypanGlassEngineeringLocked
   entities:
@@ -7129,11 +7114,6 @@ entities:
     - type: Transform
       pos: 4.5,-1.5
       parent: 2
-  - uid: 1142
-    components:
-    - type: Transform
-      pos: 5.5,-5.5
-      parent: 2
   - uid: 1157
     components:
     - type: Transform
@@ -7145,11 +7125,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 13.5,-3.5
-      parent: 2
-  - uid: 2952
-    components:
-    - type: Transform
-      pos: 5.5,-9.5
       parent: 2
 - proto: AirlockTypanGlassScienceLocked
   entities:
@@ -7222,8 +7197,82 @@ entities:
     - type: Transform
       pos: 10.5,-13.5
       parent: 2
+- proto: AirlockTypanGlassVirologyLocked
+  entities:
+  - uid: 1160
+    components:
+    - type: Transform
+      pos: 53.5,17.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCommand
+      - - TypanMedical
+  - uid: 2254
+    components:
+    - type: Transform
+      pos: 48.5,17.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCommand
+      - - TypanMedical
+  - uid: 2561
+    components:
+    - type: Transform
+      pos: 47.5,13.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCommand
+      - - TypanMedical
+  - uid: 2952
+    components:
+    - type: Transform
+      pos: 52.5,13.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCommand
+      - - TypanMedical
+  - uid: 3940
+    components:
+    - type: Transform
+      pos: 42.5,13.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCommand
+      - - TypanMedical
+  - uid: 3941
+    components:
+    - type: Transform
+      pos: 43.5,17.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCommand
+      - - TypanMedical
+  - uid: 4391
+    components:
+    - type: Transform
+      pos: 5.5,-5.5
+      parent: 2
+  - uid: 4770
+    components:
+    - type: Transform
+      pos: 5.5,-9.5
+      parent: 2
 - proto: AirlockTypanMaintLocked
   entities:
+  - uid: 29
+    components:
+    - type: Transform
+      pos: -9.5,12.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCargo
   - uid: 30
     components:
     - type: Transform
@@ -7234,11 +7283,35 @@ entities:
     - type: Transform
       pos: 1.5,-6.5
       parent: 2
+  - uid: 342
+    components:
+    - type: Transform
+      pos: -2.5,8.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCargo
   - uid: 901
     components:
     - type: Transform
       pos: -19.5,10.5
       parent: 2
+  - uid: 969
+    components:
+    - type: Transform
+      pos: 22.5,-3.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanCommand
+  - uid: 1142
+    components:
+    - type: Transform
+      pos: -21.5,-8.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanScience
   - uid: 1961
     components:
     - type: Transform
@@ -7287,6 +7360,46 @@ entities:
     - type: Transform
       pos: 23.5,15.5
       parent: 2
+  - uid: 5277
+    components:
+    - type: Transform
+      pos: 3.5,-6.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanMedical
+  - uid: 5287
+    components:
+    - type: Transform
+      pos: 3.5,-14.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanScience
+  - uid: 5342
+    components:
+    - type: Transform
+      pos: -11.5,-10.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanScience
+  - uid: 5357
+    components:
+    - type: Transform
+      pos: -7.5,-9.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanScience
+  - uid: 5386
+    components:
+    - type: Transform
+      pos: -0.5,-17.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - TypanScience
   - uid: 5966
     components:
     - type: Transform
@@ -7314,6 +7427,9 @@ entities:
     - type: Transform
       pos: 35.5,21.5
       parent: 2
+    - type: AccessReader
+      access:
+      - - TypanEngineering
   - uid: 6087
     components:
     - type: Transform
@@ -7323,8 +7439,11 @@ entities:
   - uid: 6203
     components:
     - type: Transform
-      pos: -10.5,10.5
+      pos: 1.5,-18.5
       parent: 2
+    - type: AccessReader
+      access:
+      - - TypanScience
   - uid: 6208
     components:
     - type: Transform
@@ -7336,55 +7455,33 @@ entities:
     - type: Transform
       pos: 37.5,20.5
       parent: 2
+    - type: AccessReader
+      access:
+      - - TypanEngineering
   - uid: 7544
     components:
     - type: Transform
       pos: 30.5,20.5
       parent: 2
-- proto: AirlockTypanMedicalLocked
-  entities:
-  - uid: 342
-    components:
-    - type: Transform
-      pos: 3.5,-6.5
-      parent: 2
 - proto: AirlockTypanScienceLocked
   entities:
-  - uid: 29
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 3.5,-14.5
-      parent: 2
   - uid: 4297
     components:
     - type: Transform
       pos: 4.5,-17.5
       parent: 2
+- proto: AirlockTypanService
+  entities:
   - uid: 6209
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -11.5,-10.5
+      pos: 17.5,-24.5
       parent: 2
   - uid: 6210
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -7.5,-9.5
+      pos: 17.5,-20.5
       parent: 2
-  - uid: 6615
-    components:
-    - type: Transform
-      pos: -0.5,-17.5
-      parent: 2
-  - uid: 6692
-    components:
-    - type: Transform
-      pos: 1.5,-18.5
-      parent: 2
-- proto: AirlockTypanService
-  entities:
   - uid: 6586
     components:
     - type: Transform
@@ -7413,7 +7510,7 @@ entities:
       pos: 24.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -61477.867
+      secondsUntilStateChange: -62251.45
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7428,20 +7525,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 21.5,11.5
-      parent: 2
-- proto: AirlockTypanVirology
-  entities:
-  - uid: 3940
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 17.5,-24.5
-      parent: 2
-  - uid: 3941
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 17.5,-20.5
       parent: 2
 - proto: AirSensor
   entities:
@@ -8882,6 +8965,13 @@ entities:
     - type: Transform
       pos: -14.324889,-15.337132
       parent: 2
+  - uid: 6211
+    components:
+    - type: Transform
+      parent: 1316
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: Bucket
   entities:
   - uid: 138
@@ -20226,6 +20316,11 @@ entities:
     - type: Transform
       pos: -0.5,1.5
       parent: 5000
+  - uid: 5175
+    components:
+    - type: Transform
+      pos: -10.5,10.5
+      parent: 2
   - uid: 5413
     components:
     - type: Transform
@@ -22352,6 +22447,39 @@ entities:
     - type: Transform
       pos: 12.5,-2.5
       parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - type: ContainerContainer
+      containers:
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 6211
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
   - uid: 1470
     components:
     - type: Transform
@@ -23253,6 +23381,13 @@ entities:
     components:
     - type: Transform
       pos: -19.516594,1.4706601
+      parent: 2
+- proto: DiseaseDiagnoser
+  entities:
+  - uid: 6855
+    components:
+    - type: Transform
+      pos: 4.5,-8.5
       parent: 2
 - proto: DisposalBend
   entities:
@@ -39079,6 +39214,18 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 32.5,-0.5
       parent: 2
+- proto: MouseTimedSpawner
+  entities:
+  - uid: 7725
+    components:
+    - type: Transform
+      pos: 21.5,15.5
+      parent: 2
+  - uid: 7736
+    components:
+    - type: Transform
+      pos: 23.5,-17.5
+      parent: 2
 - proto: Multitool
   entities:
   - uid: 3461
@@ -39159,13 +39306,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: NTVisitorSpawner
-  entities:
-  - uid: 1160
-    components:
-    - type: Transform
-      pos: 47.5,11.5
-      parent: 2
 - proto: NukeDiskFake
   entities:
   - uid: 4795
@@ -43130,6 +43270,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 56.5,16.5
       parent: 2
+  - uid: 7740
+    components:
+    - type: Transform
+      pos: -28.5,11.5
+      parent: 2
 - proto: RailingCornerSmall
   entities:
   - uid: 71
@@ -44964,22 +45109,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 17.5,-25.5
       parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        3940:
-        - - Pressed
-          - DoorBolt
   - uid: 4052
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 17.5,-21.5
       parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        3941:
-        - - Pressed
-          - DoorBolt
   - uid: 4974
     components:
     - type: Transform
@@ -45406,10 +45541,20 @@ entities:
       parent: 5416
 - proto: SpawnMobMonkey
   entities:
+  - uid: 6588
+    components:
+    - type: Transform
+      pos: 47.5,11.5
+      parent: 2
   - uid: 7017
     components:
     - type: Transform
       pos: 48.5,19.5
+      parent: 2
+  - uid: 7734
+    components:
+    - type: Transform
+      pos: 42.5,10.5
       parent: 2
 - proto: SpawnMobSpiderSalvage
   entities:
@@ -45944,63 +46089,6 @@ entities:
     - type: Transform
       pos: -28.5,-2.5
       parent: 2
-- proto: SuitStorageTypanBase
-  entities:
-  - uid: 6855
-    components:
-    - type: Transform
-      pos: 24.5,12.5
-      parent: 2
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14673
-        moles:
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-      removedMasks: 20
-      open: True
-    - type: Lock
-      locked: False
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.48
-            - 0.25,-0.48
-            - 0.25,0.48
-            - -0.25,0.48
-          mask:
-          - Impassable
-          - MidImpassable
-          - LowImpassable
-          - BlobImpassable
-          layer:
-          - BulletImpassable
-          - Opaque
-          density: 350
-          hard: True
-          restitution: 0
-          friction: 0.4
-    - type: PlaceableSurface
-      isPlaceable: True
 - proto: SuitStorageTypanCargotechFilled
   entities:
   - uid: 2589
@@ -46015,11 +46103,6 @@ entities:
       parent: 2
 - proto: SuitStorageTypanCOFilled
   entities:
-  - uid: 2254
-    components:
-    - type: Transform
-      pos: 24.5,10.5
-      parent: 2
   - uid: 6032
     components:
     - type: Transform
@@ -46027,15 +46110,15 @@ entities:
       parent: 2
 - proto: SuitStorageTypanParamedicFilled
   entities:
-  - uid: 4391
+  - uid: 7735
     components:
     - type: Transform
-      pos: 4.5,-7.5
+      pos: 10.5,-2.5
       parent: 2
-  - uid: 4770
+  - uid: 7737
     components:
     - type: Transform
-      pos: 4.5,-8.5
+      pos: 9.5,-2.5
       parent: 2
 - proto: SuitStorageTypanPatrolFilled
   entities:
@@ -46060,6 +46143,18 @@ entities:
     components:
     - type: Transform
       pos: -7.5,-19.5
+      parent: 2
+- proto: SuitStorageTypanStelsFilled
+  entities:
+  - uid: 6615
+    components:
+    - type: Transform
+      pos: 24.5,12.5
+      parent: 2
+  - uid: 6692
+    components:
+    - type: Transform
+      pos: 24.5,10.5
       parent: 2
 - proto: SuitStorageTypanTechnicianFilled
   entities:
@@ -47263,6 +47358,13 @@ entities:
       parent: 2
     - type: Pullable
       prevFixedRotation: True
+- proto: Vaccinator
+  entities:
+  - uid: 7718
+    components:
+    - type: Transform
+      pos: 4.5,-7.5
+      parent: 2
 - proto: VendingMachineBoozeSyndicate
   entities:
   - uid: 2691
@@ -47444,20 +47546,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: VisitingMedicalSpawner
-  entities:
-  - uid: 7718
-    components:
-    - type: Transform
-      pos: 42.5,11.5
-      parent: 2
-- proto: VisitorAlienSpawner
-  entities:
-  - uid: 7725
-    components:
-    - type: Transform
-      pos: 52.5,11.5
-      parent: 2
 - proto: WallPlastitanium
   entities:
   - uid: 10
@@ -53233,6 +53321,16 @@ entities:
     components:
     - type: Transform
       pos: -16.5,4.5
+      parent: 2
+  - uid: 7738
+    components:
+    - type: Transform
+      pos: -28.5,11.5
+      parent: 2
+  - uid: 7739
+    components:
+    - type: Transform
+      pos: -22.5,4.5
       parent: 2
 - proto: WeaponTurretSyndicateBroken
   entities:

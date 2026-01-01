@@ -126,3 +126,35 @@
     sprite: _Goobstation/Clothing/Ears/Headsets/blueshield.rsi
   - type: Headset
     color: "#fcdf03"
+
+- type: entity
+  parent: ClothingHeadsetCommand
+  id: ClothingHeadsetCommandService
+  name: command-service headset
+  description: A headset with a command and service channels.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommand
+      - EncryptionKeyService
+      - EncryptionKeyCommon
+  - type: Headset
+    color: "#fcdf03"
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltRadioHost
+  name: гарнитурa радио ведущего
+  description: Гарнитура радио ведущего, позволяющая вещать на все частоты станции.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Ears/Headsets/radiohost.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Ears/Headsets/radiohost.rsi
+  - type: Headset
+    color: "#f3e5ab"
