@@ -183,9 +183,9 @@
     - !type:GroupSelector
       children:
       - id: ClothingBeltSecurityFilled
-        weight: 0.7
+        weight: 0.5
       - id: ClothingBeltCorporateJudoFilled
-        weight: 0.3
+        weight: 0.5
     # Goobstation - Martial Arts - end
 
 - type: entity
@@ -252,6 +252,7 @@
     - id: BloodTrak # Goobstation
     - id: Betty # Goobstation
     - id: BoxTapeRecorder # DeltaV
+    - id: PhotoCameraFilled # CorvaxGoob
 
 - type: entity
   id: ClosetBombFilled

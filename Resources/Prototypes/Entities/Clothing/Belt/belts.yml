@@ -188,7 +188,6 @@
         - Nailgun # Goobstation
         - MagazineNailgun # Goobstation
       components:
-        - StationMap
         - SprayPainter
         - SprayPainterAmmo
         - NetworkConfigurator
@@ -276,7 +275,6 @@
         - Nailgun # Goobstation
         - MagazineNailgun # Goobstation
       components:
-        - StationMap
         - SprayPainter
         - SprayPainterAmmo
         - NetworkConfigurator
@@ -346,6 +344,7 @@
         - EnergySpeedloader # Goobstation
         - Sidearm # Goobstation
         - PepperSpray # Goobstation
+        - BolaEnergy # CorvaxGoob
       components:
         - Stunbaton
         - FlashOnTrigger
@@ -519,7 +518,7 @@
   - type: Storage
     whitelist:
       tags:
-        # - PlantAnalyzer
+        - PlantAnalyzer
         - PlantSampleTaker
         - BotanyShovel
         - BotanyHoe
@@ -540,10 +539,10 @@
         whitelist:
           tags:
           - BotanyHatchet
-      # hydro:
-      #   whitelist:
-      #     tags:
-      #     - PlantAnalyzer # Dunno what to put here, should be aight.
+      hydro:
+        whitelist:
+          tags:
+          - PlantAnalyzer
       hoe:
         whitelist:
           tags:
@@ -668,6 +667,8 @@
         - EnergySpeedloader # Goobstation
         - MilitaryPowerCell # Goobstation
         - HandGrenade
+        - TelescopicBaton # CorvaxGoob
+        - TelescopicShield # CorvaxGoob
       components:
         - Stunbaton
         - FlashOnTrigger
@@ -713,7 +714,7 @@
   - type: ItemSlots
     slots:
       item:
-        name: Sabre
+        # name: Sabre # CorvaxGoob-Loc-in-UI
         insertVerbText: sheath-insert-verb
         ejectVerbText: sheath-eject-verb
         insertSound: /Audio/Items/sheath.ogg
@@ -885,6 +886,11 @@
         - Hammer # Goobstation
         - Nailgun # Goobstation
         - MagazineNailgun # Goobstation
+        - SeismicCharge # CorvaxGoob
+        - MiningDrill # CorvaxGoob
+        - LavalandJaunter # CorvaxGoob
+        - FlashlightSeclite # CorvaxGoob
+        - MineralScanner # CorvaxGoob
       components:
         - StationMap
         - SprayPainter
@@ -898,6 +904,8 @@
         - TrayScanner
         - GasAnalyzer
         - HandLabeler
+        - ShelterCapsule # CorvaxGoob
+        - Fulton # CorvaxGoob
     # CorvaxGoob-WorkBelts-Techfab-end
 
 - type: entity

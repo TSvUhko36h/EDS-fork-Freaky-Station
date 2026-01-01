@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/23/2025 01:39:08
-  entityCount: 15528
+  time: 12/19/2025 21:01:39
+  entityCount: 15531
 maps:
 - 1
 grids:
@@ -6447,6 +6447,11 @@ entities:
             2292: 57.111843,-16.250092
     - type: OccluderTree
     - type: Shuttle
+      dampingModifiers:
+        Cruise: 0.0075
+        Dampen: 0.25
+        Anchor: 2
+        None: 0.25
       dampingModifier: 0.25
     - type: GridPathfinding
     - type: GasTileOverlay
@@ -6454,6 +6459,7 @@ entities:
     - type: SpreaderGrid
     - type: ImplicitRoof
     - type: NavMap
+    - type: FTLDrive
 - proto: AccordionInstrument
   entities:
   - uid: 3
@@ -8893,7 +8899,7 @@ entities:
       pos: 28.5,-21.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -26958.852
+      secondsUntilStateChange: -27039.402
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -33332,6 +33338,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 36.5,20.5
       parent: 2
+- proto: CaptainDrobe
+  entities:
+  - uid: 6673
+    components:
+    - type: Transform
+      pos: 37.5,40.5
+      parent: 2
 - proto: CaptainIDCard
   entities:
   - uid: 4871
@@ -43981,13 +43994,6 @@ entities:
     components:
     - type: Transform
       pos: 15.5,46.5
-      parent: 2
-- proto: DresserCaptainFilled
-  entities:
-  - uid: 6673
-    components:
-    - type: Transform
-      pos: 37.5,40.5
       parent: 2
 - proto: DresserChiefEngineerFilled
   entities:
@@ -81351,6 +81357,18 @@ entities:
     - type: Transform
       pos: 27.5,-32.5
       parent: 2
+- proto: SpawnPointVirologist
+  entities:
+  - uid: 7
+    components:
+    - type: Transform
+      pos: 81.5,-5.5
+      parent: 2
+  - uid: 15529
+    components:
+    - type: Transform
+      pos: 79.5,-6.5
+      parent: 2
 - proto: SpawnPointWarden
   entities:
   - uid: 12298
@@ -81424,6 +81442,11 @@ entities:
     components:
     - type: Transform
       pos: 20.5,45.5
+      parent: 2
+  - uid: 15530
+    components:
+    - type: Transform
+      pos: 79.5,-6.5
       parent: 2
 - proto: SpawnVehicleChairOfficeLight
   entities:
@@ -98375,6 +98398,13 @@ entities:
     components:
     - type: Transform
       pos: 39.143993,28.716045
+      parent: 2
+- proto: WeaponTurretLaserNanoTrasen
+  entities:
+  - uid: 15531
+    components:
+    - type: Transform
+      pos: 80.5,-7.5
       parent: 2
 - proto: WeedSpray
   entities:

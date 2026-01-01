@@ -170,6 +170,7 @@
   minLimit: 0
   maxLimit: 3
   loadouts:
+  - KlePstKit
   - FlowerWreath
   - Hairflower
   - Headphones
@@ -177,6 +178,7 @@
   - PlushieSpaceLizard
   - PersonalAI # Goobstation
   - GoldenPersonalAI # Goobstation
+  - CrewCassette # Goobstation
   - ThreeCandles
   - Lighter
   - CigPackGreen
@@ -285,6 +287,7 @@
   - LoadoutSpeciesPlasma # Goobstation
   - EmergencyWaterVapor # Delta-V
   - EmergencySilicon
+  - LoadoutSpeciesAbductorTranslator # CorvaxGoob-Species
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -345,6 +348,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - VeteranCaptainCloak # goob
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -435,6 +439,7 @@
   - LightBrownMJ
   - BrownMJ
   - MaroonMJ
+  - QuarterzipJumpsuit
  # goob changes end
 
 - type: loadoutGroup
@@ -1301,6 +1306,10 @@
   loadouts:
   - WardenHead
   - WardenBeret
+# CorvaxGoob-Loadouts-Start
+  - WardenCap
+  - WardenHeadAlt
+# CorvaxGoob-Loadouts-End
 
 - type: loadoutGroup
   id: WardenJumpsuit
@@ -1355,6 +1364,7 @@
   loadouts:
   - SecurityBelt
   - SecurityWebbing
+  - SecurityJudoBelt # Goobstation - Martial Arts
 
 - type: loadoutGroup
   id: SecurityOuterClothing
