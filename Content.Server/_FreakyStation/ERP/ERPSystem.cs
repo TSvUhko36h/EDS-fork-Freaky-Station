@@ -37,7 +37,7 @@ namespace Content.Server.ERP
         {
             if (component.Erp)
             {
-                args.PushMarkup("[color=#ff00ff]ERP: ВКЛЮЧЕНО[/color]");
+                args.PushMarkup("[color=#ff85ff][bold]ERP статус — ВКЛЮЧЕНО.[/color][/bold]");
             }
         }
         private void OnPlayerSpawned(PlayerSpawnCompleteEvent ev)
