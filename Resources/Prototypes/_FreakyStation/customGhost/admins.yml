@@ -6,13 +6,13 @@
   ghostName: Egorql
   ghostDescription: Блять че за хуйняя
 
-#- type: customGhost
- # id: CashaGhost
- # ckey: Casha
- # sprite: /Textures/_FreakStation/Ghost/GhostCasha.rsi
- # alpha: 0.8
- # ghostName: Casha
- # ghostDescription: Допиваю свой бокал и снова в жизни ищу толк
+- type: customGhost
+  id: CashaGhost
+  ckey: Casha
+  sprite: /Textures/_FreakStation/Ghost/GhostCasha.rsi
+  alpha: 0.8
+  ghostName: Casha
+  ghostDescription: Допиваю свой бокал и снова в жизни ищу толк
 
 - type: customGhost
   id: kef1rOOGhost
