@@ -53,12 +53,11 @@
   alpha: 0.8
   ghostName: Homyakk
   ghostDescription: Долбоёб, нихуя не умеет
-  
+
 - type: customGhost
-  id: EDsLI1103Ghost
-  ckey: EDsLI1103
-  sprite: /Textures/_FreakStation/Ghost/EDSLI1103.rsi
-  scale: 0.2
+  id: EDsLi1103Ghost
+  ckey: EDsLi1103
+  sprite: /Textures/_FreakStation/Ghost/GhostEDsLi1103.rsi
   alpha: 0.8
-  ghostName: EDsLI1103
-  ghostDescription: Привет, не надо писать мне из какого я города, какой у меня номер телефона и имя. Я сам знаю
+  ghostName: 'EDsLi1103'
+  ghostDescription: 'Привет, не надо писать мне из какого я города, какой у меня номер телефона и имя. Я сам знаю.'
