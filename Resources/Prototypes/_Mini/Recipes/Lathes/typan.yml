@@ -251,14 +251,14 @@
     Plastic: 100
     Gold: 50
 
-- type: latheRecipe
-  id: HolyHandGrenade
-  parent: TypanBaseExplosiveRecipe
-  result: HolyHandGrenade
-  materials:
-    Steel: 200
-    Gold: 300
-    Plasma: 100
+# - type: latheRecipe
+#   id: HolyHandGrenade
+#   parent: TypanBaseExplosiveRecipe
+#   result: HolyHandGrenade
+#   materials:
+#     Steel: 200
+#     Gold: 300
+#     Plasma: 100
 
 - type: latheRecipe
   id: WhiteholeGrenade
