@@ -61,3 +61,11 @@
   alpha: 0.8
   ghostName: 'EDsLi1103'
   ghostDescription: 'Привет, не надо писать мне из какого я города, какой у меня номер телефона и имя. Я сам знаю.'
+
+- type: customGhost
+  id: EraNebullaGhost
+  ckey: EraNebulla
+  sprite: /Textures/_FreakStation/Ghost/GhostEraNebulla.rsi
+  alpha: 0.8
+  ghostName: 'EraNebulla'
+  ghostDescription: "Been spendin' most their bans, Livin' in a admin's paradise"
