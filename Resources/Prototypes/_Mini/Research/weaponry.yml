@@ -384,13 +384,13 @@
   id: TypanExperimentalGrenades
   name: research-technology-experimental-grenades
   icon:
-    sprite: Objects/Weapons/Grenades/holyhandgrenade.rsi
+    sprite: Objects/Weapons/Grenades/whiteholegrenade.rsi
     state: icon
   discipline: TypanWeaponry
   tier: 3
-  cost: 30000
+  cost: 10000
   recipeUnlocks:
-  - HolyHandGrenade
+  # - HolyHandGrenade
   - WhiteholeGrenade
   # Goobstation R&D Console rework start
   position: 0,-8
