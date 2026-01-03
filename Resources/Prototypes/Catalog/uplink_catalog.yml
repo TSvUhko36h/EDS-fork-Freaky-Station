@@ -580,7 +580,7 @@
   description: uplink-exploding-syndicate-bomb-desc
   productEntity: SyndicateBomb
   cost:
-    Telecrystal: 2 # goob
+    Telecrystal: 12 # goob
   categories:
     - UplinkExplosives
   restockTime: 1800

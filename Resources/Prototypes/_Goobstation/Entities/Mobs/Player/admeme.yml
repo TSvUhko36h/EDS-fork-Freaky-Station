@@ -37,6 +37,8 @@
   - SlimePerson
   - Dwarf
   - Feroxi # Freak
+  - Chitinid # Freak
+  - Felinid # Freak
   components:
   - type: RandomHumanoidAppearance
     randomizeName: false

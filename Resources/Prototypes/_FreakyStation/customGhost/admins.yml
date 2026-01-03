@@ -6,13 +6,13 @@
   ghostName: Egorql
   ghostDescription: Блять че за хуйняя
 
-#- type: customGhost
- # id: CashaGhost
- # ckey: Casha
- # sprite: /Textures/_FreakStation/Ghost/GhostCasha.rsi
- # alpha: 0.8
- # ghostName: Casha
- # ghostDescription: Допиваю свой бокал и снова в жизни ищу толк
+- type: customGhost
+  id: CashaGhost
+  ckey: Casha
+  sprite: /Textures/_FreakStation/Ghost/GhostCasha.rsi
+  alpha: 0.8
+  ghostName: Casha
+  ghostDescription: Допиваю свой бокал и снова в жизни ищу толк
 
 - type: customGhost
   id: kef1rOOGhost
@@ -53,12 +53,19 @@
   alpha: 0.8
   ghostName: Homyakk
   ghostDescription: Долбоёб, нихуя не умеет
-  
+
 - type: customGhost
-  id: EDsLI1103Ghost
-  ckey: EDsLI1103
-  sprite: /Textures/_FreakStation/Ghost/EDSLI1103.rsi
-  scale: 0.2
+  id: EDsLi1103Ghost
+  ckey: EDsLi1103
+  sprite: /Textures/_FreakStation/Ghost/GhostEDsLi1103.rsi
   alpha: 0.8
-  ghostName: EDsLI1103
-  ghostDescription: Привет, не надо писать мне из какого я города, какой у меня номер телефона и имя. Я сам знаю
+  ghostName: 'EDsLi1103'
+  ghostDescription: 'Привет, не надо писать мне из какого я города, какой у меня номер телефона и имя. Я сам знаю.'
+
+- type: customGhost
+  id: EraNebullaGhost
+  ckey: EraNebulla
+  sprite: /Textures/_FreakStation/Ghost/GhostEraNebulla.rsi
+  alpha: 0.8
+  ghostName: 'EraNebulla'
+  ghostDescription: "Been spendin' most their bans, Livin' in a admin's paradise"
