@@ -764,6 +764,7 @@ namespace Content.Shared.Preferences
             {
                 if (!prototypeManager.HasIndex<RoleLoadoutPrototype>(roleName))
                 {
+
                     toRemove.Add(roleName);
                     continue;
                 }
