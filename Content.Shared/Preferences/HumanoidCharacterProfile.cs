@@ -764,10 +764,10 @@ namespace Content.Shared.Preferences
             {
                 if (!prototypeManager.HasIndex<RoleLoadoutPrototype>(roleName))
                 {
-
                     toRemove.Add(roleName);
                     continue;
                 }
+
                 loadouts.Role = roleName;
                 loadouts.EnsureValid(this, session, collection);
             }
