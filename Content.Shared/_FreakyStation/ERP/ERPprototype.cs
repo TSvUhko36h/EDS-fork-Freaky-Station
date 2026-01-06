@@ -18,7 +18,7 @@ public sealed partial class ERPPrototype : IPrototype
     [DataField(required: true)]
     public string Name = default!;
     [DataField]
-    public SpriteSpecifier Icon = new SpriteSpecifier.Texture(new("/Textures/Casha/ERPicon/fon.png"));
+    public SpriteSpecifier Icon = new SpriteSpecifier.Texture(new("/Textures/_FreakStation/Casha/ERPicon/fon.png"));
     [DataField("sound")]
     public List<SoundSpecifier> Sounds = new();
     [DataField] public HashSet<string> Emotes = new();
@@ -35,5 +35,5 @@ public sealed partial class ERPPrototype : IPrototype
 
     [DataField] public bool Erp = false;
 
-    [DataField] public int LovePercent = 0; 
+    [DataField] public int LovePercent = 0;
 }

@@ -30,6 +30,24 @@
         },
         {
             "name": "fill-5"
+        },
+        {
+            "name": "inhand-left-fill-1"
+        },
+        {
+            "name": "inhand-right-fill-1"
+        },
+        {
+            "name": "inhand-left-fill-2"
+        },
+        {
+            "name": "inhand-left-fill-3"
+        },
+        {
+            "name": "inhand-right-fill-2"
+        },
+        {
+            "name": "inhand-right-fill-3"
         }
     ]
 }
