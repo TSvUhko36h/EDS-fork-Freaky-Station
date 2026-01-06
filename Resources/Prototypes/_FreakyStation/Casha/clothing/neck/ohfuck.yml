@@ -5,10 +5,10 @@
   description: Крепкий ошейник немного сжимающий шею носителя и придушивая его. Кому то такое даже нравится.
   components:
     - type: Sprite
-      sprite: Casha/clothing/neck/ohgod.rsi
+      sprite: _FreakStation/Casha/clothing/neck/ohgod.rsi
     - type: Clothing
-      sprite: Casha/clothing/neck/ohgod.rsi
-      
+      sprite: _FreakStation/Casha/clothing/neck/ohgod.rsi
+
 - type: entity
   parent: ClothingScarfBase
   id: dog-collar-e
@@ -16,9 +16,9 @@
   description: Крепкий ошейник который выдаёт разряд тока по сигналу, кто то и такое любит.
   components:
     - type: Sprite
-      sprite: Casha/clothing/neck/ohgodd.rsi
+      sprite: _FreakStation/Casha/clothing/neck/ohgodd.rsi
     - type: Clothing
-      sprite: Casha/clothing/neck/ohgodd.rsi
+      sprite: _FreakStation/Casha/clothing/neck/ohgodd.rsi
       stripDelay: 10
       equipDelay: 5
     - type: SelfUnremovableClothing

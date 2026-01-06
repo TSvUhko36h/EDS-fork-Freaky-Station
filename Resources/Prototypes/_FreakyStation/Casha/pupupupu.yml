@@ -1,7 +1,7 @@
 - type: interaction
   id: RPFIVE
   name: Дать пять
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - даёт пять %target
   userSex: Unsexed
@@ -13,7 +13,7 @@
 - type: interaction
   id: RPPAT
   name: Погладить
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Гладит %target по голове своей рукой
   - Аккуратным движением руки проводит по волосам %target поглаживая их и перебирая пальцами
@@ -23,11 +23,11 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: false
-  
+
 - type: interaction
   id: ERPzad
   name: Шлёпнуть
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Шлёпает %target по заднице
   - Замахивается рукой и шлёпает %target по попе
@@ -39,11 +39,11 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: true
-  
+
 - type: interaction
   id: ERPkiss1
   name: Поцеловать в щёку
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Осторожно касается губами щеки %target задерживаясь на миг
   - Улыбается и нежно чмокает в щёчку %target, глядя в глаза
@@ -55,11 +55,11 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: false
-  
+
 - type: interaction
   id: ERPkiss2
   name: Поцеловать
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Cмотрит в глаза %target, затем страстно целует, позволяя языку исследовать губы %target
   - Притягивает ближе держа %target за талию, нежно касаясь губ, и углубляет поцелуй, сплетая языки в медленном танце
@@ -73,12 +73,12 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: true
-  
+
 #действия с мужчиной
 - type: interaction
   id: ERPMasturbirovat
   name: Мастурбировать
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Берёт член %target  в руку и медленно поглаживает его головку, открывая её и дразня своими прикосновениями
   - Берёт член %target  в две руки и медленно поглаживает его
@@ -96,7 +96,7 @@
 - type: interaction
   id: ERPMasturbirovatt
   name: Мастурбировать
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Опускает руку к паху %target и проводя по внутренней стороне бедра, доходит до киски начиная, после чего начинает поглаживать половые губы двумя пальцами
   - Трёт клитор %target медленными круговыми движениями
@@ -116,7 +116,7 @@
 - type: interaction
   id: ERPanal
   name: Трахнуть в задницу
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Раздвигает ноги %target и вставляет член в задницу
   - Сжимает задницу %target, после чего резким движением бёдер вставляет в неё свой член
@@ -131,11 +131,11 @@
   targetWithoutCloth: true
   erp: true
   lovePercent: 10
-  
+
 - type: interaction
   id: ERPvaginal
   name: Трахнуть киску
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Раздвигает ноги %target и вставляет член в её пизду
   - Сжимает ляжки %target разводя её ноги и резким движением бёдер вставляет член в её киску
@@ -150,11 +150,11 @@
   targetWithoutCloth: true
   erp: true
   lovePercent: 15
-  
+
 - type: interaction
   id: ERPminetM
   name: Трахнуть рот
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Берёт %target за волосы и движением своих бёдер вставляет его в рот %target
   - Резким движением бёдер вставляет свой член в рот %target
@@ -169,15 +169,15 @@
   targetWithoutCloth: false
   erp: true
   lovePercent: 20
-  
+
 - type: interaction
   id: ERPkuninakanuni
   name: Сесть на лицо
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Садиться на лицо %target прижимаясь своей киской ко рту %target и водя ею по лицу
-  - Сжимает ляшки около лица %target пока трётся своей киской об лицо 
-  - Сидит на лице %target издавая протяжные стоны и водя своей киской 
+  - Сжимает ляшки около лица %target пока трётся своей киской об лицо
+  - Сидит на лице %target издавая протяжные стоны и водя своей киской
   sounds:
     path: /Audio/ERP/ERPPanelSton6.ogg
   userSex: Female
@@ -186,15 +186,15 @@
   targetWithoutCloth: false
   erp: true
   lovePercent: 15
-  
+
 - type: interaction
   id: ERPkuninakanunim
   name: Отлизать киску
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Склоняется ко влагалищу %target и медленно вылизывает его внутренности
   - Приблизившись к влагалищу %target, игриво касается половых губ языком
-  - Покорно облизывает влагалище %target, слегка причмокивая 
+  - Покорно облизывает влагалище %target, слегка причмокивая
   sounds:
     path: /Audio/ERP/ERPPanelSton6.ogg
   userSex: Unsexed
@@ -203,11 +203,11 @@
   targetWithoutCloth: true
   erp: true
   lovePercent: 20
-  
+
 - type: interaction
   id: ERPsoso
   name: Отсосать член
-  icon: Casha/ERPemote/hearticon.png
+  icon: _FreakStation/Casha/ERPemote/hearticon.png
   emotes:
   - Берёт член %target в свой рот и начинает его сосать слегка причмокивая
   - Покорно сосёт член %target ритмично двигая своей головой

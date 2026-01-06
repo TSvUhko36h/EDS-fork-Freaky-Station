@@ -5,6 +5,6 @@
   description: Красивая чёрная шляпа закрывающая часть лица.
   components:
   - type: Sprite
-    sprite: Casha/clothing/head/Sherlookpizdec.rsi
+    sprite: _FreakStation/Casha/clothing/head/Sherlookpizdec.rsi
   - type: Clothing
-    sprite: Casha/clothing/head/Sherlookpizdec.rsi
+    sprite: _FreakStation/Casha/clothing/head/Sherlookpizdec.rsi

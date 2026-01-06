@@ -18,7 +18,7 @@
     - state: icon-open
       map: ["foldedLayer"]
       visible: false
-      
+
 - type: entity
   abstract: true
   parent: InnerClothingFoldableBase
@@ -39,7 +39,7 @@
     - state: icon-open
       map: ["foldedLayer"]
       visible: true
-      
+
 - type: entity
   parent: InnerClothingFoldableBase
   id: prikol
@@ -47,9 +47,9 @@
   description: Короткая юбка с коротким топом сильно открывающим грудь.
   components:
   - type: Sprite
-    sprite: Casha/clothing/jumpsuit/Sherlookkaif.rsi
+    sprite: _FreakStation/Casha/clothing/jumpsuit/Sherlookkaif.rsi
   - type: Clothing
-    sprite: Casha/clothing/jumpsuit/Sherlookkaif.rsi
+    sprite: _FreakStation/Casha/clothing/jumpsuit/Sherlookkaif.rsi
 
 - type: entity
   parent: [InnerClothingFoldableBaseOpened, prikol]

@@ -272,7 +272,7 @@
     LPPTubetopTeal: 10
     LPPTubetopWhite: 10
     LPPTubetopYellow: 10
-    
+
 - type: entity
   parent: VendingMachine
   id: VendingMachinePants
@@ -294,7 +294,7 @@
   - type: SpeakOnUIClosed
     pack: Pantsbyes
   - type: Sprite
-    sprite: Casha/Vendomat/pantsvend.rsi
+    sprite: _FreakStation/Casha/Vendomat/pantsvend.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -307,7 +307,7 @@
     radius: 1.5
     energy: 1.6
     color: "#006400"
-    
+
 - type: entity
   parent: VendingMachine
   id: VendingMachineSex
@@ -329,7 +329,7 @@
   - type: SpeakOnUIClosed
     pack: Sexbyes
   - type: Sprite
-    sprite: Casha/Vendomat/sexmat.rsi
+    sprite: _FreakStation/Casha/Vendomat/sexmat.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -342,13 +342,13 @@
     radius: 1.5
     energy: 1.6
     color: "#ff1493"
-    
+
 - type: localizedDataset
   id: SexAds
   values:
     prefix: advertisement-sexmat-
     count: 6
-    
+
 - type: localizedDataset
   id: Sexbyes
   values:

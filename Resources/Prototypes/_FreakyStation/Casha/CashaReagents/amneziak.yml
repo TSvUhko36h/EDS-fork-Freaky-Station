@@ -45,5 +45,5 @@
   - type: Label
     currentLabel: Афродизиак
   - type: Sprite
-    sprite: Casha/reagent/afrodeziak.rsi
+    sprite: _FreakStation/Casha/reagent/afrodeziak.rsi
   - type: Sealable
