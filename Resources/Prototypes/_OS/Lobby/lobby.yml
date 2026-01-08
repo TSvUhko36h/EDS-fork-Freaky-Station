@@ -1,4 +1,8 @@
 - type: animatedLobbyScreen
+  id: EveningSun7Screen
+  path: /Textures/_OS/Lobby/evening_sun7.rsi
+
+- type: animatedLobbyScreen
   id: SpaceHoleLobbyScreen
   path: /Textures/_OS/Lobby/space-hole.rsi
 
@@ -25,10 +29,6 @@
 - type: animatedLobbyScreen
   id: EveningSun6Screen
   path: /Textures/_OS/Lobby/evening_sun6.rsi
-
-- type: animatedLobbyScreen
-  id: EveningSun7Screen
-  path: /Textures/_OS/Lobby/evening_sun7.rsi
 
 - type: animatedLobbyScreen
   id: EveningSun8Screen
