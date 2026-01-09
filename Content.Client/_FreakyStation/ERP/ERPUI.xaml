@@ -12,18 +12,6 @@
             <BoxContainer Name="TargetDescription" Orientation="Vertical" HorizontalExpand="True" HorizontalAlignment="Right" Margin="10" MinWidth="0">
             </BoxContainer>
         </BoxContainer>
-        <BoxContainer Name="ErpProgress" Orientation="Horizontal" HorizontalExpand="True" MaxHeight="20" VerticalAlignment="Top" Margin="10">
-            <ProgressBar
-                        Margin="3 3 3 3"
-                        Name="ProgressBar"
-                        MinValue="0"
-                        MaxValue="1"
-                        MinWidth="357"
-                        SetHeight="20"
-                        HorizontalExpand="True"
-                        HorizontalAlignment="Left">
-            </ProgressBar>
-        </BoxContainer>
         <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}" Thickness="2" Access="Public" />
         <ItemList Name="ItemInteractions"
                   Access="Public"

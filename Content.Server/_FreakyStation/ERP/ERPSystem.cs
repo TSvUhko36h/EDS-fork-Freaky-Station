@@ -15,10 +15,12 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Alert;
 namespace Content.Server.ERP
 {
     public sealed class ERPSystem : EntitySystem
     {
+        [Dependency] private readonly AlertsSystem _alerts = default!;
         [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
         [Dependency] private readonly EuiManager _eui = default!;
         [Dependency] protected readonly ItemSlotsSystem ItemSlotsSystem = default!;
@@ -137,7 +139,6 @@ namespace Content.Server.ERP
         public override void Update(float frameTime)
         {
             base.Update(frameTime);
-
             var query = EntityQueryEnumerator<ERPComponent>();
             while (query.MoveNext(out var uid, out var comp))
             {
@@ -148,6 +149,22 @@ namespace Content.Server.ERP
                 }
                 if (comp.Love < 0) comp.Love = 0;
                 if (comp.ActualLove < 0) comp.ActualLove = 0;
+                comp.Love -= ((comp.Love - comp.ActualLove) / 1) * frameTime;
+                if (_gameTiming.CurTime - comp.TimeFromLastErp > TimeSpan.FromSeconds(15) && comp.Love > 0)
+                {
+                    comp.ActualLove -= 0.001f;
+                }
+                comp.Love = MathHelper.Clamp(comp.Love, 0f, 1f);
+                comp.ActualLove = MathHelper.Clamp(comp.ActualLove, 0f, 1f);
+                float progress = comp.Love;
+
+                if (!comp.Erp || progress < 0.1f)
+                {
+                    _alerts.ClearAlert(uid, "Arousal");
+                    continue;
+                }
+                short severity = (short) Math.Clamp(Math.Floor(progress * 10) + 1, 1, 10);
+                _alerts.ShowAlert(uid, "Arousal", severity);
             }
         }
 

@@ -149,8 +149,7 @@
   userWithoutCloth: true
   targetWithoutCloth: true
   erp: true
-  lovePercent: 15
-
+  lovePercent: 10
 - type: interaction
   id: ERPminetM
   name: Трахнуть рот
@@ -168,8 +167,8 @@
   userWithoutCloth: true
   targetWithoutCloth: false
   erp: true
-  lovePercent: 20
-
+  lovePercent: 10
+  
 - type: interaction
   id: ERPkuninakanuni
   name: Сесть на лицо
@@ -185,7 +184,7 @@
   userWithoutCloth: true
   targetWithoutCloth: false
   erp: true
-  lovePercent: 15
+  lovePercent: 10
 
 - type: interaction
   id: ERPkuninakanunim
@@ -202,8 +201,7 @@
   userWithoutCloth: false
   targetWithoutCloth: true
   erp: true
-  lovePercent: 20
-
+  lovePercent: 10
 - type: interaction
   id: ERPsoso
   name: Отсосать член
@@ -221,4 +219,311 @@
   userWithoutCloth: false
   targetWithoutCloth: true
   erp: true
+  lovePercent: 10
+  
+- type: interaction
+  id: ERPHug
+  name: Обнять
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Крепко обнимает %target, прижимаясь всем телом
+  - Нежно обнимает %target сзади, кладя руки на талию
+  - Притягивает %target к себе и обнимает, зарываясь лицом в шею
+  - Обхватывает %target руками и тихо шепчет что-то на ухо, не отпуская
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+- type: interaction
+  id: ERPTouchChest
+  name: Потрогать грудь
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Медленно проводит ладонью по груди %target, слегка сжимая
+  - Нежно массирует грудь %target через одежду, дразня соски пальцами
+  - Прижимает ладонь к груди %target и лёгкими кругами ласкает её
+  - Скользит рукой под одежду %target и напрямую касается груди, перебирая пальцами сосок
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 5
+
+- type: interaction
+  id: ERPTouchChestM
+  name: Потрогать грудь
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Проводит ладонью по груди %target, лаская соски через ткань
+  - Слегка сжимает грудные мышцы %target, дразня пальцами
+  - Нежно массирует грудь %target, проводя большими пальцами по соскам
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 5
+
+- type: interaction
+  id: ERPLickNipples
+  name: Лизнуть соски
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Приоткрывает одежду %target и медленно проводит языком по соску
+  - Нежно облизывает соски %target, слегка посасывая их
+  - Кружит языком вокруг соска %target, затем втягивает его в рот
+  - Покусывает и облизывает соски %target, чередуя нежность и лёгкую боль
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 5
+
+- type: interaction
+  id: ERPGrind
+  name: Потереться
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Прижимается к %target всем телом и медленно трётся бёдрами
+  - Садится сверху на %target и начинает двигать бёдрами в попытках потереться об него
+  - Стоя сзади, прижимается и трётся пахом о задницу %target
+  - Медленно водит бёдрами, прижимаясь промежностью к бедру %target
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 5
+
+- type: interaction
+  id: ERPSitOnLap
+  name: Сесть на колени
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Садится на колени к %target, обхватывая его шею руками
+  - Медленно опускается на колени %target, прижимаясь всем телом
+  - Садится спиной к %target на его колени и начинает слегка двигаться
+  - Устраивается на коленях %target, кладя руки ему на плечи и глядя в глаза
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 5
+  
+- type: interaction
+  id: ERPRide
+  name: Оседлать
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Садится сверху на член %target и начинает активно скакать, принимая его глубоко
+  - Оседлав %target, медленно опускается на член и начинает двигаться бёдрами в ритме
+  - Сидит на %target сверху и трахает себя его членом, сжимая бёдра и постанывая
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Female
+  targetSex: Male
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
   lovePercent: 15
+
+- type: interaction
+  id: ERPDoggy
+  name: Трахнуть раком
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Ставит %target раком и входит сзади, крепко держа за бёдра и трахая глубоко
+  - Входит в %target сзади резким движением и начинает мощно трахать в позе догги
+  - Хлопает по заднице %target и трахает раком, вгоняя член до упора
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 15
+  
+- type: interaction
+  id: ERP69Female
+  name: 69
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Ложится на %target в позе 69 и одновременно лижет киску, пока %target делает то же самое
+  - Устраивается сверху в 69, прижимая пах ко рту %target и жадно беря её киску в рот
+  - Взаимно ласкает %target ртом в позе 69, синхронно двигаясь и постанывая
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 15
+  
+- type: interaction
+  id: ERP69Male
+  name: 69
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Ложится на %target в позе 69 и одновременно сосёт его член, пока %target делает то же самое
+  - Устраивается сверху в 69, прижимая пах ко рту %target и жадно беря его член в рот
+  - Взаимно ласкает %target ртом в позе 69, синхронно двигаясь и постанывая
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 15
+  
+- type: interaction
+  id: ERPCumInside
+  name: Кончить внутрь
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Ускоряет движения и с громким стоном кончает глубоко внутрь %target, заполняя её горячим семенем
+  - Прижимается плотно к %target и с рычащими стонами изливается внутрь, чувствуя как пульсирует внутри
+  - Доводит себя до края и с силой вгоняет член поглубже, кончая внутрь %target мощными толчками
+  - Сжимает %target в объятиях и кончает внутрь, ощущая как семя заполняет её до краёв
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 30
+
+- type: interaction
+  id: ERPCumMouth
+  name: Кончить в рот
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Вытаскивает член и с громким стоном кончает в открытый рот %target, заполняя его семенем
+  - Держит %target за волосы и кончает прямо в рот, заставляя принимать каждую струю
+  - Дрожит и изливает густое семя в рот %target, наблюдая как оно стекает по губам
+  - С силой прижимает член ко рту %target и кончает, заполняя горло горячим семенем
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 25
+
+- type: interaction
+  id: ERPCumFace
+  name: Кончить на лицо
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Вытаскивает член и кончает на лицо %target, покрывая щёки и губы густыми струями
+  - Смотрит в глаза %target и с рыком кончает, разрисовывая её лицо семенем
+  - Дрочит член над лицом %target и мощно кончает, оставляя горячие капли на коже
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 20
+
+- type: interaction
+  id: ERPCumChest
+  name: Кончить на грудь
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Кончает на грудь %target, покрывая соски и кожу горячими струями семени
+  - Прижимает член между грудей %target и кончает, оставляя семя стекать по её телу
+  - Дрочит над грудью %target и с громким стоном изливает семя на её соски
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 20
+  
+- type: interaction
+  id: ERPTitjob
+  name: Трахнуть грудь
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Зажимает член между грудей %target и начинает трахать их, скользя между мягкими холмами
+  - Двигает бёдрами, трахая грудь %target, пока головка члена касается её губ
+  - Сжимает грудь %target вокруг своего члена и интенсивно двигает бёдрами
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 10
+  
+- type: interaction
+  id: ERPFootjob
+  name: Футджоб
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Обхватывает член %target ступнями и медленно дрочит его ногами
+  - Трёт головку члена %target пальцами ног, дразня и сжимая
+  - Интенсивно дрочит член %target обеими ступнями, ускоряя темп
+  - Массирует член %target подошвами, чередуя давление и лёгкие касания
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 5
+  
+- type: interaction
+  id: ERPMissionary
+  name: Трахнуть в миссионерской позе
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Ложится на %target, раздвигает её ноги и глубоко входит, трахая в классической позе
+  - Прижимается всем телом к %target и мощно двигает бёдрами, глядя в глаза
+  - Держит руки %target над головой и трахает в миссионерке, ускоряя темп
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 15
+  
+- type: interaction
+  id: ERPStanding
+  name: Трахнуть стоя
+  icon: Casha/ERPemote/hearticon.png
+  emotes:
+  - Прижимает %target к стене и входит, трахая стоя
+  - Поднимает одну ногу %target и глубоко проникает, держа на руках
+  - Стоя лицом к лицу, входит в %target и интенсивно двигает бёдрами
+  sounds:
+    path: /Audio/ERP/ERPPanelSton6.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 25
