@@ -35,27 +35,6 @@ namespace Content.Client._FreakyStation.ERP
 
             _audio = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<SharedAudioSystem>();
         }
-
-        public override void HandleMessage(EuiMessageBase msg)
-        {
-            base.HandleMessage(msg);
-
-            switch (msg)
-            {
-                case ResponseLoveMessage req:
-                    _window.LoveBar.Value = req.Percent;
-                    break;
-                case ResponseInteractionState req:
-                    _window.UserHasClothing = req.UserHasClothing;
-                    _window.TargetHasClothing = req.TargetHasClothing;
-                    _window.UserSex = req.UserSex;
-                    _window.TargetSex = req.TargetSex;
-                    _window.Erp = req.ErpAllowed;
-                    _window.Populate();
-                    break;
-            }
-        }
-
         public void RequestLove()
         {
             if (!_player.LocalEntity.HasValue) return;
