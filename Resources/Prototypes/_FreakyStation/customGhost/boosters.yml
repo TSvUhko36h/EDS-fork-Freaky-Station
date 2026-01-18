@@ -40,3 +40,11 @@
   alpha: 0.8
   ghostName: BlackCat
   ghostDescription: Мяу
+  
+- type: customGhost
+  id: Kef1r00Ghost
+  ckey: kef1r00
+  sprite: /Textures/_FreakStation/Ghost/Booster/GhostKef1r00.rsi
+  alpha: 0.8
+  ghostName: kef1r00
+  ghostDescription: поддержал сервер

@@ -14,21 +14,21 @@
   ghostName: Casha
   ghostDescription: Допиваю свой бокал и снова в жизни ищу толк
 
-- type: customGhost
-  id: kef1rOOGhost
-  ckey: kef1r00
-  sprite: /Textures/_FreakStation/Ghost/GhostWhite.rsi
-  alpha: 0.8
-  ghostName: kef1r00
-  ghostDescription: "я не придумал"
+# - type: customGhost #понижен до бустера тип
+  # id: kef1rOOGhost
+  # ckey: kef1r00
+  # sprite: /Textures/_FreakStation/Ghost/GhostWhite.rsi
+  # alpha: 0.8
+  # ghostName: kef1r00
+  # ghostDescription: "я не придумал"
 
-- type: customGhost
-  id: ANIvarmGhost
-  ckey: ANIvarm
-  sprite: /Textures/_FreakStation/Ghost/GhostKaiju.rsi
-  alpha: 0.8
-  ghostName: ANIvarm
-  ghostDescription: brr brr patapim
+# - type: customGhost # мне не нравится крч
+  # id: ANIvarmGhost
+  # ckey: ANIvarm
+  # sprite: /Textures/_FreakStation/Ghost/GhostKaiju.rsi
+  # alpha: 0.8
+  # ghostName: ANIvarm
+  # ghostDescription: brr brr patapim
 
 - type: customGhost
   id: SherlookGhost
