@@ -119,12 +119,16 @@ namespace Content.Server.ERP
                                 {
                                     if (container.Containers["jumpsuit"].ContainedEntities.Count != 0) userClothing = true;
                                     if (container.Containers["outerClothing"].ContainedEntities.Count != 0) userClothing = true;
+                                    if (container.Containers["breast"].ContainedEntities.Count != 0) userClothing = true;
+                                    if (container.Containers["underwear"].ContainedEntities.Count != 0) userClothing = true;
                                 }
 
                                 if (TryComp<ContainerManagerComponent>(args.Target, out var targetContainer))
                                 {
                                     if (targetContainer.Containers["jumpsuit"].ContainedEntities.Count != 0) targetClothing = true;
                                     if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
+                                    if (targetContainer.Containers["breast"].ContainedEntities.Count != 0) targetClothing = true;
+                                    if (targetContainer.Containers["underwear"].ContainedEntities.Count != 0) targetClothing = true;
                                 }
 
                                 _eui.OpenEui(new ERPEUI(GetNetEntity(args.Target), userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp), player);

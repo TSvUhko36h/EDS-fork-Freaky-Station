@@ -70,6 +70,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared.ADT.CCVar;
 
 namespace Content.Shared.Preferences
 {
@@ -123,6 +124,18 @@ namespace Content.Shared.Preferences
         [DataField]
         public string FlavorText { get; set; } = string.Empty;
 
+        //ADT-tweak-start
+        /// <summary>
+        /// ООС заметки у персонажа
+        /// </summary>
+        [DataField]
+        public string OOCNotes { get; set; } = string.Empty;
+        /// <summary>
+        /// ссылка на хэдшот персонажа
+        /// </summary>
+        [DataField]
+        public string HeadshotUrl { get; set; } = string.Empty;
+        //ADT-tweak-end
         [DataField]
         public ERPS ERPS { get; set; } = ERPS.No;
 
@@ -203,7 +216,12 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
-            Dictionary<string, RoleLoadout> loadouts)
+            Dictionary<string, RoleLoadout> loadouts,
+            //ADT Start
+            string oocNotes,
+            string headshotUrl
+            //ADT End
+        )
             // ProtoId<BarkPrototype> barkVoice) // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
         {
             Name = name;
@@ -220,6 +238,10 @@ namespace Content.Shared.Preferences
             _antagPreferences = antagPreferences;
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
+            // ADT start
+            OOCNotes = oocNotes;
+            HeadshotUrl = headshotUrl;
+            // ADT end
             // BarkVoice = barkVoice; // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
 
             var hasHighPrority = false;
@@ -252,7 +274,12 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
-                new Dictionary<string, RoleLoadout>(other.Loadouts))
+                new Dictionary<string, RoleLoadout>(other.Loadouts),
+                // ADT start
+                other.OOCNotes,
+                other.HeadshotUrl
+                )
+                // ADT end
                 // other.BarkVoice) // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
         {
         }
@@ -367,7 +394,16 @@ namespace Content.Shared.Preferences
         {
             return new(this) { FlavorText = flavorText };
         }
-
+        //ADT-tweak-start: ООС заметки и ЮРЛ
+        public HumanoidCharacterProfile WithOOCNotes(string oocNotes)
+        {
+            return new(this) { OOCNotes = oocNotes };
+        }
+        public HumanoidCharacterProfile WithHeadshotUrl(string headshotUrl)
+        {
+            return new(this) { HeadshotUrl = headshotUrl };
+        }
+        //ADT-tweak-end
         public HumanoidCharacterProfile WithAge(int age)
         {
             return new(this) { Age = age };
@@ -591,6 +627,10 @@ namespace Content.Shared.Preferences
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
+            //ADT-Start
+            if (OOCNotes != other.OOCNotes) return false;
+            if (HeadshotUrl != other.HeadshotUrl) return false;
+            //ADT-End
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 
@@ -681,7 +721,24 @@ namespace Content.Shared.Preferences
             {
                 flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
             }
+            //ADT-tweak-start
+            string oocNotes = OOCNotes; // Initialize with the property value
+            if (oocNotes.Length > maxFlavorTextLength)
+            {
+                oocNotes = FormattedMessage.RemoveMarkupOrThrow(oocNotes)[..maxFlavorTextLength];
+            }
+            else
+            {
+                oocNotes = FormattedMessage.RemoveMarkupOrThrow(oocNotes);
+            }
 
+            string headshoturl = HeadshotUrl;
+            if (headshoturl.Length > 500 || !HeadshotUrl.Contains(configManager.GetCVar(ADTCCVars.HeadshotUrl))) //чутка хардкод, но это просто чтобы не засирали ссылкками на что угодно
+            {
+                headshoturl = string.Empty;
+            }
+            //максимальная длина ООЦ заметок не больше чем длина флавора
+            //ADT-tweak-end
             var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex, sponsorPrototypes); // CorvaxGoob-Sponsors
 
             var prefsUnavailableMode = PreferenceUnavailable switch
@@ -730,6 +787,10 @@ namespace Content.Shared.Preferences
 
             Name = name;
             FlavorText = flavortext;
+            //ADT-tweak-start
+            OOCNotes = oocNotes;
+            HeadshotUrl = headshoturl;
+            //ADT-tweak-end
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -855,6 +916,10 @@ namespace Content.Shared.Preferences
             hashCode.Add(_traitPreferences);
             hashCode.Add(_loadouts);
             hashCode.Add(Name);
+            //ADT-tweak-start
+            hashCode.Add(OOCNotes);
+            hashCode.Add(HeadshotUrl);
+            //ADT-tweak-end
             hashCode.Add(FlavorText);
             hashCode.Add(Species);
             hashCode.Add(Age);
