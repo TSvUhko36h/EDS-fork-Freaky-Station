@@ -421,7 +421,11 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
+                loadouts,
+                // ADT start
+                profile.OOCNotes,
+                profile.HeadshotUrl
+                // ADT end
                 // barkVoice // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
             );
         }
@@ -509,6 +513,8 @@ namespace Content.Server.Database
                 profile.Loadouts.Add(dz);
             }
 
+            profile.OOCNotes = humanoid.OOCNotes;
+            profile.HeadshotUrl = humanoid.HeadshotUrl;
             return profile;
         }
         #endregion

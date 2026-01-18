@@ -113,6 +113,7 @@ using Content.Shared.Teleportation;
 using Content.Shared.Stunnable;
 using Content.Goobstation.Shared.Teleportation.Systems;
 using Content.Shared.Polymorph;
+using Content.Shared.ADT.CharacterFlavor;
 
 namespace Content.Server.Implants;
 
@@ -248,6 +249,7 @@ public sealed class SubdermalImplantSystem : SharedSubdermalImplantSystem
             _forensicsSystem.RandomizeFingerprint(ent);
 
             RemComp<DetailExaminableComponent>(ent); // remove MRP+ custom description if one exists
+            RemComp<CharacterFlavorComponent>(ent); //ADT-tweak: удаляем флавор вместе с прочим
             _identity.QueueIdentityUpdate(ent); // manually queue identity update since we don't raise the event
             _popup.PopupEntity(Loc.GetString("scramble-implant-activated-popup"), ent, ent);
         }
