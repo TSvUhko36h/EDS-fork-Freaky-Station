@@ -32,7 +32,6 @@
     - id: RubberStampNanorep
     - id: ExecutiveBriefcaseEmpty # nanorep update
     - id: ComputerNTRTasksFlatpack # nanorep update
-    - id: TelephoneIaa
     - id: Paper
       amount: !type:ConstantNumberSelector
         value: 5

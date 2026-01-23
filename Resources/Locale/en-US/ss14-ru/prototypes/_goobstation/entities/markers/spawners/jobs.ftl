@@ -6,7 +6,3 @@ ent-SpawnPointNanotrasenCareerTrainer = nanotrasencareertrainer
     .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointRoboticist = SpawnPointRoboticist
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointRadioHost = SpawnPointRadioHost
-    .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointVirologist = virologist
-    .desc = { ent-SpawnPointJobBase.desc }

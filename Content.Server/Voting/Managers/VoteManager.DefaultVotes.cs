@@ -635,13 +635,13 @@ namespace Content.Server.Voting.Managers
                     continue;
                 if(preset.ModeTitle == "traitor-title" && _playerManager.PlayerCount<5)
                     continue;
-                if(preset.ModeTitle == "nukeops-title" && _playerManager.PlayerCount<25)
+                if(preset.ModeTitle == "nukeops-title" && _playerManager.PlayerCount<40)
                     continue;
-                if(preset.ModeTitle == "cosmiccult-title" && _playerManager.PlayerCount<20)
+                if(preset.ModeTitle == "cosmiccult-title" && _playerManager.PlayerCount<30)
                     continue;
-                if(preset.ModeTitle == "survivalplus-title" && _playerManager.PlayerCount<25)
+                if(preset.ModeTitle == "survivalplus-title" && _playerManager.PlayerCount<40)
                     continue;
-                if(preset.ModeTitle == "secretplus-mid-title" && _playerManager.PlayerCount<20)
+                if(preset.ModeTitle == "secretplus-mid-title" && _playerManager.PlayerCount<25)
                     continue;
                 if(preset.ModeTitle == "rev-title" && _playerManager.PlayerCount<30)
                     continue;

@@ -27,7 +27,7 @@ using Content.Shared.Ghost;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
 using Content.Shared._Mini.MiniCCVars;
-// using Content._Mini.Interfaces.Shared;
+// using Content.Mini.Interfaces.Shared;
 using Robust.Shared.Configuration;
 using GhostWarpsResponseEvent = Content.Shared.Ghost.SharedGhostSystem.GhostWarpsResponseEvent;
 

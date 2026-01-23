@@ -1,5 +1,4 @@
 using Content.Client._CorvaxGoob.RoundEnd.PhotoAlbum;
-using Content.Client.Message;
 using Content.Client.Stylesheets;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -28,7 +27,7 @@ public sealed partial class RoundEndSummaryWindow
 
         stationAlbumTab.RemoveAllChildren();
 
-        if (stationAlbumSystem.Albums is null || stationAlbumSystem.Albums.Count == 0)
+        if (stationAlbumSystem.Images is null || stationAlbumSystem.Images.Count == 0)
             return null;
 
         var stationAlbumContainerScrollbox = new ScrollContainer
@@ -42,97 +41,67 @@ public sealed partial class RoundEndSummaryWindow
         {
             Orientation = LayoutOrientation.Vertical,
             HorizontalExpand = true,
+            VerticalExpand = true
         };
+
+        var gridContainer = new GridContainer();
+
+        gridContainer.Columns = 2;
+        gridContainer.HorizontalExpand = true;
 
         SpriteSpecifier.Texture downloadIconTexture = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/in.svg.192dpi.png"));
 
-        foreach (var album in stationAlbumSystem.Albums)
+        foreach (var image in stationAlbumSystem.Images)
         {
-            var gridContainer = new GridContainer();
+            MemoryStream stream = new MemoryStream(image.Key);
 
-            gridContainer.Columns = 2;
-            gridContainer.HorizontalExpand = true;
+            var imageLabel = new RichTextLabel();
 
-            foreach (var image in album.Images)
-            {
-                MemoryStream stream = new MemoryStream(image.Key);
+            if (image.Value is not null)
+                imageLabel.SetMessage(image.Value);
+            else
+                imageLabel.SetMessage(Loc.GetString("round-end-summary-album-photo-no-name"));
 
-                var imageLabel = new RichTextLabel();
-
-                if (image.Value is not null)
-                    imageLabel.SetMessage(image.Value);
-                else
-                    imageLabel.SetMessage(Loc.GetString("round-end-summary-album-photo-no-name"));
-
-                var imageContainer = new BoxContainer
-                {
-                    Orientation = LayoutOrientation.Vertical,
-                    HorizontalExpand = true,
-                    VerticalExpand = true
-                };
-
-                TextureRect textureRect = new TextureRect
-                {
-                    Margin = new Thickness(5, 10, 5, 5)
-                };
-
-                TextureButton downloadButton = new TextureButton
-                {
-                    HorizontalAlignment = HAlignment.Right,
-                    VerticalAlignment = VAlignment.Bottom
-                };
-
-                downloadButton.OnPressed += _ => DownloadButton_OnPressed(_, image.Key);
-
-                downloadButton.Scale = new Vector2(0.5f, 0.5f);
-                downloadButton.TextureNormal = spriteSystem.Frame0(downloadIconTexture);
-
-                textureRect.Texture = Texture.LoadFromPNGStream(stream);
-                textureRect.AddChild(downloadButton);
-
-                var panel = new PanelContainer
-                {
-                    StyleClasses = { StyleNano.StyleClassBackgroundBaseDark },
-                };
-
-                imageContainer.AddChild(textureRect);
-                imageContainer.AddChild(imageLabel);
-
-                panel.AddChild(imageContainer);
-
-                gridContainer.AddChild(panel);
-            }
-
-            stationAlbumContainer.AddChild(gridContainer);
-
-            var stationAlbumAuthorHeaderContainer = new BoxContainer
+            var imageContainer = new BoxContainer
             {
                 Orientation = LayoutOrientation.Vertical,
                 HorizontalExpand = true,
-                VerticalExpand = true,
-                Margin = new Thickness(0, 5, 0, 5)
+                VerticalExpand = true
             };
 
-            var stationAlbumAuthorHeaderPanel = new PanelContainer
+            TextureRect textureRect = new TextureRect
+            {
+                Margin = new Thickness(5, 10, 5, 5)
+            };
+
+            TextureButton downloadButton = new TextureButton
+            {
+                HorizontalAlignment = HAlignment.Right,
+                VerticalAlignment = VAlignment.Bottom
+            };
+
+            downloadButton.OnPressed += _ => DownloadButton_OnPressed(_, image.Key);
+
+            downloadButton.Scale = new Vector2(0.5f, 0.5f);
+            downloadButton.TextureNormal = spriteSystem.Frame0(downloadIconTexture);
+
+            textureRect.Texture = Texture.LoadFromPNGStream(stream);
+            textureRect.AddChild(downloadButton);
+
+            var panel = new PanelContainer
             {
                 StyleClasses = { StyleNano.StyleClassBackgroundBaseDark },
-                SetSize = new Vector2(556, 30),
-                HorizontalAlignment = HAlignment.Left
             };
 
-            var stationAlbumAuthorHeaderLabel = new RichTextLabel();
+            imageContainer.AddChild(textureRect);
+            imageContainer.AddChild(imageLabel);
 
-            string authorName = album.AuthorName == null ? Loc.GetString("round-end-summary-album-photo-no-author-name") : album.AuthorName;
-            string authorCKey = album.AuthorCkey == null ? Loc.GetString("round-end-summary-album-photo-no-author-ckey") : album.AuthorCkey;
+            panel.AddChild(imageContainer);
 
-            stationAlbumAuthorHeaderLabel.SetMarkup(Loc.GetString("round-end-summary-album-photo-author", ("authorName", authorName), ("authorCKey", authorCKey)));
-
-            stationAlbumAuthorHeaderPanel.AddChild(stationAlbumAuthorHeaderLabel);
-            stationAlbumAuthorHeaderContainer.AddChild(stationAlbumAuthorHeaderPanel);
-
-            stationAlbumContainer.AddChild(stationAlbumAuthorHeaderContainer);
+            gridContainer.AddChild(panel);
         }
 
+        stationAlbumContainer.AddChild(gridContainer);
         stationAlbumContainerScrollbox.AddChild(stationAlbumContainer);
         stationAlbumTab.AddChild(stationAlbumContainerScrollbox);
 

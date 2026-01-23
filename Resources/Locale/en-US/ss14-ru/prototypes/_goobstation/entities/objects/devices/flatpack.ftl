@@ -40,7 +40,3 @@ ent-ClawMachineFlatPack = claw machine flat pack
     .desc = A flatpack used for constructing a claw machine
 ent-ChemistryHotplateFlatPack = hotplate flat pack
     .desc = A flatpack used for constructing a hotplate.
-ent-DiseaseDiagnoserFlatPack = disease diagnoser flat pack
-    .desc = A flatpack used for constructing a disease diagnoser.
-ent-VaccinatorFlatPack = vaccinator machine flat pack
-    .desc = A flatpack used for constructing a vaccinator.

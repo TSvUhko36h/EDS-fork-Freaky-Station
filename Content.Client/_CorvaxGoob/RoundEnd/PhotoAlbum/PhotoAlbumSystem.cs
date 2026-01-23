@@ -4,7 +4,7 @@ namespace Content.Client._CorvaxGoob.RoundEnd.PhotoAlbum;
 
 public sealed class PhotoAlbumSystem : EntitySystem
 {
-    public List<AlbumData>? Albums { get; private set; }
+    public Dictionary<byte[], string?>? Images { get; private set; }
 
     public override void Initialize()
     {
@@ -13,7 +13,7 @@ public sealed class PhotoAlbumSystem : EntitySystem
         SubscribeNetworkEvent<PhotoAlbumEvent>(OnStationImagesReceived);
     }
 
-    private void OnStationImagesReceived(PhotoAlbumEvent ev) => Albums = ev.Albums;
+    private void OnStationImagesReceived(PhotoAlbumEvent ev) => Images = ev.Images;
 
-    public void ClearImagesData() => Albums = null;
+    public void ClearImagesData() => Images = null;
 }

@@ -521,7 +521,7 @@
   description: uplink-belt-rig-desc
   productEntity: ClothingBeltMilitaryRigGrenadier
   cost:
-    Telecrystal: 3
+    Telecrystal: 12
   categories:
   -  UplinkWearables
   conditions:
@@ -764,7 +764,7 @@
   icon: { sprite: _Goobstation/Objects/Devices/communication.rsi, state: radio-syndiroach }
   productEntity: ReinforcementRadioSyndicateSyndiRoach
   cost:
-    Telecrystal: 4
+    Telecrystal: 6
   categories:
     - UplinkAllies
 

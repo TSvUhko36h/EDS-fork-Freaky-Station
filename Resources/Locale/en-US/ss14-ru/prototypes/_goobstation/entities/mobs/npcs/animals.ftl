@@ -30,5 +30,3 @@ ent-MobWhiteWolf = white wolf
     .desc = Don't try to pet this one.
 ent-MobHorse = horse
     .desc = Very foul creature. For those that feel like punching.
-ent-MobClownGoblin = clown goblin
-    .desc = Little walking clown mask and shoes. You want to honk their nose!

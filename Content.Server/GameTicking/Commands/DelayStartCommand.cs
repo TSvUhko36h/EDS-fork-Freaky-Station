@@ -46,7 +46,7 @@ namespace Content.Server.GameTicking.Commands
                 return;
             }
 
-            if (!int.TryParse(args[0], out var seconds) || seconds == 0) // CorvaxGoob changes : from uint to int
+            if (!uint.TryParse(args[0], out var seconds) || seconds == 0)
             {
                 shell.WriteLine($"{args[0]} isn't a valid amount of seconds.");
                 return;

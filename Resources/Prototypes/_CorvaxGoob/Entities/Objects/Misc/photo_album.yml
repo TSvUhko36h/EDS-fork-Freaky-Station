@@ -36,6 +36,3 @@
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
-  - type: Construction
-    graph: PhotoAlbum
-    node: album

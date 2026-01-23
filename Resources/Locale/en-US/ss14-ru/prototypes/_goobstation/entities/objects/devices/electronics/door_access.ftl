@@ -13,6 +13,3 @@ ent-DoorElectronicsRobotics = { ent-DoorElectronics }
 ent-DoorElectronicsAllService = { ent-DoorElectronics }
     .suffix = All Service, Locked
     .desc = { ent-DoorElectronics.desc }
-ent-DoorElectronicsJournalism = { ent-DoorElectronics }
-    .suffix = Journalism, Locked
-    .desc = { ent-DoorElectronics.desc }

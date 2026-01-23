@@ -1,11 +1,11 @@
 # Guns
 - type: listing
   id: UplinkHushpup
-  name: Дробовик с глушителем
-  description: Редкая модификация силовика с экспериментальным глушителем. Отлично подходит для тех, кто придерживается строгого морального кодекса. Использует патроны .50 калибра.
+  name: uplink-hushpup-name
+  description: uplink-hushpup-desc
   icon: { sprite: /Textures/_Harmony/Objects/Weapons/Guns/Shotguns/hushpup.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledHushpup
   cost:
-    Telecrystal: 8
+    Telecrystal: 30
   categories:
   - UplinkWeaponry

@@ -25,9 +25,7 @@ public sealed class XATDeathSystem : BaseXATSystem<XATDeathComponent>
 
     private void OnMobStateChanged(MobStateChangedEvent args)
     {
-        if (args.NewMobState != MobState.Dead ||
-            !Exists(args.Target) ||
-            Deleted(args.Target)) // CorvaxGoob-CSRuleSystem-eventbus_moment
+        if (args.NewMobState != MobState.Dead)
             return;
 
         var targetCoords = Transform(args.Target).Coordinates;

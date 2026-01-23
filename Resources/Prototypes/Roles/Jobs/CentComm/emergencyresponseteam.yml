@@ -45,6 +45,7 @@
     - CrowbarRed
     - ADTBaseUplinkBOBERT
     - PinpointerNuclear
+    - ADTBaseUplinkBOBERT
 - type: startingGear
   id: ERTLeaderGearEVA
   equipment:

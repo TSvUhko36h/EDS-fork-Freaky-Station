@@ -36,7 +36,3 @@ ent-PartyMakerIDCard = party maker ID card
     .desc = { ent-IDCardStandard.desc }
 ent-RoboticistIDCard = roboticist ID card
     .desc = { ent-IDCardStandard.desc }
-ent-RadioHostIDCard = radio host ID card
-    .desc = { ent-IDCardStandard.desc }
-ent-VirologistIDCard = virology ID card
-    .desc = { ent-IDCardStandard.desc }

@@ -36,7 +36,3 @@ ent-PartyMakerIDCard = ID-карта патимейкера
     .desc = { ent-IDCardStandard.desc }
 ent-RoboticistIDCard = ID-карта робототехника
     .desc = { ent-IDCardStandard.desc }
-ent-RadioHostIDCard = ID-карта радиоведущего
-    .desc = { ent-IDCardStandard.desc }
-ent-VirologistIDCard = ID-карта вирусолога
-    .desc = { ent-IDCardStandard.desc }
