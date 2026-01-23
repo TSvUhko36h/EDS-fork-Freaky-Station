@@ -47,7 +47,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingOuterHardsuitSalvage #Goobstation # Uncommented by CorvaxGoob
+      - id: ClothingOuterHardsuitSpatio #Goobstation # Uncommented by CorvaxGoob
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
       - id: ClothingShoesBootsMag # Uncommented by CorvaxGoob
@@ -84,6 +84,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingOuterHardsuitSpatio #Goobstation # Uncommented by CorvaxGoob
       - id: ClothingEyesGlassesMeson
       - id: ClothingBeltUtilityFilled
       - id: SurvivalKnife

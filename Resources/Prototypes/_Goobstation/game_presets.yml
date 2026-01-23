@@ -175,7 +175,7 @@
   name: guide-title
   description: guide-description
   showInVote: true
-  minPlayers: 1
+  minPlayers: 15
   rules:
     - CombatDynamic
     - SubGamemodesRule

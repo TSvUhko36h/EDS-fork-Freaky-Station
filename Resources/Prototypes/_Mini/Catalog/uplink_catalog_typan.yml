@@ -506,7 +506,7 @@
   productEntity: ClothingBackpackDuffelSyndicateMedicalBundleFilled
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 16
+    Telecrystal: 20
   cost:
     Telecrystal: 40
   categories:
@@ -1403,7 +1403,7 @@
   description: uplink-carp-suit-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateCarpSuit
   cost:
-    Telecrystal: 4
+    Telecrystal: 1
   categories:
   - TypanUplinkPointless
 

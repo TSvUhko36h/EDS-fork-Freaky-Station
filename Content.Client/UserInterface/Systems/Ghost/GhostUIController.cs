@@ -27,7 +27,7 @@ using Content.Shared.Ghost;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
 using Content.Shared._Mini.MiniCCVars;
-// using Content.Mini.Interfaces.Shared;
+// using Content._Mini.Interfaces.Shared;
 using Robust.Shared.Configuration;
 using GhostWarpsResponseEvent = Content.Shared.Ghost.SharedGhostSystem.GhostWarpsResponseEvent;
 
@@ -89,7 +89,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         }
 
         Gui.Visible = _system?.IsGhost ?? false;
-        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, _system?.Player?.CanEnterGhostBar, _system?.Player?.CanTakeGhostRoles); // Goob edit
+        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, _system?.Player?.CanEnterGhostBar, _system?.Player?.CanTakeGhostRoles); // CorvaxGoob-GhostBar edit
     }
 
     private void OnPlayerRemoved(GhostComponent component)
@@ -150,8 +150,8 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.RequestWarpsPressed += RequestWarps;
         Gui.ReturnToBodyPressed += ReturnToBody;
         Gui.GhostRolesPressed += GhostRolesPressed;
-        Gui.GhostBarPressed += GhostBarPressed; // Goobstation - Ghost Bar
-        Gui.GhostBarWindow.SpawnButtonPressed += GhostBarSpawnPressed; // Goobstation - Ghost Bar
+        Gui.GhostBarPressed += GhostBarPressed; // CorvaxGoob-GhostBar
+        Gui.GhostBarWindow.SpawnButtonPressed += GhostBarSpawnPressed; // CorvaxGoob-GhostBar
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
         // Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
 
@@ -166,8 +166,6 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.RequestWarpsPressed -= RequestWarps;
         Gui.ReturnToBodyPressed -= ReturnToBody;
         Gui.GhostRolesPressed -= GhostRolesPressed;
-        Gui.GhostBarPressed -= GhostBarPressed; // Goobstation - Ghost Bar
-        Gui.GhostBarWindow.SpawnButtonPressed -= GhostBarSpawnPressed; // Goobstation - Ghost Bar
         Gui.TargetWindow.WarpClicked -= OnWarpClicked;
 
         Gui.Hide();
@@ -190,12 +188,12 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         _system?.OpenGhostRoles();
     }
 
-    private void GhostBarPressed() // Goobstation - Ghost Bar
+    private void GhostBarPressed() // CorvaxGoob-GhostBar
     {
         Gui?.GhostBarWindow.OpenCentered();
     }
 
-    private void GhostBarSpawnPressed() // Goobstation - Ghost Bar
+    private void GhostBarSpawnPressed() // CorvaxGoob-GhostBar
     {
         _system?.GhostBarSpawn();
     }

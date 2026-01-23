@@ -12,8 +12,6 @@
     - BaseStationExpeditions
     # - BaseStationAllEventsEligible
     - BaseStationSiliconTypanStatic
-    # - BaseStationSOGCall
-    - BaseStationERTCall
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform

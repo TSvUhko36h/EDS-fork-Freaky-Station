@@ -55,6 +55,7 @@
 # SPDX-FileCopyrightText: 2025 loltart <lo1tartyt@gmail.com>
 # SPDX-FileCopyrightText: 2025 pheenty <fedorlukin2006@gmail.com>
 # SPDX-FileCopyrightText: 2025 terminatorbo <kovalevb059@gmail.com>
+# SPDX-FileCopyrightText: 2025 jvne <juneialduncan21@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -258,7 +259,7 @@
   description: uplink-cluster-grenade-desc
   productEntity: ClusterGrenade
   cost:
-    Telecrystal: 4
+    Telecrystal: 2
   categories:
   - UplinkExplosives
   conditions:
@@ -346,7 +347,7 @@
   icon: { sprite: _EinsteinEngines/Objects/Weapons/Guns/Battery/syndicate-disabler.rsi, state: base }
   productEntity: WeaponDisablerSyndicate
   cost:
-    Telecrystal: 8
+    Telecrystal: 4
   categories:
   - UplinkWeaponry
 
@@ -382,7 +383,7 @@
   description: uplink-WSPR-desc
   productEntity: WeaponRifleWSPR
   cost:
-    Telecrystal: 16
+    Telecrystal: 13
   categories:
   - UplinkWeaponry
 
@@ -393,7 +394,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Guns/Rifles/burner.rsi, state: icon }
   productEntity: WeaponRifleBurner
   cost:
-    Telecrystal: 18
+    Telecrystal: 20
   categories:
   - UplinkWeaponry
 
@@ -404,7 +405,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Guns/Shotguns/magshot.rsi, state: icon }
   productEntity: WeaponShotgunHeavy
   cost:
-    Telecrystal: 46
+    Telecrystal: 40
   categories:
   - UplinkWeaponry
   conditions:
@@ -420,7 +421,7 @@
   icon: { sprite:  /Textures/_Goobstation/Objects/Weapons/Guns/Bow/hardlight_bow.rsi, state: icon }
   productEntity: BowHardlight
   cost:
-    Telecrystal: 20
+    Telecrystal: 12
   categories:
   - UplinkWeaponry
   conditions:
@@ -436,7 +437,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Guns/Pistols/Dualetta.rsi, state: icon }
   productEntity: BriefcaseSyndieDualettaBundleFilled
   cost:
-    Telecrystal: 14
+    Telecrystal: 10
   categories:
   - UplinkWeaponry
 
@@ -461,7 +462,7 @@
   description: uplink-bulk-mosin-desc
   productEntity: CrateSyndicateBulkMosin
   cost:
-    Telecrystal: 10
+    Telecrystal: 5
   categories:
     - UplinkWeaponry
 
@@ -471,7 +472,7 @@
   description: uplink-m7s-desc
   productEntity: WeaponSubMachineGunM7S
   cost:
-    Telecrystal: 20
+    Telecrystal: 12
   categories:
     -  UplinkWeaponry
 
@@ -497,22 +498,22 @@
   description: uplink-combat-shotgun-desc
   productEntity: WeaponShotgunCombat
   cost:
-    Telecrystal: 22
+    Telecrystal: 10
   categories:
     -  UplinkWeaponry
 
 # Wearables
 
-# - type: listing
-#   id: UplinkClothingDreadnought
-#   name: uplink-hardsuit-cybersun-dreadnought-name
-#   description: uplink-hardsuit-cybersun-dreadnought-desc
-#   icon: { sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/dreadnought.rsi, state: icon }
-#   productEntity: CrateSyndicateDreadnought
-#   cost:
-#     Telecrystal: 150
-#   categories:
-#   - UplinkWearables
+- type: listing
+  id: UplinkClothingDreadnought
+  name: uplink-hardsuit-cybersun-dreadnought-name
+  description: uplink-hardsuit-cybersun-dreadnought-desc
+  icon: { sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/dreadnought.rsi, state: icon }
+  productEntity: CrateSyndicateDreadnought
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkWearables
 
 - type: listing
   id: UplinkClothingBeltMilitaryRigGrenadier
@@ -520,7 +521,7 @@
   description: uplink-belt-rig-desc
   productEntity: ClothingBeltMilitaryRigGrenadier
   cost:
-    Telecrystal: 12
+    Telecrystal: 3
   categories:
   -  UplinkWearables
   conditions:
@@ -585,7 +586,7 @@
   icon: { sprite: /Textures/_Goobstation/Clothing/OuterClothing/Hardsuits/cybersunstealth.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateStealthHardsuitBundle
   cost:
-    Telecrystal: 14
+    Telecrystal: 15
   categories:
   - UplinkWearables
 
@@ -621,6 +622,27 @@
     Telecrystal: 12
   categories:
   - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkClothingHandsGlovesGuerrillaNukeops
+  name: uplink-guerrilla-gloves-name
+  description: uplink-guerrilla-gloves-desc
+  icon: { sprite: /Textures/_Goobstation/Clothing/Hands/Gloves/guerrilla.rsi, state: icon }
+  productEntity: ClothingHandsGlovesGuerrilla
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
 
 # Job specific
 - type: listing
@@ -659,7 +681,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Melee/hisgrace.rsi, state: icon }
   productEntity: HisGrace
   cost:
-    Telecrystal: 12
+    Telecrystal: 20
   categories:
   - UplinkJob
   conditions:
@@ -726,7 +748,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Vehicles/clowncar.rsi, state: clowncar }
   productEntity: CrateFunClownCarNukieUplink
   cost:
-    Telecrystal: 8
+    Telecrystal: 4
   categories:
   - UplinkPointless
   conditions:
@@ -742,7 +764,7 @@
   icon: { sprite: _Goobstation/Objects/Devices/communication.rsi, state: radio-syndiroach }
   productEntity: ReinforcementRadioSyndicateSyndiRoach
   cost:
-    Telecrystal: 8
+    Telecrystal: 4
   categories:
     - UplinkAllies
 
@@ -752,7 +774,7 @@
   description: uplink-beenades-desc
   productEntity: BeeGrenade
   cost:
-    Telecrystal: 4
+    Telecrystal: 1
   categories:
   - UplinkJob
   conditions:
@@ -781,7 +803,7 @@
   description: uplink-magazine-nailgun-desc
   productEntity: MagazineNailgunArmorPiercing
   cost:
-    Telecrystal: 3
+    Telecrystal: 1
   categories:
   - UplinkJob
   conditions:
@@ -810,7 +832,7 @@
   icon: { sprite: Objects/Weapons/Melee/plasma_spear.rsi, state: spear }
   productEntity: SpearGreyTide
   cost:
-    Telecrystal: 15
+    Telecrystal: 10
   categories:
   - UplinkJob
   conditions:
@@ -908,7 +930,7 @@
   icon: { sprite: /Textures/Objects/Specific/Medical/syndi_implanter.rsi, state: implanter0 }
   productEntity: MindcontrolImplanter
   cost:
-    Telecrystal: 10 # Half the budget #bounty someone want it cheaper.
+    Telecrystal: 5 # Half the budget #bounty someone want it cheaper.
   categories:
     - UplinkImplants
   conditions:
@@ -925,7 +947,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Grenades/smoke.rsi, state: icon }
   productEntity: SmokeImplanter
   cost:
-    Telecrystal: 4
+    Telecrystal: 2
   categories:
     - UplinkImplants
 
@@ -960,7 +982,7 @@
   icon: { sprite: /Textures/_Goobstation/Clothing/Hands/Gloves/kravgloves.rsi, state: icon }
   productEntity: KravMagaImplanter
   cost:
-    Telecrystal: 14
+    Telecrystal: 10
   categories:
     - UplinkImplants
 
@@ -1020,7 +1042,7 @@
   icon: { sprite: _Goobstation/Objects/Misc/sandevistan.rsi, state: icon }
   productEntity: AutosurgeonSandevistan
   cost:
-    Telecrystal: 20
+    Telecrystal: 14
   categories:
   - UplinkImplants
   conditions:
@@ -1060,7 +1082,7 @@
   icon: { sprite: _Goobstation/Objects/Weapons/Guns/SMGs/smartgun.rsi, state: base }
   productEntity: AutosurgeonSmartLink
   cost:
-    Telecrystal: 14
+    Telecrystal: 6
   categories:
   - UplinkImplants
 
@@ -1071,7 +1093,7 @@
   icon: { sprite: Objects/Weapons/Guns/LMGs/l6.rsi, state: icon }
   productEntity: AutosurgeonRecoilAbsorber
   cost:
-    Telecrystal: 20
+    Telecrystal: 4
   categories:
   - UplinkImplants
 
@@ -1093,7 +1115,7 @@
   icon: { sprite: _Goobstation/Objects/Misc/jumpstarter_heart.rsi, state: icon }
   productEntity: AutosurgeonJumpstarter
   cost:
-    Telecrystal: 20
+    Telecrystal: 12
   categories:
   - UplinkImplants
   conditions:
@@ -1282,7 +1304,7 @@
   icon: { sprite: /Textures/Objects/Vehicles/syndicatesegway.rsi, state: icon }
   productEntity: CrateFunSyndicateSegway
   cost:
-    Telecrystal: 10 # Same as what it was before being removed
+    Telecrystal: 6 # Same as what it was before being removed
   categories:
   - UplinkDisruption
   conditions:
@@ -1308,7 +1330,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: yellow-icon }
   productEntity: MagazinePistolCaselessRifleSAPHE
   cost:
-    Telecrystal: 3 # 23 damage but ~1/3 of a rifle magazine and semi armor piercing, remember the damage is 13 pierce 10.5 explosive
+    Telecrystal: 2 # 23 damage but ~1/3 of a rifle magazine and semi armor piercing, remember the damage is 13 pierce 10.5 explosive
   categories:
   - UplinkAmmo
 
@@ -1319,7 +1341,7 @@
   icon: { sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/M7S_magazine.rsi, state: icon }
   productEntity: MagazineLowCaliberM7S
   cost:
-    Telecrystal: 3 # 105 dmg per TC which seems huge, but you're missing half of your shots
+    Telecrystal: 1 # 105 dmg per TC which seems huge, but you're missing half of your shots
   categories:
   - UplinkAmmo
 
@@ -1412,7 +1434,7 @@
   icon: { sprite: /Textures/Objects/Specific/Mech/mecha.rsi, state: mauler }
   productEntity: CrateCybersunMaulerBundle
   cost:
-    Telecrystal: 200
+    Telecrystal: 140
   categories:
   - UplinkAllies
   conditions:
@@ -1461,7 +1483,7 @@
   description: uplink-capoeira-desc
   productEntity: CapoeiraManual
   cost:
-    Telecrystal: 15
+    Telecrystal: 8
   categories:
   - UplinkWeaponry
   conditions: # Goob, two times cheaper for nukies
@@ -1470,20 +1492,20 @@
       tags:
       - NukeOpsUplink
 
-# - type: listing
-#   id: UplinkMysteriousScroll
-#   name: uplink-sleeping-carp-name
-#   description: uplink-sleeping-carp-desc
-#   productEntity: SleepingCarpScroll
-#   cost:
-#     Telecrystal: 70
-#   categories:
-#   - UplinkWeaponry
-#   conditions:
-#   - !type:StoreWhitelistCondition
-#     blacklist:
-#       tags:
-#       - NukeOpsUplink
+- type: listing
+  id: UplinkMysteriousScroll
+  name: uplink-sleeping-carp-name
+  description: uplink-sleeping-carp-desc
+  productEntity: SleepingCarpScroll
+  cost:
+    Telecrystal: 16
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
 
 # Explosives
 
@@ -1514,7 +1536,7 @@
   productEntity: WeaponLauncherRocketDisposable
   icon: { sprite: _Goobstation/Objects/Weapons/Guns/Launchers/m172.rsi, state: icon }
   cost:
-    Telecrystal: 4 # Basically a worse C4 but ranged
+    Telecrystal: 5 # Basically a worse C4 but ranged
   categories:
   - UplinkExplosives
   conditions:
@@ -1567,7 +1589,7 @@
   description: uplink-holo-cigar-desc
   productEntity: HoloCigar
   cost:
-    Telecrystal: 8
+    Telecrystal: 4
   categories:
   - UplinkWearables
   conditions:
@@ -1575,24 +1597,24 @@
     whitelist:
     - Human
 
-# - type: listing
-#   id: UplinkUndeterminedBundle
-#   name: uplink-undetermined-bundle-name
-#   description: uplink-undetermined-bundle-desc
-#   productEntity: CrateSyndicateUndetermined
-#   cost:
-#     Telecrystal: 99 # :trollface:
-#   categories:
-#   - UplinkDisruption
-#   conditions:
-#   - !type:StoreWhitelistCondition
-#     blacklist:
-#       tags:
-#       - NukeOpsUplink
-#   - !type:BuyerWhitelistCondition
-#     blacklist:
-#       components:
-#       - SurplusBundle
+- type: listing
+  id: UplinkUndeterminedBundle
+  name: uplink-undetermined-bundle-name
+  description: uplink-undetermined-bundle-desc
+  productEntity: CrateSyndicateUndetermined
+  cost:
+    Telecrystal: 20 # :trollface:
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
 
 # - type: listing
 #   id: UplinkEnergyPickaxe
@@ -1659,3 +1681,32 @@
     Telecrystal: 15 # Same price as what Antimov was. Might be worth increasing the price for nukies as they can do some BAD things with this.
   categories:
   - UplinkDisruption
+
+- type: listing
+  id: UplinkCdDiskSyndicate
+  name: uplink-cddisksyndicate-name
+  description: uplink-cddisksyndicate-desc
+  productEntity: JVNECdDiskSyndicate
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkPointless
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkCdDiskNumber
+  name: uplink-cddisknumber-name
+  description: uplink-cddisknumber-desc
+  productEntity: JVNECdDiskNumber
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - RadioHost

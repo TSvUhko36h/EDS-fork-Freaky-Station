@@ -653,6 +653,8 @@ namespace Content.Server.Voting.Managers
                     continue;
                 if(preset.ModeTitle == "xenomorph-title" && _playerManager.PlayerCount<30)
                     continue;
+                if(preset.ModeTitle == "guide-title" && _playerManager.PlayerCount<25)
+                    continue;
                 if(preset.ID == _lastPickedPreset)
                     continue;
                 presets[preset.ID] = preset.ModeTitle;

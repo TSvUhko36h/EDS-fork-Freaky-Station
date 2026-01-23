@@ -140,9 +140,6 @@ namespace Content.Client.Communications.UI
 
             AnnounceButton.OnPressed += (_) => Owner.AnnounceButtonPressed(Rope.Collapse(MessageInput.TextRope));
             AnnounceButton.Disabled = !owner.CanAnnounce;
-
-            ERTMessageInput.Placeholder = new Rope.Leaf(_loc.GetString("comms-console-menu-ert-message-placeholder"));
-
             BroadcastButton.OnPressed += (_) => Owner.BroadcastButtonPressed(Rope.Collapse(MessageInput.TextRope));
             BroadcastButton.Disabled = !owner.CanBroadcast;
 
@@ -157,33 +154,8 @@ namespace Content.Client.Communications.UI
 
             AlertLevelSetButton.OnPressed += (_) => Owner.AlertLevelSetButtonPressed();
             AlertLevelSetButton.Disabled = !owner.CanSetAlertLevel;
-
-            ERTTeamSelector.OnItemSelected += args =>
-            {
-                var metadata = ERTTeamSelector.GetItemMetadata(args.Id);
-                if (metadata != null && metadata is string cast)
-                {
-                    Owner.ERTTeamSelected(cast);
-                }
-            };
-
-            ERTCall.OnPressed += (_) => Owner.CallERTButtonPressed(Rope.Collapse(ERTMessageInput.TextRope).Trim());
-            ERTCall.Disabled = !owner.ERTCanCall;
-
             EmergencyShuttleButton.OnPressed += (_) => Owner.EmergencyShuttleButtonPressed();
             EmergencyShuttleButton.Disabled = !owner.CanCall;
-
-            FirstPrivilegedIdButton.OnPressed += _ =>
-            {
-                Owner.UpdateFirstId();
-                UpdateFirstId(owner.IsFirstPrivilegedIdPresent, owner.IsFirstPrivilegedIdValid);
-            };
-
-            SecondPrivilegedIdButton.OnPressed += _ =>
-            {
-                Owner.UpdateSecondId();
-                UpdateSecondId(owner.IsSecondPrivilegedIdPresent, owner.IsSecondPrivilegedIdValid);
-            };
 
             UpdateCountdown();
             Timer.SpawnRepeating(1000, UpdateCountdown, _timerCancelTokenSource.Token);
@@ -226,28 +198,6 @@ namespace Content.Client.Communications.UI
             }
         }
 
-        public void UpdateERTTeams(List<string>? ertTeams, string? selectedErt)
-        {
-            ERTTeamSelector.Clear();
-
-            if (ertTeams == null)
-                return;
-
-            foreach (var team in ertTeams)
-            {
-                var name = team;
-                if (_loc.TryGetString($"ert-team-name-{team}", out var locName))
-                {
-                    name = locName;
-                }
-                ERTTeamSelector.AddItem(name);
-                ERTTeamSelector.SetItemMetadata(ERTTeamSelector.ItemCount - 1, team);
-                if (team == selectedErt)
-                {
-                    ERTTeamSelector.Select(ERTTeamSelector.ItemCount - 1);
-                }
-            }
-        }
 
         public void UpdateCountdown()
         {
@@ -263,45 +213,6 @@ namespace Content.Client.Communications.UI
                 ("time", Owner.Countdown.ToString()));
                 CountdownLabel.SetMessage(infoText);
             }
-
-            if (!Owner.ERTCountdownStarted)
-            {
-                ERTCountdownLabel.SetMessage("");
-                ERTCall.Text = _loc.GetString("comms-console-menu-call-ert");
-                ERTCallStatusLabel.Text = "";
-            }
-            else
-            {
-                ERTCall.Text = _loc.GetString("comms-console-menu-recall-ert");
-                var ERTinfoText = _loc.GetString($"comms-console-menu-time-remaining",
-                ("time", Owner.Countdown.ToString()));
-                ERTCountdownLabel.SetMessage(ERTinfoText);
-                ERTCallStatusLabel.Text = _loc.GetString("comms-console-menu-call-ert-status-called");
-            }
-        }
-
-        public void UpdateFirstId(bool isFirstPrivilegedIdPresent, bool isFirstPrivilegedIdValid)
-        {
-            FirstPrivilegedIdButton.Text = isFirstPrivilegedIdPresent ? _loc.GetString("comms-console-menu-eject-button") : _loc.GetString("comms-console-menu-insert-button");
-
-            if (isFirstPrivilegedIdValid)
-                FirstPrivilegedIdLabel.FontColorOverride = Color.DarkGreen;
-            else
-                FirstPrivilegedIdLabel.FontColorOverride = Color.LightGray;
-
-            ERTCall.Disabled = !Owner.ERTCanCall;
-        }
-
-        public void UpdateSecondId(bool isSecondPrivilegedIdPresent, bool isSecondPrivilegedIdValid)
-        {
-            SecondPrivilegedIdButton.Text = isSecondPrivilegedIdPresent ? _loc.GetString("comms-console-menu-eject-button") : _loc.GetString("comms-console-menu-insert-button");
-
-            if (isSecondPrivilegedIdValid)
-                SecondPrivilegedIdLabel.FontColorOverride = Color.DarkGreen;
-            else
-                SecondPrivilegedIdLabel.FontColorOverride = Color.LightGray;
-
-            ERTCall.Disabled = !Owner.ERTCanCall;
         }
 
         public override void Close()

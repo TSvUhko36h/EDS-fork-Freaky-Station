@@ -143,11 +143,13 @@
   - spawn
   - cspawn
   - delete
+  - ertui
 
 - Flags: MODERATOR
   Commands:
   - kick
   - respawn
+  - ertui
 
 - Flags: HOST
   Commands:

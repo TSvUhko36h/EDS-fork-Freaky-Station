@@ -580,7 +580,7 @@
   description: uplink-exploding-syndicate-bomb-desc
   productEntity: SyndicateBomb
   cost:
-    Telecrystal: 12 # goob
+    Telecrystal: 10 # goob
   categories:
     - UplinkExplosives
   restockTime: 1800
@@ -611,7 +611,7 @@
   description: uplink-cluster-grenade-desc
   productEntity: ClusterGrenade
   cost:
-    Telecrystal: 4 # goob - Best grenade in the game currently, but very hard to predict how it explodes.
+    Telecrystal: 2 # goob - Best grenade in the game currently, but very hard to predict how it explodes.
   categories:
   - UplinkExplosives
   conditions: # Goob, two times cheaper for nukies
@@ -742,7 +742,7 @@
   description: uplink-sniper-ammo-desc
   productEntity: MagazineBoxAntiMateriel
   cost:
-    Telecrystal: 1 # goob
+    Telecrystal: 2 # goob
   categories:
   - UplinkAmmo
 
@@ -863,7 +863,7 @@
   description: uplink-stimpack-desc
   productEntity: Stimpack
   cost:
-    Telecrystal: 1 # goob - 1 TC per 3 seconds.
+    Telecrystal: 2 # goob - 1 TC per 3 seconds.
   categories:
   - UplinkChemicals
 
@@ -896,7 +896,7 @@
   description: uplink-meds-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateMedicalBundleFilled
   cost:
-    Telecrystal: 4 # goob
+    Telecrystal: 20 # goob
   categories:
   - UplinkChemicals
   conditions:
@@ -1188,7 +1188,7 @@
   description: uplink-omnimed-tool-syndie-desc
   productEntity: OmnimedToolSyndie
   cost:
-    Telecrystal: 35
+    Telecrystal: 6
   icon: { sprite: /Textures/_Shitmed/Objects/Specific/Medical/Surgery/omnimed.rsi, state: evil }
   categories:
   - UplinkDisruption
@@ -1200,7 +1200,7 @@
   description: uplink-antimov-law-desc
   productEntity: AntimovCircuitBoard
   cost:
-    Telecrystal: 24 # goob
+    Telecrystal: 15 # goob
   categories:
   - UplinkDisruption
 # Goob - Antimov was given the same price for traitors and nukies
@@ -1780,7 +1780,7 @@
   icon: { sprite: /Textures/Clothing/OuterClothing/Suits/eva_syndicate.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateEVABundle
   cost:
-    Telecrystal: 4 # goob - Meh protection no slowdown. Can definitely take a hit or two extra however.
+    Telecrystal: 2 # goob - Meh protection no slowdown. Can definitely take a hit or two extra however.
   categories:
   - UplinkWearables
 
@@ -2010,7 +2010,7 @@
   description: uplink-carp-suit-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateCarpSuit
   cost:
-    Telecrystal: 8 # goob
+    Telecrystal: 4 # goob
   categories:
   - UplinkPointless
 

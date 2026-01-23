@@ -1,7 +1,8 @@
+
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server.Mini.SpawnERTShuttleCommand;
+namespace Content.Server._Mini.SpawnERTShuttleCommand;
 
 /// <summary>
 /// ERT shuttle id and path for loading it.

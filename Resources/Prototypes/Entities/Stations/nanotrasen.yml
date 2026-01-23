@@ -70,7 +70,6 @@
     - BaseStationNanotrasen
     - BaseStationMail # Nyano component, required for station mail to function
     - BaseStationWizardTarget # Goobstation
-    - BaseStationERTCall
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform

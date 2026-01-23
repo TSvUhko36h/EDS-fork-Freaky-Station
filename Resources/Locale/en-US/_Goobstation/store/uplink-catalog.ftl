@@ -24,6 +24,7 @@
 # SPDX-FileCopyrightText: 2025 Theodore Lukin <66275205+pheenty@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Weide <64257676+Lyacs@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 absurd-shaman <165011607+absurd-shaman@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 jvne <juneialduncan21@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -358,3 +359,9 @@ uplink-syndiedrobe-desc = A vending machine stocked with Syndicate-branded cloth
 
 uplink-customboard-name = Модифицированный набор законов
 uplink-customboard-desc = Модифицированный набор законов, который позволяет пользователю изменять законы на любые, какие он захочет. Поставляется с уже установленным протоколом Антимова.
+
+uplink-cddisksyndicate-name = Syndicate Advertisement CD
+uplink-cddisksyndicate-desc = 102.9 Syndicate radio
+
+uplink-cddisknumber-name = Number Station CD
+uplink-cddisknumber-desc = Call in a threat to distract the station... good luck playing the whole thing.

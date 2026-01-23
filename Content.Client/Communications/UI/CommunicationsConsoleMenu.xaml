@@ -43,34 +43,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
         <Control MinSize="0 10" />
 
-        <!-- ERT -->
-        <Label Text="{Loc 'comms-console-menu-category-ert'}"/>
-        <controls:HLine Color="#404040" Thickness="2" Margin="0 0 0 5"/>
-        <OptionButton Name="ERTTeamSelector" />
-
-        <Control MinSize="0 10" />
-
-        <TextEdit Name="ERTMessageInput" HorizontalExpand="True" VerticalExpand="True" Margin="0 0 0 5" MinHeight="100" />
-
-        <Control MinSize="0 5" />
-
-        <Button Name="ERTCall" Text="{Loc 'comms-console-menu-call-ert'}" StyleClasses="OpenLeft" Access="Public" />
-        <RichTextLabel Name="ERTCountdownLabel" VerticalExpand="True" />
-
-        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-            <Label Name="FirstPrivilegedIdLabel" Text="{Loc 'comms-console-menu-first-privileged-id-label'}"/>
-            <Button Name="FirstPrivilegedIdButton" Access="Public" HorizontalAlignment="Right" HorizontalExpand="True"/>
-        </BoxContainer>
-
-        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-            <Label Name="SecondPrivilegedIdLabel" Text="{Loc 'comms-console-menu-second-privileged-id-label'}"/>
-            <Button Name="SecondPrivilegedIdButton" Access="Public" HorizontalAlignment="Right" HorizontalExpand="True"/>
-        </BoxContainer>
-
-        <Label Name="ERTCallStatusLabel"/>
-
-        <Control MinSize="0 10" />
-
         <!-- Footer -->
         <BoxContainer Orientation="Vertical">
             <PanelContainer StyleClasses="LowDivider"/>

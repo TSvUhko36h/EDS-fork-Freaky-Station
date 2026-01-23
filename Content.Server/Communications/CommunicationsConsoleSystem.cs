@@ -70,7 +70,6 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
-using Content.Server.Mini.ERTCall;
 using Content.Shared.Containers.ItemSlots;
 using System.Linq;
 using Robust.Shared.Containers;
@@ -91,7 +90,6 @@ namespace Content.Server.Communications
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-        [Dependency] private readonly ERTCallSystem _ertCallSystem = default!;
         [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
         [Dependency] private readonly IChatManager _chatManager = default!;
 
@@ -105,8 +103,6 @@ namespace Content.Server.Communications
             SubscribeLocalEvent<AlertLevelChangedEvent>(OnAlertLevelChanged);
             SubscribeLocalEvent<RoundEndSystemChangedEvent>(_ => OnGenericBroadcastEvent());
             SubscribeLocalEvent<AlertLevelDelayFinishedEvent>(_ => OnGenericBroadcastEvent());
-            SubscribeLocalEvent<ERTCallEvent>(OnERTCall);
-            SubscribeLocalEvent<ERTRecallEvent>(OnERTRecall);
 
             // Messages from the BUI
             SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleSetAlertLevelMessage>(OnSetAlertLevelMessage);
@@ -116,10 +112,6 @@ namespace Content.Server.Communications
             SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleCallEmergencyShuttleMessage>(OnCallShuttleMessage);
             SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleRecallEmergencyShuttleMessage>(OnRecallShuttleMessage);
 
-            SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleCallERTMessage>(OnERTCallMessage);
-            SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleRecallERTMessage>(OnERTRecallMessage);
-            SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleSelectERTMessage>(OnERTSelectMessage);
-
             SubscribeLocalEvent<CommunicationsConsoleComponent, EntInsertedIntoContainerMessage>((uid, comp, _) => UpdateCommsConsoleInterface(uid, comp));
             SubscribeLocalEvent<CommunicationsConsoleComponent, EntRemovedFromContainerMessage>((uid, comp, _) => UpdateCommsConsoleInterface(uid, comp));
 
@@ -128,9 +120,6 @@ namespace Content.Server.Communications
         public void OnMapInit(EntityUid uid, CommunicationsConsoleComponent comp, MapInitEvent args)
         {
             comp.AnnouncementCooldownRemaining = comp.InitialDelay;
-
-            _itemSlotsSystem.AddItemSlot(uid, CommunicationsConsoleComponent.FirstPrivilegedSlotId, comp.FirstPrivilegedIdSlot);
-            _itemSlotsSystem.AddItemSlot(uid, CommunicationsConsoleComponent.SecondPrivilegedSlotId, comp.SecondPrivilegedIdSlot);
         }
 
         public override void Update(float frameTime)
@@ -197,27 +186,7 @@ namespace Content.Server.Communications
             }
         }
 
-        private void OnERTCall(ERTCallEvent args)
-        {
-            var query = EntityQueryEnumerator<CommunicationsConsoleComponent>();
-            while (query.MoveNext(out var uid, out var comp))
-            {
-                var entStation = _stationSystem.GetOwningStation(uid);
-                if (args.Station == entStation)
-                    UpdateCommsConsoleInterface(uid, comp);
-            }
-        }
 
-        private void OnERTRecall(ERTRecallEvent args)
-        {
-            var query = EntityQueryEnumerator<CommunicationsConsoleComponent>();
-            while (query.MoveNext(out var uid, out var comp))
-            {
-                var entStation = _stationSystem.GetOwningStation(uid);
-                if (args.Station == entStation)
-                    UpdateCommsConsoleInterface(uid, comp);
-            }
-        }
 
         /// <summary>
         /// Updates the UI for all comms consoles.
@@ -263,15 +232,6 @@ namespace Content.Server.Communications
                     currentLevel = alertComp.CurrentLevel;
                     currentDelay = _alertLevelSystem.GetAlertLevelDelay(stationUid.Value, alertComp);
                 }
-
-                if (TryComp(stationUid.Value, out ERTCallComponent? ertComponent) && ertComponent.ERTTeams != null)
-                {
-                    ertList = new();
-                    foreach (var (id, detail) in ertComponent.ERTTeams.Teams)
-                    {
-                        ertList.Add(id);
-                    }
-                }
             }
 
             _uiSystem.SetUiState(uid, CommunicationsConsoleUiKey.Key, new CommunicationsConsoleInterfaceState(
@@ -280,51 +240,8 @@ namespace Content.Server.Communications
                     levels,
                     currentLevel,
                     currentDelay,
-                    _roundEndSystem.ExpectedCountdownEnd,
-                    CanCallOrRecallERT(comp),
-                    ertList,
-                    _ertCallSystem.TimeToErt(stationUid),
-                    FirstPrivilegedIdIsPresented(comp),
-                    SecondPrivilegedIdIsPresented(comp),
-                    FirstPrivilegedIdIsValid(comp),
-                    SecondPrivilegedIdIsValid(comp)
+                    _roundEndSystem.ExpectedCountdownEnd
                 ));
-        }
-
-        private bool FirstPrivilegedIdIsPresented(CommunicationsConsoleComponent comp)
-        {
-            return comp.FirstPrivilegedIdSlot.Item is { Valid: true };
-        }
-
-        private bool SecondPrivilegedIdIsPresented(CommunicationsConsoleComponent comp)
-        {
-            return comp.SecondPrivilegedIdSlot.Item is { Valid: true };
-        }
-
-        private bool FirstPrivilegedIdIsValid(CommunicationsConsoleComponent comp)
-        {
-            if (EntityManager.TryGetComponent<AccessComponent>(comp.FirstPrivilegedIdSlot.Item, out var accesses))
-            {
-                foreach (var access in accesses.Tags.ToArray())
-                {
-                    if (access == comp.FirstPrivilegedIdTargetAccess)
-                        return true;
-                }
-            }
-            return false;
-        }
-
-        private bool SecondPrivilegedIdIsValid(CommunicationsConsoleComponent comp)
-        {
-            if (EntityManager.TryGetComponent<AccessComponent>(comp.SecondPrivilegedIdSlot.Item, out var accesses))
-            {
-                foreach (var access in accesses.Tags.ToArray())
-                {
-                    if (access == comp.SecondPrivilegedIdTargetAccess)
-                        return true;
-                }
-            }
-            return false;
         }
 
         private static bool CanAnnounce(CommunicationsConsoleComponent comp)
@@ -360,19 +277,6 @@ namespace Content.Server.Communications
                 return false;
 
             return !(left.TotalSeconds / expected.TotalSeconds < recallThreshold);
-        }
-
-        private bool CanCallOrRecallERT(CommunicationsConsoleComponent comp)
-        {
-            if (!comp.CanCallERT)
-                return false;
-
-            if (comp.CallERTCooldownRemaining <= 0f && FirstPrivilegedIdIsValid(comp) && SecondPrivilegedIdIsValid(comp))
-            {
-                return true;
-            }
-
-            return false;
         }
 
         private void OnSetAlertLevelMessage(EntityUid uid, CommunicationsConsoleComponent comp, CommunicationsConsoleSetAlertLevelMessage message)
@@ -509,64 +413,6 @@ namespace Content.Server.Communications
             _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(message.Actor):player} has recalled the shuttle.");
         }
 
-        private void OnERTCallMessage(EntityUid uid, CommunicationsConsoleComponent comp, CommunicationsConsoleCallERTMessage message)
-        {
-            if (!CanCallOrRecallERT(comp))
-            {
-                _popupSystem.PopupEntity(Loc.GetString("comms-console-permission-denied"), uid, message.Actor);
-                return;
-            }
-
-            if (message.Actor is not { Valid: true } mob) return;
-
-            var stationUid = _stationSystem.GetOwningStation(uid);
-            if (stationUid == null)
-                return;
-
-            var mes = message.Message;
-
-            if (mes == null)
-                mes = "No reason";
-
-            _chatManager.SendAdminAlert(Loc.GetString("comms-console-menu-ert-message-alert", ("name", mob), ("ert", Loc.GetString($"ert-team-name-{message.ERTTeam}")), ("message", mes)));
-
-            _ertCallSystem.CallErt(stationUid.Value, message.ERTTeam);
-            comp.CallERTCooldownRemaining = comp.DelayBetweenERTCall;
-            UpdateCommsConsoleInterface();
-
-            _adminLogger.Add(LogType.Action, LogImpact.Extreme, $"{ToPrettyString(mob):player} has call ERT {message.ERTTeam} with reason {message.Message}.");
-        }
-
-        private void OnERTRecallMessage(EntityUid uid, CommunicationsConsoleComponent comp, CommunicationsConsoleRecallERTMessage message)
-        {
-            if (!CanCallOrRecallERT(comp))
-            {
-                _popupSystem.PopupEntity(Loc.GetString("comms-console-permission-denied"), uid, message.Actor);
-                return;
-            }
-
-            if (message.Actor is not { Valid: true } mob) return;
-
-            var stationUid = _stationSystem.GetOwningStation(uid);
-            if (stationUid == null)
-                return;
-
-            if (!_ertCallSystem.RecallERT(stationUid.Value))
-            {
-                _popupSystem.PopupEntity(Loc.GetString("comms-console-call-ert-fall"), uid, message.Actor);
-                return;
-            }
-
-            comp.CallERTCooldownRemaining = comp.DelayBetweenERTCall;
-            UpdateCommsConsoleInterface();
-
-            _adminLogger.Add(LogType.Action, LogImpact.Extreme, $"{ToPrettyString(mob):player} has recall ERT.");
-        }
-
-        private void OnERTSelectMessage(EntityUid uid, CommunicationsConsoleComponent comp, CommunicationsConsoleSelectERTMessage message)
-        {
-            UpdateCommsConsoleInterface();
-        }
     }
 
     /// <summary>

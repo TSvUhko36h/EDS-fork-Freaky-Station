@@ -205,16 +205,6 @@ namespace Content.Client.Communications.UI
             CountdownStarted = commsState.CountdownStarted;
             AlertLevelSelectable = commsState.AlertLevels != null && !float.IsNaN(commsState.CurrentAlertDelay) && commsState.CurrentAlertDelay <= 0;
             CurrentLevel = commsState.CurrentAlert;
-
-            ERTCanCall = commsState.ERTCanCall;
-            _expectedERTCountdownTime = commsState.ERTCountdownTime;
-            ERTCountdownStarted = commsState.ERTCountdownStarted;
-
-            IsFirstPrivilegedIdPresent = commsState.IsFirstPrivilegedIdPresent;
-            IsSecondPrivilegedIdPresent = commsState.IsSecondPrivilegedIdPresent;
-            IsFirstPrivilegedIdValid = commsState.IsFirstPrivilegedIdValid;
-            IsSecondPrivilegedIdValid = commsState.IsSecondPrivilegedIdValid;
-
             if (string.IsNullOrEmpty(SelectedAlertLevel))
             {
                 if (commsState.AlertLevels != null && commsState.AlertLevels.Count > 0)
@@ -223,27 +213,14 @@ namespace Content.Client.Communications.UI
                 }
             }
 
-            if (string.IsNullOrEmpty(ERTSelectedTeam))
-            {
-                if (commsState.ERTList != null && commsState.ERTList.Count > 0)
-                {
-                    ERTSelectedTeam = commsState.ERTList[0];
-                }
-            }
 
             if (_menu != null)
             {
                 _menu.UpdateCountdown();
                 _menu.UpdateAlertLevels(commsState.AlertLevels, CurrentLevel, SelectedAlertLevel);
                 _menu.AlertLevelSetButton.Disabled = !AlertLevelSelectable;
-
                 _menu.EmergencyShuttleButton.Disabled = !CanCall;
                 _menu.AnnounceButton.Disabled = !CanAnnounce;
-
-                _menu.UpdateERTTeams(commsState.ERTList, ERTSelectedTeam);
-                _menu.UpdateFirstId(IsFirstPrivilegedIdPresent, IsFirstPrivilegedIdValid);
-                _menu.UpdateSecondId(IsSecondPrivilegedIdPresent, IsSecondPrivilegedIdValid);
-
                 _menu.BroadcastButton.Disabled = !CanBroadcast;
             }
         }
