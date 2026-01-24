@@ -22,8 +22,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
-      name: ghost-role-information-centcomofficer-name
-      description: ghost-role-information-ert-centcom-official-description
+      name: ghost-role-information-centcom-official-name
+      description: ghost-role-information-centcom-official-description
       rules: ghost-role-information-centcom-personal-rules
       category: ghost-role-information-centcomm-category
       requirements:

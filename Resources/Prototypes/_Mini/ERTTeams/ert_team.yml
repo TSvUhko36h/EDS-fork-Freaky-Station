@@ -24,7 +24,7 @@
   codeBlackList:
   - gamma
   spawns:
-    - id: RandomHumanoidSpawnerCBURNAgent
+    - id: RandomHumanoidSpawnerCBURNUnit
       amount: 1
 
 # - type: ertTeam
@@ -89,7 +89,7 @@
     #   amount: 1
     # - id: RandomHumanoidSpawnerERTEngineerAmber
     #   amount: 1
-    - id: RandomHumanoidSpawnerERTSecurityAmber
+    - id: RandomHumanoidSpawnerERTSecurity
       amount: 1
     # - id: RandomHumanoidSpawnerERTMedicalAmber
     #   amount: 1
@@ -122,13 +122,13 @@
   - gamma
   price: 4
   spawns:
-    - id: RandomHumanoidSpawnerERTLeaderRed
+    - id: RandomHumanoidSpawnerERTLeaderEVA
       amount: 1
-    - id: RandomHumanoidSpawnerERTSecurityRed
+    - id: RandomHumanoidSpawnerERTSecurityEVA
       amount: 3
-    - id: RandomHumanoidSpawnerERTMedicalRed
+    - id: RandomHumanoidSpawnerERTMedicalEVA
       amount: 1
-    - id: RandomHumanoidSpawnerERTEngineerRed
+    - id: RandomHumanoidSpawnerERTEngineerEVA
       amount: 1
 
 - type: ertTeam
@@ -158,13 +158,13 @@
   codeBlackList:
   - epsilon
   spawns:
-    - id: RandomHumanoidSpawnerERTLeaderGamma
+    - id: RandomHumanoidSpawnerERTLeaderEVA
       amount: 1
-    - id: RandomHumanoidSpawnerERTEngineerGamma
+    - id: RandomHumanoidSpawnerERTEngineerEVA
       amount: 1
-    - id: RandomHumanoidSpawnerERTSecurityGamma
+    - id: RandomHumanoidSpawnerERTSecurityEVA
       amount: 4
-    - id: RandomHumanoidSpawnerERTMedicalGamma
+    - id: RandomHumanoidSpawnerERTMedicalEVA
       amount: 2
 
 - type: ertTeam
@@ -203,5 +203,5 @@
   spawns:
     - id: RandomHumanoidSpawnerCentralCommandOfficial
       amount: 1
-    - id: RandomHumanoidSpawnerERTSecurityGamma
+    - id: RandomHumanoidSpawnerERTSecurityEVA
       amount: 2
