@@ -16,13 +16,13 @@
   - CorvaxAwesome
   - CorvaxBagel
   #- CorvaxMarathon
-  - CorvaxMascara
-  - CorvaxOutpost
   - CorvaxPaper
   #- CorvaxPearl
   - CorvaxVoid
 
   # Lowpop 0–25
+  - CorvaxOutpost
+  - CorvaxMascara
   - CorvaxMaus
   - FreakyOmega # Freaky
   - FreakySaltern # Freaky
