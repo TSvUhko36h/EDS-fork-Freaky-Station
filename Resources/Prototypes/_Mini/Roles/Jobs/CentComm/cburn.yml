@@ -6,6 +6,8 @@
   id: CBURNLeader
   name: job-name-cburn-leader
   description: job-description-cburnleader
+  skills: # CorvaxGoob-Skills
+    - All
   playTimeTracker: JobCBURNLeader
   setPreference: false
   startingGear: CBURNLeaderGear

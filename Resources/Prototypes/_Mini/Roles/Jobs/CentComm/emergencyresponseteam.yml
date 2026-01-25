@@ -3,6 +3,8 @@
 - type: job
   id: ERTLeaderAmber
   name: job-name-ertleader-amber
+  skills: # CorvaxGoob-Skills
+  - All
   description: job-description-ertleader
   playTimeTracker: JobERTLeaderAmber
   setPreference: false
@@ -47,6 +49,8 @@
   id: ERTLeaderRed
   name: job-name-ertleader-red
   description: job-description-ertleader
+  skills: # CorvaxGoob-Skills
+  - All
   playTimeTracker: JobERTLeaderRed
   setPreference: false
   startingGear: ERTLeaderGearRed
@@ -98,6 +102,8 @@
   icon: "JobIconERTLeader"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  skills: # CorvaxGoob-Skills
+  - All
   accessGroups:
   - AllAccess
   access:
@@ -139,6 +145,8 @@
   id: ERTSecurityAmber
   name: job-name-ertsecurity-amber
   description: job-description-ertsecurity
+  skills: # CorvaxGoob-Skills
+  - All
   playTimeTracker: JobERTSecurityAmber
   setPreference: false
   startingGear: ERTSecurityGearAmber
@@ -185,6 +193,8 @@
   id: ERTSecurityRed
   name: job-name-ertsecurity-red
   description: job-description-ertsecurity
+  skills: # CorvaxGoob-Skills
+  - All
   playTimeTracker: JobERTSecurityRed
   setPreference: false
   startingGear: ERTSecurityGearRed
@@ -227,6 +237,8 @@
   id: ERTSecurityGamma
   name: job-name-ertsecurity-gamma
   description: job-description-ertsecurity
+  skills: # CorvaxGoob-Skills
+  - All
   playTimeTracker: JobERTSecurityGamma
   setPreference: false
   startingGear: ERTSecurityGearGamma
@@ -271,6 +283,8 @@
 - type: job
   id: ERTMedicalAmber
   name: job-name-ertmedic-amber
+  skills: # CorvaxGoob-Skills
+    - All
   description: job-description-ertmedic
   playTimeTracker: JobERTMedicalAmber
   setPreference: false
@@ -317,6 +331,8 @@
 ## Red
 - type: job
   id: ERTMedicalRed
+  skills: # CorvaxGoob-Skills
+    - All
   name: job-name-ertmedic-red
   description: job-description-ertmedic
   playTimeTracker: JobERTMedicalRed
@@ -367,6 +383,8 @@
   id: ERTMedicalGamma
   name: job-name-ertmedic-gamma
   description: job-description-ertmedic
+  skills: # CorvaxGoob-Skills
+    - All
   playTimeTracker: JobERTMedicalGamma
   setPreference: false
   startingGear: ERTMedicalGearGamma
@@ -421,6 +439,8 @@
   id: ERTEngineerAmber
   name: job-name-ertengineer-amber
   description: job-description-ertengineer
+  skills: # CorvaxGoob-Skills
+    - All
   playTimeTracker: JobERTEngineerAmber
   setPreference: false
   startingGear: ERTEngineerGearAmber
@@ -471,6 +491,8 @@
   icon: "JobIconERT"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  skills: # CorvaxGoob-Skills
+    - All
   accessGroups:
   - AllAccess
   access:
@@ -508,6 +530,8 @@
 - type: job
   id: ERTEngineerGamma
   name: job-name-ertengineer-gamma
+  skills: # CorvaxGoob-Skills
+  - All
   description: job-description-ertengineer
   playTimeTracker: JobERTEngineerGamma
   setPreference: false
@@ -559,6 +583,8 @@
 ## Amber
 - type: job
   id: ERTJanitorAmber
+  skills: # CorvaxGoob-Skills
+  - All
   name: job-name-ertjanitor-amber
   description: job-description-ertjanitor
   playTimeTracker: JobERTJanitorAmber
@@ -605,6 +631,8 @@
 ## Red
 - type: job
   id: ERTJanitorRed
+  skills: # CorvaxGoob-Skills
+  - All
   name: job-name-ertjanitor-red
   description: job-description-ertjanitor
   playTimeTracker: JobERTJanitorRed
@@ -651,6 +679,8 @@
 ## Gamma
 - type: job
   id: ERTJanitorGamma
+  skills: # CorvaxGoob-Skills
+  - All
   name: job-name-ertjanitor-gamma
   description: job-description-ertjanitor
   playTimeTracker: JobERTJanitorGamma
