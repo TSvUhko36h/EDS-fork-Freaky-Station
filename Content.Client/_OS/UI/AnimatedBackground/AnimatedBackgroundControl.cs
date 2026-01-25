@@ -13,7 +13,7 @@ public sealed class AnimatedBackgroundControl : TextureRect
     [Dependency] private readonly IResourceCache _resourceCache = default!;
     [Dependency] private readonly IClyde _clyde = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    private string _rsiPath = "/Textures/_FreakStation/LobbyScreens/Fleet.rsi"; // а где бля рандом?
+    private string _rsiPath = "/Textures/_FreakStation/LobbyScreens/Gachi.rsi";
     public RSI? _RSI;
     private const int States = 1;
     private IRenderTexture? _buffer;
