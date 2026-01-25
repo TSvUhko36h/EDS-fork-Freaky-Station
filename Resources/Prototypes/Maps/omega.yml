@@ -30,9 +30,9 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: gameMap
-  id: Omega
-  mapName: 'Omega'
-  mapPath: /Maps/_Goobstation/omega.yml # Goobstation
+  id: FreakyOmega
+  mapName: 'FRIK Омега'
+  mapPath: /Maps/_FreakyStation/freaky-omega.yml # FreakyStation
   minPlayers: 0 # Freak, was 7
   maxPlayers: 35
   stations:

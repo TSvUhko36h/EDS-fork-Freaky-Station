@@ -30,9 +30,9 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: gameMap
-  id: Saltern
-  mapName: 'Saltern'
-  mapPath: /Maps/_Goobstation/saltern.yml # Goobstation - use custom saltern
+  id: FreakySaltern
+  mapName: 'FRIK Салтерн'
+  mapPath: /Maps/_FreakyStation/freaky-saltern.yml # FreakyStation
   minPlayers: 0
   maxPlayers: 35
   fallback: true
