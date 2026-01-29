@@ -6,7 +6,7 @@ public class SponsorColor
 {
     public static string GetColorForNickname(int DonateLvl)
     {
-        string color = "#aa00ff";
+        string color = "#000000";
         switch (DonateLvl)
         {
             case 1:

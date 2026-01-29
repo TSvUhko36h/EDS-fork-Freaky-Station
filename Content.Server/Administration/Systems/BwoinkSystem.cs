@@ -810,17 +810,16 @@ namespace Content.Server.Administration.Systems
             if (_rateLimit.CountAction(eventArgs.SenderSession, RateLimitKey) != RateLimitStatus.Allowed)
                 return;
 
-            var sponsorData = SponsorInfoComponent.listOfSponsors.FirstOrDefault(s => s.Uid == senderSession.UserId.ToString());
-            var listCount = SponsorInfoComponent.listOfSponsors.Count;
-
             var displayName = $"{senderSession.Name}";
 
-            if (listCount > 0)
+            if (SponsorInfoComponent.listOfSponsors.Any(d => string.Equals(d.Uid, senderSession.UserId.ToString(), StringComparison.OrdinalIgnoreCase)))
             {
                 int miniDonateLevel = SponsorManager.GetDonateLevel(senderSession.UserId.ToString());
                 string miniDonateColor = SponsorColor.GetColorForNickname(miniDonateLevel);
-                displayName = $"[color ={miniDonateColor}]{senderSession.Name}[/color]";
+                displayName = $"[bold][color={miniDonateColor}]{senderSession.Name}[/color][/bold]";
             }
+            var count = SponsorInfoComponent.listOfSponsors.Count;
+            Log.Info($"Количество спонсоров в списке: {count}");
 
             var bwoinkParams = new BwoinkParams(message,
                 eventArgs.SenderSession.UserId,

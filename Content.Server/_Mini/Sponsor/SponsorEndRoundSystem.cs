@@ -13,7 +13,7 @@ public sealed class MyRoundEndSystem : EntitySystem
     {
         base.Initialize();
         
-        SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEnd);
+        //SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEnd);
     }
     private void OnRoundEnd(RoundEndMessageEvent ev)
     {

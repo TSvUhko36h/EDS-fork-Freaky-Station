@@ -649,19 +649,27 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
                     {
                         preferredList.Add(session);
                         preferredList.Add(session);
-                    }
-                    if (def.PrefRoles.Contains("HeadRev") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1 || def.PrefRoles.Contains("Zombie") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1)
-                    {
                         preferredList.Add(session);
                         preferredList.Add(session);
                     }
-                    if (def.PrefRoles.Contains("Nukeops") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2)
+                    if (def.PrefRoles.Contains("HeadRev") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1 || def.PrefRoles.Contains("Zombie") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1 || def.PrefRoles.Contains("Abductor") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1)
                     {
+                        preferredList.Add(session);
+                        preferredList.Add(session);
+                        preferredList.Add(session);
+                        preferredList.Add(session);
+                    }
+                    if (def.PrefRoles.Contains("Nukeops") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2 || def.PrefRoles.Contains("Devil") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2 || def.PrefRoles.Contains("Cultist") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2)
+                    {
+                        preferredList.Add(session);
+                        preferredList.Add(session);
                         preferredList.Add(session);
                         preferredList.Add(session);
                     }
                     if (SponsorManager.GetDonateLevel(session.UserId.ToString()) > 3)
                     {
+                        preferredList.Add(session);
+                        preferredList.Add(session);
                         preferredList.Add(session);
                         preferredList.Add(session);
                     }
