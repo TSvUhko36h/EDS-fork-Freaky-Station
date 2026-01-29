@@ -449,7 +449,7 @@ internal sealed partial class ChatManager : IChatManager
         {
             int miniDonateLevel = SponsorManager.GetDonateLevel(player.UserId.ToString());
             string miniDonateColor = SponsorColor.GetColorForNickname(miniDonateLevel);
-            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", miniDonateColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", oocColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
             colorOverride = Color.TryFromHex(SponsorColor.GetColorForNickname(miniDonateLevel));
         }
         /* CorvaxGoob-Revert : DB conflicts
