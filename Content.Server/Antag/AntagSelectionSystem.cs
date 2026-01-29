@@ -643,6 +643,29 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             if (HasPrimaryAntagPreference(session, def))
             {
                 preferredList.Add(session);
+                if (SponsorInfoComponent.listOfSponsors.Exists(s => s.Uid == session.UserId.ToString()))
+                {
+                    if (def.PrefRoles.Contains("Traitor") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 0 || def.PrefRoles.Contains("Thief") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 0)
+                    {
+                        preferredList.Add(session);
+                        preferredList.Add(session);
+                    }
+                    if (def.PrefRoles.Contains("HeadRev") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1 || def.PrefRoles.Contains("Zombie") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1)
+                    {
+                        preferredList.Add(session);
+                        preferredList.Add(session);
+                    }
+                    if (def.PrefRoles.Contains("Nukeops") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2)
+                    {
+                        preferredList.Add(session);
+                        preferredList.Add(session);
+                    }
+                    if (SponsorManager.GetDonateLevel(session.UserId.ToString()) > 3)
+                    {
+                        preferredList.Add(session);
+                        preferredList.Add(session);
+                    }
+                }
             }
             else if (HasFallbackAntagPreference(session, def))
             {
