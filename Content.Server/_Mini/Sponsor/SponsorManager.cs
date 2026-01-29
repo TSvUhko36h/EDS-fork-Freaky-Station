@@ -14,15 +14,4 @@ public class SponsorManager
         }
         return result;
     }
-    public async Task GetDonatorInfo()
-    {
-        try
-        {
-           
-        }
-        catch (Exception e)
-        {
-           
-        }
-    }
 }

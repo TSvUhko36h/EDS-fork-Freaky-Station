@@ -810,10 +810,20 @@ namespace Content.Server.Administration.Systems
             if (_rateLimit.CountAction(eventArgs.SenderSession, RateLimitKey) != RateLimitStatus.Allowed)
                 return;
 
+            var sponsorData = SponsorInfoComponent.listOfSponsors.FirstOrDefault(s => s.Uid == senderSession.UserId.ToString());
+            var listCount = SponsorInfoComponent.listOfSponsors.Count;
+            Log.Info($"{senderSession.UserId.ToString()} {listCount}");
+            var sponsorPrefix = "";
+            if (listCount>0)
+                sponsorPrefix = "(Спонсор) ";
+
+            var displayName = $"{sponsorPrefix}{senderSession.Name} {senderSession.UserId.ToString()}";
+            Log.Error(displayName);
+
             var bwoinkParams = new BwoinkParams(message,
                 eventArgs.SenderSession.UserId,
                 senderAdmin,
-                eventArgs.SenderSession.Name,
+                displayName,
                 eventArgs.SenderSession.Channel,
                 false,
                 true,
