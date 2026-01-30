@@ -812,15 +812,14 @@ namespace Content.Server.Administration.Systems
 
             var displayName = $"{senderSession.Name}";
 
+            //mini-station donate color
             if (SponsorInfoComponent.listOfSponsors.Any(d => string.Equals(d.Uid, senderSession.UserId.ToString(), StringComparison.OrdinalIgnoreCase)))
             {
                 int miniDonateLevel = SponsorManager.GetDonateLevel(senderSession.UserId.ToString());
                 string miniDonateColor = SponsorColor.GetColorForNickname(miniDonateLevel);
                 displayName = $"[bold][color={miniDonateColor}]{senderSession.Name}[/color][/bold]";
             }
-            var count = SponsorInfoComponent.listOfSponsors.Count;
-            Log.Info($"Количество спонсоров в списке: {count}");
-
+            //mini-station
             var bwoinkParams = new BwoinkParams(message,
                 eventArgs.SenderSession.UserId,
                 senderAdmin,

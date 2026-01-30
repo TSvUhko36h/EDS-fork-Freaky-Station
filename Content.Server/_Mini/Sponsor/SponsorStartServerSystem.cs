@@ -44,7 +44,10 @@ public sealed class DonatorStartupSystem : EntitySystem
                 var userIdStr = reader.GetGuid(0).ToString();
                 var level = reader.GetInt32(1);
 
-                tempList.Add(new SponsorInfoComponent.SponsorInfo(userIdStr, level));
+                if (!tempList.Any(x => x.Uid == userIdStr))
+                {
+                    tempList.Add(new SponsorInfoComponent.SponsorInfo(userIdStr, level));
+                }
             }
             SponsorInfoComponent.listOfSponsors = tempList;
         }
