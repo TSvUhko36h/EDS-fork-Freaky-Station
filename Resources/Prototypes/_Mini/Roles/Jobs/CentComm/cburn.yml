@@ -37,8 +37,7 @@
     id: CBURNLeaderPDA
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: DoorRemoteAll
-  inhand:
-  - ERTloadoutCBURNLeader
+
 
 # Agent
 
@@ -65,16 +64,27 @@
   id: CBURNAgentGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBrown
-    mask: ClothingMaskGasExplorer
-    eyes: ClothingEyesGlassesSecurity
-    ears: ClothingHeadsetCentCom
+    back: ClothingBackpackDuffelCBURN
+    mask: ClothingMaskGasERT
+    neck: ExecutiveIDCard # Executive Access!
+    eyes: ClothingEyesGlassesMedSec # Better glasses
+    ears: ClothingHeadsetAltCentCom
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitCBURN
-    shoes: ClothingShoesBootsCombatFilled
-    id: CBURNPDA
-    pocket1: DoubleEmergencyOxygenTankFilled
-  inhand:
-  - ERTloadoutCBURN
+    shoes: ClothingShoesBootsMagEmergencyResponseTeam # Goobstation
+    id: CBURNPDA # Todo - Replace it.
+    pocket1: InfectionScannerCburn # Goob
+    pocket2: WeaponPulsePistol
+    belt: ClothingBeltSecurityFilled # No shotgun, no bandolier.
+  storage:
+    back:
+    # - WeaponPulseCarbine # CBURN desperately needs a good fucking gun, not that dogshit. - Also, this gun is literally never used.
+    - AmbuzolPlusMedipen # Injectors are cooler.
+    - BaseUplinkCBRUN
+    - AmbuzolMedipen # Injectors are cooler.
+    - AmbuzolMedipen # Injectors are cooler.
+    - MedkitCombatFilled # Ah yes, let's send them in with ZERO meds. Good luck!
+    - CburnSpear # SPEAAR
 
 # Other
 - type: entity
@@ -84,9 +94,9 @@
   description: Мантия отличающая командира РХБЗЗ от его подчинённых.
   components:
   - type: Sprite
-    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+    sprite: Clothing/Neck/mantles/hosmantle.rsi
   - type: Clothing
-    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+    sprite: Clothing/Neck/mantles/hosmantle.rsi
 
 - type: entity
   parent: PillCanister
