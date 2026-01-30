@@ -11,6 +11,7 @@ public class SponsorManager
         if (SponsorInfoComponent.listOfSponsors.FirstOrDefault(p => p.Uid == uid) is { DonateLevel: var donatelevel })
         {
             result = donatelevel;
+            return result;
         }
         return result;
     }

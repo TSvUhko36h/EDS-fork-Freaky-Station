@@ -25,6 +25,8 @@
     - All
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-leader-name
       description: ghost-role-information-ert-leader-description
       rules: ghost-role-information-nonantagonist-rules
@@ -69,6 +71,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-leader-name
       description: ghost-role-information-ert-leader-description
       rules: ghost-role-information-nonantagonist-rules
@@ -113,6 +117,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-leader-name
       description: ghost-role-information-ert-leader-description
       rules: ghost-role-information-nonantagonist-rules
@@ -157,6 +163,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-cburn-leader-name
       description: ghost-role-information-cburn-leader-description
       rules: ghost-role-information-nonantagonist-rules
@@ -208,6 +216,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-security-name
       description: ghost-role-information-ert-security-description
       rules: ghost-role-information-nonantagonist-rules
@@ -246,6 +256,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-security-name
       description: ghost-role-information-ert-security-description
       rules: ghost-role-information-nonantagonist-rules
@@ -359,6 +371,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-medical-name
       description: ghost-role-information-ert-medical-description
       rules: ghost-role-information-nonantagonist-rules
@@ -392,6 +406,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-medical-name
       description: ghost-role-information-ert-medical-description
       rules: ghost-role-information-nonantagonist-rules
@@ -434,6 +450,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-janitor-name
       description: ghost-role-information-ert-janitor-description
       rules: ghost-role-information-nonantagonist-rules
@@ -469,6 +487,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-janitor-name
       description: ghost-role-information-ert-janitor-description
       rules: ghost-role-information-nonantagonist-rules
@@ -499,6 +519,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-janitor-name
       description: ghost-role-information-ert-janitor-description
       rules: ghost-role-information-nonantagonist-rules
@@ -538,6 +560,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-engineer-name
       description: ghost-role-information-ert-engineer-description
       rules: ghost-role-information-nonantagonist-rules
@@ -576,6 +600,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-ert-engineer-name
       description: ghost-role-information-ert-engineer-description
       rules: ghost-role-information-nonantagonist-rules
@@ -609,6 +635,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+          - All
       name: ghost-role-information-ert-engineer-name
       description: ghost-role-information-ert-engineer-description
       rules: ghost-role-information-nonantagonist-rules
@@ -650,6 +678,8 @@
   parent: EventHumanoidERT
   components:
     - type: GhostRole
+      skills: # CorvaxGoob-Skills
+        - All
       name: ghost-role-information-cburn-agent-name
       description: ghost-role-information-cburn-agent-description
       rules: ghost-role-information-nonantagonist-rules
