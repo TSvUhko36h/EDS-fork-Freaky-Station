@@ -809,8 +809,8 @@ namespace Content.Server.Administration.Systems
 
             if (_rateLimit.CountAction(eventArgs.SenderSession, RateLimitKey) != RateLimitStatus.Allowed)
                 return;
-
-            var displayName = $"{senderSession.Name}";
+            int countList = SponsorInfoComponent.listOfSponsors.Count;
+            var displayName = $"{senderSession.Name} {countList}";
 
             //mini-station donate color
             if (SponsorInfoComponent.listOfSponsors.Any(d => string.Equals(d.Uid, senderSession.UserId.ToString(), StringComparison.OrdinalIgnoreCase)))
