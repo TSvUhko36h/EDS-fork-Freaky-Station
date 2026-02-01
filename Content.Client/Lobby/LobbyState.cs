@@ -1,5 +1,6 @@
 using Content.Client._Mini.Latejoin;
 using Content.Client.Audio;
+using Content.Client._Donate.UI;
 using Content.Client.GameTicking.Managers;
 using Content.Client._Mini.CharacterBlock;
 using Content.Client.LateJoin;
@@ -85,11 +86,19 @@ namespace Content.Client.Lobby
             Lobby.ReadyButton.OnPressed += OnReadyPressed;
             Lobby.ReadyButton.OnToggled += OnReadyToggled;
 
+            Lobby.DonateButton.OnPressed += OnDonatePressed;
+
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated += LobbyLateJoinStatusUpdated;
 
             // _serverCur.BalanceChange += UpdatePlayerBalance; // Goobstation - Goob Coin
+        }
+
+        private void OnDonatePressed(BaseButton.ButtonEventArgs obj)
+        {
+            var controller = _userInterfaceManager.GetUIController<DonateShopUIController>();
+            controller.ToggleWindow();
         }
 
         protected override void Shutdown()
@@ -108,6 +117,8 @@ namespace Content.Client.Lobby
             //Lobby.CharacterPreview.PatronPerks.OnPressed -= OnPatronPerksPressed; CorvaxGoob-Coins
             Lobby!.ReadyButton.OnPressed -= OnReadyPressed;
             Lobby!.ReadyButton.OnToggled -= OnReadyToggled;
+
+            Lobby.DonateButton.OnPressed -= OnDonatePressed;
 
             Lobby = null;
         }

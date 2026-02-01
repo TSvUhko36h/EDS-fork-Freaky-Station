@@ -10,23 +10,23 @@ public class SponsorColor
         switch (DonateLvl)
         {
             case 1:
-                color = "#77d700";
+                color = "#b4e07ed1";
                 return color;
                 break;
             case 2:
-                color = "#c0c0c0";
+                color = "#bebaba";
                 return color;
                 break;
             case 3:
-                color = "#ffd700";
+                color = "#e0ad47";
                 return color;
                 break;
             case 4:
-                color = "#8b00ff";
+                color = "#a86ed7";
                 return color;
                 break;
             case 5:
-                color = "#c0c0c0";
+                color = "#e78459";
                 return color;
                 break;
         }
