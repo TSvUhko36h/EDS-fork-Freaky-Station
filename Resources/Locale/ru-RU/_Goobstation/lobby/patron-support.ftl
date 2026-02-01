@@ -5,23 +5,23 @@ patron-support-window-description2 = Ваша помощь поможет нам
 
 patron-support-window-tiers-header = Уровни поддержки и награды
 
-patron-support-window-tier1-name = Шпион-донатер [50RUB/месяц]
-patron-support-window-tier1-perk1 = • ⚑ Уникальная роль в Discord
+patron-support-window-tier1-name = Шпион-донатер [150RUB/месяц]
+patron-support-window-tier1-perk1 = • Уникальная роль в Discord
 patron-support-window-tier1-perk2 = • Донатерские чаты в Discord
 
-patron-support-window-tier2-name = Состоятельный фрик [100RUB/месяц]
+patron-support-window-tier2-name = Состоятельный фрик [250RUB/месяц]
 patron-support-window-tier2-perk1 = = Всё за предыдущий уровень
-patron-support-window-tier2-perk2 = • ⚪ Серебряный цвет ника в ООС
-patron-support-window-tier2-perk3 = • 🌟Выдача лоутир и мидтир антагов по просьбе в AHelp
+patron-support-window-tier2-perk2 = •  Серебряный цвет ника в ООС
+patron-support-window-tier2-perk3 = • Выдача лоутир и мидтир антагов по просьбе в AHelp
 
-patron-support-window-tier3-name = Магнат фрик-коинов (200RUB/месяц)
+patron-support-window-tier3-name = Магнат фрик-коинов (350RUB/месяц)
 patron-support-window-tier3-perk1 = = Всё за предыдущий уровень
-patron-support-window-tier3-perk2 = • 🟡 Жёлтый цвет ника в OOC
-patron-support-window-tier3-perk3 = • 🌟Выдача лоутир, мидтир и хайтир антагов по просьбе в AHelp
+patron-support-window-tier3-perk2 = • Жёлтый цвет ника в OOC
+patron-support-window-tier3-perk3 = • Выдача лоутир, мидтир и хайтир антагов по просьбе в AHelp
 
 
-patron-support-window-tier4-name = Кастом-гост
-patron-support-window-tier4-perk1 = ⚑ Уникальная роль в Discord с уникальными донатерскими чатами в Discord
-patron-support-window-tier4-perk2 = 👻 Специальный личный призрак. Обратитесь к координаторам в ЛС, либо же в чат бусти для подробностей.
+patron-support-window-tier4-name = Кастом-гост (500RUB/месяц)
+patron-support-window-tier4-perk1 • Уникальная роль в Discord с уникальными донатерскими чатами в Discord
+patron-support-window-tier4-perk2 • Специальный личный призрак. Обратитесь к координаторам в ЛС, либо же в чат бусти для подробностей.
 
-patron-support-window-button = Посетить наш Booooosty 👻
+patron-support-window-button = Посетить наш Booooosty

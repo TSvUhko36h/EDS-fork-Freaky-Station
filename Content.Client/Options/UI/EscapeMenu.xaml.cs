@@ -48,7 +48,7 @@ namespace Content.Client.Options.UI
         public EscapeMenu()
         {
             RobustXamlLoader.Load(this);
-            Boosty.OnPressed += _ => _uriOpener.OpenUri(new Uri("https://boosty.to/sherlol"));
+            Boosty.OnPressed += _ => _uriOpener.OpenUri(new Uri("https://boosty.to/freakystation"));
             Discord.OnPressed += _ => _uriOpener.OpenUri(new Uri("https://discord.gg/NMqvMnqNA6"));
         }
     }
