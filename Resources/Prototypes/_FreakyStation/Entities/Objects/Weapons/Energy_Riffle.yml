@@ -1,6 +1,6 @@
 # Прожектайл станера
 - type: entity
-  name : disabler Riffle bolt
+  name : режим станнера
   id: BulletRiffleDisabler
   parent: BulletDisabler
   categories: [ HideSpawnMenu ]
@@ -18,7 +18,7 @@
 
 # Прожектайл лазера
 - type: entity
-  name: laser riffle bolt
+  name: режим лазера
   id: BulletRiffleLaser
   parent: BulletLaser
   categories: [ HideSpawnMenu ]
