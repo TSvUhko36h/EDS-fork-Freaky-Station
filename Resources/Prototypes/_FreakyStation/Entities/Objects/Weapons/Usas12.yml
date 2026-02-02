@@ -28,7 +28,7 @@
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_auto.ogg # Corvax-Guns
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: ItemSlots
@@ -74,7 +74,7 @@
         - ShellShotgun
     capacity: 12
     soundRack:
-      path: /Audio/Corvax/Weapons/Guns/Cock/shotgun_cock.ogg # Corvax-Guns
+      path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
   - type: Item
     size: Small
   - type: ContainerContainer

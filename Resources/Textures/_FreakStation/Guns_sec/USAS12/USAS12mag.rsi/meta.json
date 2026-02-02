@@ -20,6 +20,18 @@
             "name": "slug"
         },
         {
+            "name": "inhand-left-mag"
+        },
+        {
+            "name": "inhand-left-stripe"
+        },
+        {
+            "name": "inhand-right-mag"
+        },
+        {
+            "name": "inhand-right-stripe"
+        },
+        {
             "name": "mag-1"
         }
     ]
