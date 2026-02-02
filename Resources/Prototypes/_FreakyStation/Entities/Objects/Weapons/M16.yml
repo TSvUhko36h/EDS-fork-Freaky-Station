@@ -105,6 +105,13 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineM16
+  result: MagazineM16
+  materials:
+    Steel: 145
 
 #Пустой магазин
 - type: entity
@@ -122,6 +129,13 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseEmptyAmmoRecipe
+  id: MagazineM16Empty
+  result: MagazineM16Empty
+  materials:
+    Steel: 25
 
 #Магазин учебных
 - type: entity
@@ -138,6 +152,13 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineM16Practice
+  result: MagazineM16Practice
+  materials:
+    Steel: 85
 
 #Магазин урановых
 - type: entity
@@ -154,6 +175,15 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineM16Uranium
+  result: MagazineM16Uranium
+  materials:
+    Steel: 25
+    Plastic: 65
+    Uranium: 120
 
 #Магазин зажигательных
 - type: entity
@@ -170,3 +200,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineM16Incendiary
+  result: MagazineM16Incendiary
+  materials:
+    Steel: 25
+    Plastic: 120

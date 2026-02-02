@@ -92,8 +92,7 @@
     zeroVisible: false
   - type: Appearance
 
-#обычный
-
+# Обычный
 - type: entity
   id: MagazineUSAS12
   name: барабан с дробью (.50 pellet)
@@ -110,9 +109,15 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineUSAS12
+  result: MagazineUSAS12
+  materials:
+    Steel: 240
 
 # Пустой
-
 - type: entity
   id: MagazineUSAS12Empty
   name: барабан с дробью (.50 pellet)
@@ -128,9 +133,15 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: BallisticAmmoProvider
     proto: null
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseEmptyAmmoRecipe
+  id: MagazineUSAS12Empty
+  result: MagazineUSAS12Empty
+  materials:
+    Steel: 50
 
 # Травмат
-
 - type: entity
   id: MagazineUSAS12beanbags
   name: барабан с дробью (.50 травматический)
@@ -147,9 +158,16 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineUSAS12beanbags
+  result: MagazineUSAS12beanbags
+  materials:
+    Steel: 150
+    Plastic: 140
 
 # Пуля
-
 - type: entity
   id: MagazineUSAS12Slug
   name: барабан с дробью (.50 пуля)
@@ -166,9 +184,16 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineUSAS12Slug
+  result: MagazineUSAS12Slug
+  materials:
+    Steel: 190
+    Plastic: 100
 
 # Зажигательные
-
 - type: entity
   id: MagazineUSAS12incendiary
   name: барабан с дробью (.50 зажигательные)
@@ -185,3 +210,11 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  #Крафт в техфабе
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineUSAS12incendiary
+  result: MagazineUSAS12incendiary
+  materials:
+    Steel: 80
+    Plastic: 320
