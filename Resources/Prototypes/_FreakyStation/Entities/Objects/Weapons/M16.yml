@@ -127,7 +127,6 @@
 - type: entity
   id: MagazineM16Practice
   name: M16 магазин учебные (.35 auto practice)
-  suffix: M16
   parent: BaseMagazineM16
   components:
   - type: BallisticAmmoProvider
@@ -152,6 +151,22 @@
     sprite: _FreakStation/Guns_sec/M16mag.rsi
     layers:
     - state: uranium
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+#Магазин зажигательных
+- type: entity
+  id: MagazineM16Incendiary
+  name: M16 магазин зажигательные (.35 auto incendiary)
+  parent: BaseMagazineM16
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistolIncendiary
+  - type: Sprite
+    sprite: _FreakStation/Guns_sec/M16mag.rsi
+    layers:
+    - state: practice # Пока что без своего стейта :(
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
