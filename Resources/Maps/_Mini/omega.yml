@@ -4698,7 +4698,7 @@ entities:
           - 0
         chunkSize: 4
     - type: BecomesStation
-      id: Omega
+      id: MiniOmega
     - type: OccluderTree
     - type: Shuttle
       dampingModifiers:
