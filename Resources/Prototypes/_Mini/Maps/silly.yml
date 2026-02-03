@@ -1,6 +1,6 @@
 - type: gameMap
   id: MiniSilly
-  mapName: 'NTABK Силли'
+  mapName: 'Silly'
   mapPath: /Maps/_Mini/silly.yml
   maxRandomOffset: 0
   randomRotation: false
