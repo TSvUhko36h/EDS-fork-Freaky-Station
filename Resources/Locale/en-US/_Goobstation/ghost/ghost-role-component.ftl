@@ -20,9 +20,6 @@ ghost-role-information-lootbug-description = Постарайся не быть 
 ghost-role-information-homunculus-name = Гомункул
 ghost-role-information-homunculus-description = Повинуйся тому, кто тебя создал; если же его нет, поступай как пожелаешь.
 
-ghost-role-information-huborg-name = Урист МакБорг
-ghost-role-information-huborg-description = Вы отвратительный уродливый киборг.
-
 ghost-role-information-c4-name = Композиция C-4
 ghost-role-information-c4-description = Помогайте своему пользователю взрывать вещи.
 ghost-role-information-fillbot-name = fillbot

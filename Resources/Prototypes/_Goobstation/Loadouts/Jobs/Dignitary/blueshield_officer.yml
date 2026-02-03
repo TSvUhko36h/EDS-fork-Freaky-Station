@@ -191,6 +191,8 @@
     proto: SeniorBlueshieldOfficer
   equipment:
     neck: ClothingNeckPonchoBlueshield
+
+- type: loadout
   id: BlueshieldOfficerEnsemble
   effects:
   - !type:GroupLoadoutEffect

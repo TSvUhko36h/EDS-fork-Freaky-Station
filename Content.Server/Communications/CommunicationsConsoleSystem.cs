@@ -99,8 +99,6 @@ namespace Content.Server.Communications
 
         public override void Initialize()
         {
-            SubscribeLocalEvent<CommunicationsConsoleComponent, MapInitEvent>(OnMapInit);
-
             // All events that refresh the BUI
             SubscribeLocalEvent<AlertLevelChangedEvent>(OnAlertLevelChanged);
             SubscribeLocalEvent<RoundEndSystemChangedEvent>(_ => OnGenericBroadcastEvent());
