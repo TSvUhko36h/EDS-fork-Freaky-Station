@@ -1,8 +1,8 @@
 - type: entity
   parent: BasePDA
   id: MinerPDA
-  name: miner PDA
-  description: Smells like ash.
+  name: КПК шахтёра
+  description: Пахнет пеплом и рудой.
   components:
   - type: Sprite
     sprite: _Lavaland/Objects/Devices/pda.rsi

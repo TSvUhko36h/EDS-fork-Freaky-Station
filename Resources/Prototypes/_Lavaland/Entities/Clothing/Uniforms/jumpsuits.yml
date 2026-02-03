@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitShaftMiner
-  name: shaft miner's jumpsuit
-  description: It's a snappy jumpsuit with a sturdy set of overalls. Looks a bit burnt.
+  name: шахтёрский комбинезон
+  description: Прочный комбинезон, предназначенный для работы в шахтах Лаваленда.
   components:
   - type: Sprite
     sprite: _Lavaland/Clothing/Uniforms/Jumpsuit/shaft_miner.rsi
