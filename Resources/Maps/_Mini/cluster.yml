@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/03/2026 19:08:41
+  time: 02/03/2026 22:47:03
   entityCount: 12902
 maps:
 - 1
@@ -67797,6 +67797,23 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,-22.5
       parent: 2
+- proto: SMESAdvanced
+  entities:
+  - uid: 10201
+    components:
+    - type: Transform
+      pos: 25.5,-14.5
+      parent: 2
+  - uid: 10202
+    components:
+    - type: Transform
+      pos: 24.5,-14.5
+      parent: 2
+  - uid: 10203
+    components:
+    - type: Transform
+      pos: 23.5,-14.5
+      parent: 2
 - proto: SMESBasic
   entities:
   - uid: 7322
@@ -67810,27 +67827,6 @@ entities:
     components:
     - type: Transform
       pos: -41.5,21.5
-      parent: 2
-  - uid: 10201
-    components:
-    - type: MetaData
-      name: SMES Bank 1
-    - type: Transform
-      pos: 23.5,-14.5
-      parent: 2
-  - uid: 10202
-    components:
-    - type: MetaData
-      name: SMES Bank 2
-    - type: Transform
-      pos: 24.5,-14.5
-      parent: 2
-  - uid: 10203
-    components:
-    - type: MetaData
-      name: SMES Bank 3
-    - type: Transform
-      pos: 25.5,-14.5
       parent: 2
   - uid: 10204
     components:
@@ -69218,6 +69214,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 46.5,28.5
       parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        9170:
+        - - StationRadioServerPort
+          - StationRadioRigPort
 - proto: Stool
   entities:
   - uid: 10390
@@ -73189,6 +73190,11 @@ entities:
     - type: Transform
       pos: 46.5,26.5
       parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        9170:
+        - - VinylPlayerPort
+          - StationRadioRigPort
 - proto: WallReinforced
   entities:
   - uid: 4055
