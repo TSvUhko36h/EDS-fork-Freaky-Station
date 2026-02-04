@@ -633,7 +633,7 @@ namespace Content.Server.Voting.Managers
 
                 if(_playerManager.PlayerCount > (preset.MaxPlayers ?? int.MaxValue))
                     continue;
-                if(preset.ModeTitle == "traitor-title" && _playerManager.PlayerCount<10 || _playerManager.PlayerCount > 35)
+                if(preset.ModeTitle == "traitor-title" && _playerManager.PlayerCount<10)
                     continue;
                 if(preset.ModeTitle == "nukeops-title" && _playerManager.PlayerCount<25)
                     continue;
