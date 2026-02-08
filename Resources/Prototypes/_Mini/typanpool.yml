@@ -59,7 +59,7 @@
     - Typan
 
   - type: additionalMap
-    id: Omega
+    id: FreakyOmega
     maps:
     - Typan
 
@@ -69,7 +69,7 @@
     - Typan
 
   - type: additionalMap
-    id: Saltern
+    id: FreakySaltern
     maps:
     - Typan
 
