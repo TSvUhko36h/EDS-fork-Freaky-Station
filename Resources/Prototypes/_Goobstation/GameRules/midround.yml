@@ -665,7 +665,7 @@
   parent: BaseGameRule
   components:
   - type: StationEvent
-    weight: 25 # Tune down after Christmas
+    weight: 0 # Tune down after Christmas
     earliestStart: 3
     minimumPlayers: 10
     maxOccurrences: 1
