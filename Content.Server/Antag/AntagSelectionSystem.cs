@@ -627,7 +627,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
     /// <summary>
     /// Gets an ordered player pool based on player preferences and the antagonist definition.
-       /// </summary>
+    /// </summary>
+    /// mini-station antag priority
     public AntagSelectionPlayerPool GetPlayerPool(Entity<AntagSelectionComponent> ent, IList<ICommonSession> sessions, AntagSelectionDefinition def)
     {
         var preferredList = new List<ICommonSession>();
@@ -643,6 +644,29 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             if (HasPrimaryAntagPreference(session, def))
             {
                 preferredList.Add(session);
+                //mini-station donate privellege
+                var sponsorSys = EntitySystem.Get<SponsorSystem>();
+                var sponsor = sponsorSys.Sponsors.FirstOrDefault(s => s.Uid == session.UserId.ToString());
+
+                if (sponsor.Level > 0)
+                {
+                    var level = sponsor.Level;
+
+                    // Проверяем условия по ролям и уровням
+                    bool matchesTier1 = (def.PrefRoles.Contains("Traitor") || def.PrefRoles.Contains("Thief")) && level > 0;
+                    bool matchesTier2 = (def.PrefRoles.Contains("HeadRev") || def.PrefRoles.Contains("Zombie") || def.PrefRoles.Contains("Abductor")) && level > 1;
+                    bool matchesTier3 = (def.PrefRoles.Contains("Nukeops") || def.PrefRoles.Contains("Devil") || def.PrefRoles.Contains("Cultist")) && level > 2;
+                    bool matchesTier4 = level > 3;
+
+                    // Если хоть одно условие сработало — добавляем веса
+                    if (matchesTier1 || matchesTier2 || matchesTier3 || matchesTier4)
+                    {
+                        for (var i = 0; i < 4; i++)
+                        {
+                            preferredList.Add(session);
+                        }
+                    }
+                }
             }
             else if (HasFallbackAntagPreference(session, def))
             {

@@ -150,7 +150,7 @@
   - extended
   - shittersafari
   name: extended-title
-  showInVote: false #2boring2vote
+  showInVote: true #2boring2vote
   description: extended-description
   rules:
   - BasicStationEventScheduler
@@ -180,7 +180,7 @@
   description: secret-description
   rules:
     - Secret
-    - BasicStationEventScheduler
+    # - BasicStationEventScheduler CorvaxGoob : Fixes double spawn BasicStationEventScheduler
 
 - type: gamePreset
   id: SecretExtended #For Admin Use: Runs Extended but shows "Secret" in lobby.

@@ -809,11 +809,20 @@ namespace Content.Server.Administration.Systems
 
             if (_rateLimit.CountAction(eventArgs.SenderSession, RateLimitKey) != RateLimitStatus.Allowed)
                 return;
-
+            var displayName = senderSession.Name;
+            //mini-station donate color
+            var sponsorSys = EntitySystem.Get<SponsorSystem>();
+            var sponsor = sponsorSys.Sponsors.FirstOrDefault(d => d.Uid == senderSession.UserId.ToString());
+            if (sponsor.Level > 0)
+            {
+                string miniDonateColor = SponsorColor.GetColorForNickname(sponsor.Level);
+                displayName = $"[bold][color={miniDonateColor}]{senderSession.Name}[/color][/bold]";
+            }
+            //mini-station
             var bwoinkParams = new BwoinkParams(message,
                 eventArgs.SenderSession.UserId,
                 senderAdmin,
-                eventArgs.SenderSession.Name,
+                displayName,
                 eventArgs.SenderSession.Channel,
                 false,
                 true,

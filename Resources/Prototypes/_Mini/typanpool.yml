@@ -19,6 +19,21 @@
     - Typan
 
   - type: additionalMap
+    id: MiniCluster
+    maps:
+    - Typan
+
+  - type: additionalMap
+    id: MiniOmega
+    maps:
+    - Typan
+
+  - type: additionalMap
+    id: MiniPacked
+    maps:
+    - Typan
+
+  - type: additionalMap
     id: Lambda
     maps:
     - Typan

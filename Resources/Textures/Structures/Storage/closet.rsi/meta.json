@@ -159,6 +159,9 @@
       "name": "cargo_door"
     },
     {
+      "name": "salvage_door"
+    },
+    {
       "name": "cargo_open"
     },
     {
