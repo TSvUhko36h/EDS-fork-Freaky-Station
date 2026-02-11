@@ -110,7 +110,7 @@ public sealed class DonateShopWindow : MiniDefaultWindow
         };
         boostyButton.OnPressed += _ =>
         {
-            _uriOpener.OpenUri(new Uri("https://boosty.to/mini-station"));
+            _uriOpener.OpenUri(new Uri("https://boosty.to/freakystation"));
         };
         buttonsContainer.AddChild(boostyButton);
 
