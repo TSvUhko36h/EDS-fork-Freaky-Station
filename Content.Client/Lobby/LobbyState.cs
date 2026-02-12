@@ -86,7 +86,7 @@ namespace Content.Client.Lobby
             Lobby.ReadyButton.OnPressed += OnReadyPressed;
             Lobby.ReadyButton.OnToggled += OnReadyToggled;
 
-            Lobby.DonateButton.OnPressed += OnDonatePressed;
+            // Lobby.DonateButton.OnPressed += OnDonatePressed;
 
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
@@ -95,11 +95,11 @@ namespace Content.Client.Lobby
             // _serverCur.BalanceChange += UpdatePlayerBalance; // Goobstation - Goob Coin
         }
 
-        private void OnDonatePressed(BaseButton.ButtonEventArgs obj)
-        {
-            var controller = _userInterfaceManager.GetUIController<DonateShopUIController>();
-            controller.ToggleWindow();
-        }
+        // private void OnDonatePressed(BaseButton.ButtonEventArgs obj)
+        // {
+        //     var controller = _userInterfaceManager.GetUIController<DonateShopUIController>();
+        //     controller.ToggleWindow();
+        // }
 
         protected override void Shutdown()
         {
@@ -118,7 +118,7 @@ namespace Content.Client.Lobby
             Lobby!.ReadyButton.OnPressed -= OnReadyPressed;
             Lobby!.ReadyButton.OnToggled -= OnReadyToggled;
 
-            Lobby.DonateButton.OnPressed -= OnDonatePressed;
+            // Lobby.DonateButton.OnPressed -= OnDonatePressed;
 
             Lobby = null;
         }
