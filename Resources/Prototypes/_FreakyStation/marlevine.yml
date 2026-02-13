@@ -6,6 +6,8 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: medicine
   color: "#f80000"
+  boilingPoint: 184.3
+  meltingPoint: 110.7
   metabolisms:
     Medicine:
       effects:
