@@ -21,7 +21,7 @@ patron-support-window-tier3-perk3 = • Выдача лоутир, мидтир 
 
 
 patron-support-window-tier4-name = Кастом-гост (500RUB/месяц)
-patron-support-window-tier4-perk1 • Уникальная роль в Discord с уникальными донатерскими чатами в Discord
-patron-support-window-tier4-perk2 • Специальный личный призрак. Обратитесь к координаторам в ЛС, либо же в чат бусти для подробностей.
+patron-support-window-tier4-perk1 = • Уникальная роль в Discord с уникальными донатерскими чатами в Discord
+patron-support-window-tier4-perk2 = • Специальный личный призрак. Обратитесь к координаторам в ЛС, либо же в чат бусти для подробностей.
 
 patron-support-window-button = Посетить наш Booooosty
