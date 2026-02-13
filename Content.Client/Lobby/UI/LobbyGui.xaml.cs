@@ -47,7 +47,6 @@ namespace Content.Client.Lobby.UI
 
             LeaveButton.OnPressed += _ => _consoleHost.ExecuteCommand("disconnect");
             OptionsButton.OnPressed += _ => UserInterfaceManager.GetUIController<OptionsUIController>().ToggleWindow();
-            Boosty.OnPressed += _ => _uriOpener.OpenUri(new Uri("https://boosty.to/freakystation"));
             Discord.OnPressed += _ => _uriOpener.OpenUri(new Uri("https://discord.gg/NMqvMnqNA6"));
             CharacterSetup.OnPressed += _ => SwitchState(LobbyGuiState.CharacterSetup);
             Rules.OnPressed += _ => new RulesAndInfoWindow().Open();

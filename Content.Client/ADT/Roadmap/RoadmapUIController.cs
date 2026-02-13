@@ -12,8 +12,6 @@ public sealed class RoadmapUIController : UIController, IOnStateEntered<LobbySta
     {
         if (_shown || _window != null)
             return;
-
-        ToggleRoadmap();
     }
 
     public void ToggleRoadmap()
