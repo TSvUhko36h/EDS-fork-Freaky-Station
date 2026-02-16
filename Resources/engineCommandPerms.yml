@@ -110,6 +110,8 @@
   - tpgrid
   - gridtc
   - togglespritenetsync
+  - pausemap #FreakyStation
+  - unpausemap #FreakyStation
 
 - Flags: ADMIN
   Commands:
@@ -133,8 +135,6 @@
 - Flags: SERVER
   Commands:
   - delete
-  - pausemap
-  - unpausemap
   - restart
   - shutdown
 
