@@ -1528,6 +1528,9 @@
   id: Soap
 
 - type: Tag
+  id: sockss
+
+- type: Tag
   id: Softsuit # Used for Yowies outerslot whitelist
 
 - type: Tag
