@@ -12,7 +12,7 @@
     Medicine:
       effects:
       - !type:ModifyBleedAmount
-        amount: -1.9
+        amount: -1.6
       - !type:SuppressPain
         amount: 1
         time: 30
@@ -24,7 +24,7 @@
       - !type:HealthChange
         damage:
           groups:
-            Brute: -18
+            Brute: -9
       - !type:HealthChange
         conditions:
         - !type:OrganType
@@ -34,8 +34,8 @@
           min: 15
         damage:
           types:
-            Asphyxiation: 2
-            Poison: 2
+            Asphyxiation: 1.5
+            Poison: 1.5
       - !type:ChemVomit
         conditions:
         - !type:OrganType
@@ -69,4 +69,4 @@
     TranexamicAcid:
       amount: 2
   products:
-    Marlevine: 5
+    Marlevine: 4
