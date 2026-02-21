@@ -12,7 +12,7 @@
 - type: reaction
   id: AntiHydrogen
   reactants:
-    Tritium:
+    Hydrogen:
       amount: 3
     Plasma:
       amount: 20
