@@ -1,6 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server.Botany.Components;
 using Content.Server.Botany.Systems;
 using Content.Server.Popups;
 using Content.Shared._CorvaxGoob.AbstractAnalyzer;
@@ -58,7 +57,7 @@ public sealed class PlantAnalyzerSystem : AbstractAnalyzerSystem<PlantAnalyzerCo
         PlantAnalyzerTrayData? trayData = null;
         PlantAnalyzerTolerancesData? tolerancesData = null;
         PlantAnalyzerProduceData? produceData = null;
-        if (_entityManager.TryGetComponent<PlantHolderComponent>(target, out var plantHolder))
+        if (_entityManager.TryGetComponent<Content.Server.Botany.Components.PlantHolderComponent>(target, out var plantHolder))
         {
             if (plantHolder.Seed is not null)
             {
@@ -197,6 +196,6 @@ public sealed class PlantAnalyzerSystem : AbstractAnalyzerSystem<PlantAnalyzerCo
     /// <inheritdoc/>
     protected override bool ValidScanTarget(EntityUid? target)
     {
-        return HasComp<PlantHolderComponent>(target);
+        return HasComp<Content.Server.Botany.Components.PlantHolderComponent>(target);
     }
 }

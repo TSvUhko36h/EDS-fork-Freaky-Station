@@ -107,7 +107,6 @@ public sealed class PayloadSystem : EntitySystem
             }
             // CorvaxGoob-AnomalyGrenade-End
 
-            RaiseLocalEvent(ent, args, false);
             RaiseLocalEvent(ent, ref args, false);
         }
     }
