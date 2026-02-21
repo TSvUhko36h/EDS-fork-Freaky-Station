@@ -463,6 +463,8 @@
       enum.WizardTeleportUiKey.Key: # Goobstation - wizard
         type: WizardTeleportBoundUserInterface
         requireInputValidation: false
+      enum.PsionicStudyUiKey.Key:
+        type: PsionicStudyBoundUserInterface
   - type: Puller
   - type: Speech
     speechSounds: Alto
@@ -671,3 +673,5 @@
     interfaces:
       enum.HumanoidMarkingModifierKey.Key: # sure, this can go here too
         type: HumanoidMarkingModifierBoundUserInterface
+      enum.PsionicStudyUiKey.Key:
+        type: PsionicStudyBoundUserInterface
