@@ -112155,7 +112155,7 @@ entities:
     - type: Transform
       pos: -41.927467,20.460537
       parent: 2
-- proto: ToyBladeBlade
+- proto: ToyBladeEldritch
   entities:
   - uid: 14847
     components:
