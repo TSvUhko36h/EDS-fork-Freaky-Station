@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 12/19/2025 17:45:32
-  entityCount: 7740
+  entityCount: 7741
 maps:
 - 1
 grids:
@@ -79,6 +79,8 @@ entities:
     - type: OccluderTree
     - type: Parallax
       parallax: DeltaStation
+    - type: FTLDestination
+      requireCoordinateDisk: true
   - uid: 2
     components:
     - type: MetaData
@@ -7545,7 +7547,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 5418
-- proto: AlwaysPoweredlightCyan
+- proto: PoweredlightCyan
   entities:
   - uid: 6749
     components:
@@ -7631,7 +7633,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 41.5,21.5
       parent: 2
-- proto: AlwaysPoweredLightLED
+- proto: PoweredlightLED
   entities:
   - uid: 7279
     components:
@@ -7836,14 +7838,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: AnomalyVesselExperimentalCircuitboard
-  entities:
-  - uid: 3511
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.371862,-14.212364
-      parent: 2
 - proto: APCBasic
   entities:
   - uid: 75
@@ -22227,6 +22221,15 @@ entities:
     - type: Transform
       pos: 3.5,4.5
       parent: 5000
+- proto: CoordinatesDisk
+  entities:
+  - uid: 900000
+    components:
+    - type: Transform
+      pos: 0.5,10.5
+      parent: 5000
+    - type: ShuttleDestinationCoordinates
+      destination: 1
 - proto: ComputerStationRecords
   entities:
   - uid: 2215
@@ -53980,50 +53983,6 @@ entities:
     components:
     - type: Transform
       pos: -26.473282,-7.4174776
-      parent: 2
-- proto: XenomorphEggGrown
-  entities:
-  - uid: 6877
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -22.5,-12.5
-      parent: 2
-  - uid: 6878
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -21.5,-14.5
-      parent: 2
-  - uid: 6933
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 42.5,23.5
-      parent: 2
-  - uid: 6934
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 43.5,23.5
-      parent: 2
-  - uid: 6935
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 47.5,24.5
-      parent: 2
-  - uid: 6936
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 53.5,24.5
-      parent: 2
-  - uid: 6937
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 52.5,23.5
       parent: 2
 - proto: XenomorphInfection
   entities:
