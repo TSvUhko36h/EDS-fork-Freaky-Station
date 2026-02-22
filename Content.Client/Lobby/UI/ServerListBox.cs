@@ -41,7 +41,7 @@ public sealed class ServerListBox : BoxContainer
 
     private void AddServers(BoxContainer container)
     {
-        AddServerInfo(container, "МИНИ-СТАНЦИЯ", "ss14://144.31.0.187:1213", "Партнёры", null);
+        //AddServerInfo(container, "МИНИ-СТАНЦИЯ", "ss14://144.31.0.187:1213", "Партнёры", null); // ждем упоминание итд
     }
 
     private void AddServerInfo(BoxContainer container, string serverName, string serverUrl, string description, string? discord)
