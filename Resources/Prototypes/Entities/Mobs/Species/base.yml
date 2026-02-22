@@ -462,6 +462,8 @@
       enum.WizardTeleportUiKey.Key: # Goobstation - wizard
         type: WizardTeleportBoundUserInterface
         requireInputValidation: false
+      enum.PsionicStudyUiKey.Key:
+        type: PsionicStudyBoundUserInterface
       enum.RadarConsoleUiKey.Key: #goob - contractor
         type: RadarConsoleBoundUserInterface
   - type: Puller
@@ -672,3 +674,5 @@
     interfaces:
       enum.HumanoidMarkingModifierKey.Key: # sure, this can go here too
         type: HumanoidMarkingModifierBoundUserInterface
+      enum.PsionicStudyUiKey.Key:
+        type: PsionicStudyBoundUserInterface
