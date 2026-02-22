@@ -1,11 +1,12 @@
 using Content.Goobstation.Shared.Slasher.Components;
 using Content.Goobstation.Shared.Slasher.Events;
+using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
-using Content.Shared.Stunnable;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.StatusEffect;
 using Content.Shared.Interaction;
 using Content.Server.Actions;
+using Robust.Shared.Prototypes;
 
 namespace Content.Goobstation.Server.Slasher.Systems;
 
@@ -18,7 +19,7 @@ public sealed class SlasherStaggerAreaSystem : EntitySystem
     public static readonly EntProtoId EffectId = "SlasherSlowdownStatusEffect";
 
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
+    [Dependency] private readonly MovementModStatusSystem _movemod = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedInteractionSystem _interact = default!;

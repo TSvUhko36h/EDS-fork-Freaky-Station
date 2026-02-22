@@ -307,7 +307,7 @@ public sealed class PsionicSystem : EntitySystem
                 continue;
 
             drainedTargets++;
-            _stun.TryStun(target, component.BioSurgeStunDuration, true);
+            _stun.TryUpdateParalyzeDuration(target, component.BioSurgeStunDuration);
 
             if (drainedTargets >= component.BioSurgeMaxTargets)
                 break;
@@ -385,7 +385,7 @@ public sealed class PsionicSystem : EntitySystem
             if (target == uid)
                 continue;
 
-            _stun.TryStun(target, TimeSpan.FromSeconds(0.9f), true);
+            _stun.TryUpdateParalyzeDuration(target, TimeSpan.FromSeconds(0.9f));
             _damageable.TryChangeDamage(target, damage, origin: uid);
         }
 
@@ -494,7 +494,7 @@ public sealed class PsionicSystem : EntitySystem
 
     private void TriggerNeuroshock(EntityUid uid, PsionicComponent component)
     {
-        _stun.TryStun(uid, component.NeuroshockStunDuration, true);
+        _stun.TryUpdateParalyzeDuration(uid, component.NeuroshockStunDuration);
 
         var damageType = _prototype.Index(component.NeuroshockDamageType);
         var damage = new DamageSpecifier(damageType, component.NeuroshockDamage);
