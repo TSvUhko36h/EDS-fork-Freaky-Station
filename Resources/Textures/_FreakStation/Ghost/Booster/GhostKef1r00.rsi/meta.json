@@ -9,10 +9,21 @@
   "states": [
       {
           "name": "animated",
-          "directions": 4
+          "directions": 1
       },
-      {
-          "name": "icon"
-      }
+    {
+      "name": "icon",
+        "delays": [
+            [
+                0.3,
+				0.3,
+				0.3,
+				0.3,
+				0.3,
+				0.3,
+				0.3,
+				0.3
+            ]]
+    }
   ]
 }
