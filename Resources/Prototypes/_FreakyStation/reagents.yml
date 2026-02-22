@@ -1,8 +1,8 @@
 - type: reagent
   id: AntiHydrogen
-  name: анти-водород
+  name: reagent-name-anti-hydrogen
   group: Elements
-  desc: Противоположность водороду.
+  desc: reagent-desc-anti-hydrogen
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#cccccc"
@@ -56,9 +56,9 @@
 
 - type: reagent
   id: Temperanin
-  name: темперанин
+  name: reagent-name-temperanin
   group: Medicine
-  desc: Вещество коричневого цвета, которое хорошо лечит ожоги.
+  desc: reagent-desc-temperanin
   physicalDesc: reagent-physical-desc-cloudy
   flavor: medicine
   color: "#8b4513"
@@ -70,13 +70,13 @@
       - !type:AdjustPainFeels
         conditions:
         - !type:ReagentThreshold
-          min: 30
+          min: 25
         amount: 0.04
       - !type:HealthChange
         damage:
           types:
             Heat: -5
-            Shock: -3
+            Shock: -5
             Cold: -5
       - !type:HealthChange
         conditions:
@@ -84,30 +84,30 @@
           type: Yowie
           shouldHave: false
         - !type:ReagentThreshold
-          min: 30
+          min: 25
         damage:
           types:
-            Poison: 1
+            Poison: 1.2
       - !type:ChemVomit
         conditions:
         - !type:OrganType
           type: Yowie
           shouldHave: false
         - !type:ReagentThreshold
-          min: 30
+          min: 25
         probability: 0.02
       - !type:Jitter
         conditions:
         - !type:ReagentThreshold
-          min: 30
+          min: 25
       - !type:AdjustConsciousness
         conditions:
         - !type:ReagentThreshold
-          min: 30
+          min: 25
         allowNewModifiers: true
         modifierType: Pain
         identifier: Suffocation
-        amount: -2
+        amount: -1.5
         time: 12
 
 - type: reaction
@@ -117,17 +117,17 @@
       amount: 1
     Plasma:
       amount: 5
+      catalyst: true
     Marlevine:
       amount: 1
   products:
-    Temperanin: 5
-    Plasma: 5
+    Temperanin: 4
 
 - type: reagent
   id: HyperPlasma
-  name: гипер-плазма
+  name: reagent-name-hyper-plasma
   group: Toxins
-  desc: Заряженная и мощная версия плазмы.
+  desc: reagent-desc-hyper-plasma
   physicalDesc: reagent-physical-desc-overpowering
   flavor: bitter
   color: "#7e009e"
@@ -139,8 +139,8 @@
       - !type:HealthChange
         damage:
           types:
-            Poison: 3
-            Shock: 1
+            Poison: 2.5
+            Shock: 0.8
 
 - type: reaction
   id: HyperPlasma
@@ -154,9 +154,9 @@
 
 - type: reagent
   id: Paraphys
-  name: парафиз
+  name: reagent-name-paraphys
   group: Toxins
-  desc: Аномальное вещество, которое вызывает распад организма и странные чувства.
+  desc: reagent-desc-paraphys
   physicalDesc: reagent-physical-desc-unidentifiable
   flavor: medicine
   color: "#4a412a"
@@ -168,8 +168,8 @@
       - !type:HealthChange
         damage:
           types:
-            Holy: 5
-            Cellular: 1
+            Holy: 4
+            Cellular: 0.8
 
 - type: reaction
   id: Paraphys
