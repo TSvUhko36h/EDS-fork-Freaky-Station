@@ -1,16 +1,13 @@
 using Content.Goobstation.Shared.Slasher.Components;
 using Content.Goobstation.Shared.Slasher.Events;
-using Content.Shared.Actions;
-using Content.Shared.Interaction;
-using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
-using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Network;
-using Robust.Shared.Prototypes;
+using Content.Shared.StatusEffect;
+using Content.Shared.Interaction;
+using Content.Server.Actions;
 
-namespace Content.Goobstation.Shared.Slasher.Systems;
+namespace Content.Goobstation.Server.Slasher.Systems;
 
 /// <summary>
 /// Handles the Slasher Stagger Area action. When used, slows nearby mobs in range for a short duration.
@@ -25,9 +22,7 @@ public sealed class SlasherStaggerAreaSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedInteractionSystem _interact = default!;
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly MovementModStatusSystem _movemod = default!;
+    [Dependency] private readonly ActionsSystem _actions = default!;
 
     public override void Initialize()
     {
@@ -65,16 +60,14 @@ public sealed class SlasherStaggerAreaSystem : EntitySystem
 
             _movemod.TryUpdateMovementSpeedModDuration(targetUid, EffectId, TimeSpan.FromSeconds(comp.SlowDuration), comp.SlowMultiplier, comp.SlowMultiplier);
 
-            // Show popup to the victim
-            if (_net.IsServer)
-                _popup.PopupEntity(Loc.GetString("slasher-staggerarea-victim"), targetUid, targetUid, PopupType.MediumCaution);
+            // popup for affected entity
+            _popup.PopupEntity(Loc.GetString("slasher-staggerarea-victim"), targetUid, targetUid, PopupType.MediumCaution);
         }
 
-        _audio.PlayPredicted(comp.StaggerSound, uid, uid);
+        _audio.PlayPvs(comp.StaggerSound, uid);
 
-        // Show popup to the user
-        if (_net.IsServer)
-            _popup.PopupEntity(Loc.GetString("slasher-staggerarea-popup"), uid, uid, PopupType.MediumCaution);
+        // popup for user
+        _popup.PopupEntity(Loc.GetString("slasher-staggerarea-popup"), uid, uid, PopupType.MediumCaution);
 
         args.Handled = true;
     }
