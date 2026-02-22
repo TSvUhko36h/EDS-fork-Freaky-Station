@@ -3,8 +3,8 @@
   ckey: Egorql
   sprite: /Textures/_FreakStation/Ghost/GhostEgorql.rsi
   alpha: 0.8
-  ghostName: Egorql
-  ghostDescription: Блять че за хуйняя
+  ghostName: Валера
+  ghostDescription: Я не егорик блядь
 
 - type: customGhost
   id: CashaGhost
@@ -30,13 +30,13 @@
   # ghostName: ANIvarm
   # ghostDescription: brr brr patapim
 
-- type: customGhost
-  id: SherlookGhost
-  ckey: Sherlook
-  sprite: /Textures/_FreakStation/Ghost/GhostFaceless.rsi
-  alpha: 0.8
-  ghostName: Sherlook
-  ghostDescription: Моя сука пенивайз, понеслась
+# - type: customGhost
+#   id: SherlookGhost
+#   ckey: Sherlook
+#   sprite: /Textures/_FreakStation/Ghost/GhostFaceless.rsi
+#   alpha: 0.8
+#   ghostName: Sherlook
+#   ghostDescription: Моя сука пенивайз, понеслась
 
 - type: customGhost
   id: SmesharikGhost
