@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Client._Mini.UserInterface.Controls;
 using Robust.Client.UserInterface.Controls;
 using GhostWarpPlayer = Content.Shared.Ghost.SharedGhostSystem.GhostWarpPlayer;
 using GhostWarpPlace = Content.Shared.Ghost.SharedGhostSystem.GhostWarpPlace;
@@ -58,7 +59,7 @@ public sealed partial class MiniGhostTargetWindow
 
             foreach (var player in players)
             {
-                var playerButton = new Button
+                var playerButton = new RichTextButton
                 {
                     ModulateSelfOverride = department.Color,
                     Text = GeneratePlayerLabel(player),
@@ -111,7 +112,7 @@ public sealed partial class MiniGhostTargetWindow
 
         foreach (var place in places)
         {
-            var placeButton = new Button
+            var placeButton = new RichTextButton
             {
                 ModulateSelfOverride = PlaceButtonColor,
                 Text = TruncateWithEllipsis(place.Name, MaxLenghtWithoutIcons),
@@ -163,7 +164,7 @@ public sealed partial class MiniGhostTargetWindow
 
             foreach (var antag in antagSet)
             {
-                var playerButton = new Button
+                var playerButton = new RichTextButton
                 {
                     ModulateSelfOverride = AntagonistButtonColor,
                     Text = TruncateWithEllipsis(antag.Name, MaxLenghtWithoutIcons),

@@ -26,7 +26,6 @@ using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Ghost;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
-using GhostWarp = Content.Shared.Ghost.GhostWarp;
 using GhostWarpsResponseEvent = Content.Shared.Ghost.SharedGhostSystem.GhostWarpsResponseEvent;
 
 namespace Content.Client.UserInterface.Systems.Ghost;
@@ -119,19 +118,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         if (Gui?.TargetWindow is not { } window)
             return;
 
-        var warps = new List<GhostWarp>();
-
-        foreach (var place in msg.Places)
-        {
-            warps.Add(new GhostWarp(place.Entity, place.Name, true));
-        }
-
-        foreach (var player in msg.Players)
-        {
-            warps.Add(new GhostWarp(player.Entity, player.Name, false));
-        }
-
-        window.UpdateWarps(warps);
+        window.UpdateWarps(msg.Players, msg.Places, msg.Antagonists);
         window.Populate();
     }
 
@@ -146,12 +133,6 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         _net.SendSystemNetworkMessage(msg);
     }
 
-    private void OnGhostnadoClicked()
-    {
-        var msg = new GhostnadoRequestEvent();
-        _net.SendSystemNetworkMessage(msg);
-    }
-
     public void LoadGui()
     {
         if (Gui == null)
@@ -159,9 +140,9 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
 
         Gui.RequestWarpsPressed += RequestWarps;
         Gui.ReturnToBodyPressed += ReturnToBody;
+        Gui.ReturnToRoundPressed += ReturnToRound;
         Gui.GhostRolesPressed += GhostRolesPressed;
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
-        Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
 
         UpdateGui();
     }
@@ -173,6 +154,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
 
         Gui.RequestWarpsPressed -= RequestWarps;
         Gui.ReturnToBodyPressed -= ReturnToBody;
+        Gui.ReturnToRoundPressed -= ReturnToRound;
         Gui.GhostRolesPressed -= GhostRolesPressed;
         Gui.TargetWindow.WarpClicked -= OnWarpClicked;
 
@@ -182,6 +164,11 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     private void ReturnToBody()
     {
         _system?.ReturnToBody();
+    }
+
+    private void ReturnToRound()
+    {
+        _system?.ReturnToRound();
     }
 
     private void RequestWarps()
