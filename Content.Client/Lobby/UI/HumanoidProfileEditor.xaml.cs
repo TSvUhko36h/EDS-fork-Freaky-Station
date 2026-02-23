@@ -359,16 +359,6 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Sex
-            #region Erp
-
-            ERPEnabledButton.OnItemSelected += args =>
-            {
-                ERPEnabledButton.SelectId(args.Id);
-                SetErp((ERPS) args.Id);
-            };
-
-
-            #endregion Erp
 
             #region Age
 
@@ -690,10 +680,7 @@ namespace Content.Client.Lobby.UI
                 TabContainer.AddChild(_flavorText);
                 TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
                 _flavorTextEdit = _flavorText.CFlavorTextInput;
-                //ADT-tweak-start
-                _flavorText.OnOOCNotesChanged += OnOOCNotesChange;
-                _flavorText.OnHeadshotUrlChanged += OnHeadshotUrlChange;
-                //ADT-tweak-end
+
                 _flavorText.OnFlavorTextChanged += OnFlavorTextChange;
             }
             else
@@ -703,10 +690,6 @@ namespace Content.Client.Lobby.UI
 
                 TabContainer.RemoveChild(_flavorText);
                 _flavorText.OnFlavorTextChanged -= OnFlavorTextChange;
-                //ADT-tweak-start
-                _flavorText.OnOOCNotesChanged -= OnOOCNotesChange;
-                _flavorText.OnHeadshotUrlChanged -= OnHeadshotUrlChange;
-                //ADT-tweak-end
                 _flavorText.Dispose();
                 _flavorTextEdit?.Dispose();
                 _flavorTextEdit = null;
@@ -1099,10 +1082,9 @@ namespace Content.Client.Lobby.UI
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
-            UpdateErpControls();
             // UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
             // UpdateWeight(); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            UpdateErpControls();
+
             RefreshAntags();
             RefreshJobs();
             RefreshLoadouts();
@@ -1405,29 +1387,9 @@ namespace Content.Client.Lobby.UI
                 return;
 
             Profile = Profile.WithFlavorText(content);
-            //ADT-tweak-start
-            Profile = Profile.WithOOCNotes(content);
-            //ADT-tweak-end
             SetDirty();
         }
-        //ADT-tweak-start: ООС заметки и юрл
-        private void OnOOCNotesChange(string content)
-        {
-            if (Profile is null)
-                return;
 
-            Profile = Profile.WithOOCNotes(content);
-            SetDirty();
-        }
-        private void OnHeadshotUrlChange(string content)
-        {
-            if (Profile is null)
-                return;
-
-            Profile = Profile.WithHeadshotUrl(content);
-            SetDirty();
-        }
-        //ADT-tweak-end
         private void OnMarkingChange(MarkingSet markings)
         {
             if (Profile is null)
@@ -1585,11 +1547,7 @@ namespace Content.Client.Lobby.UI
             Markings.SetSex(newSex);
             ReloadPreview();
         }
-        private void SetErp(ERPS newERP)
-        {
-            Profile = Profile?.WithERP(newERP);
-            SetDirty();
-        }
+
         private void SetGender(Gender newGender)
         {
             Profile = Profile?.WithGender(newGender);
@@ -1688,13 +1646,6 @@ namespace Content.Client.Lobby.UI
             if (_flavorTextEdit != null)
             {
                 _flavorTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
-                // ADT-Tweak-start
-                if (_flavorText == null)
-                    return;
-
-                _flavorText.COOCTextInput.TextRope = new Rope.Leaf(Profile?.OOCNotes ?? "");
-                _flavorText.CHeadshotUrlInput.Text = Profile?.HeadshotUrl ?? "";
-                // ADT-Tweak-end
             }
         }
 
@@ -1747,29 +1698,6 @@ namespace Content.Client.Lobby.UI
                 SexButton.SelectId((int) Profile.Sex);
             else
                 SexButton.SelectId((int) sexes[0]);
-        }
-        private void UpdateErpControls()
-        {
-            if (Profile == null)
-                return;
-
-            ERPEnabledButton.Clear();
-
-            var erps = new List<ERPS>
-            {
-                ERPS.Yes,
-
-                ERPS.No
-            };
-            foreach (var sex in erps)
-            {
-                ERPEnabledButton.AddItem(Loc.GetString($"humanoid-profile-editor-erp-{sex.ToString().ToLower()}-text"), (int) sex);
-            }
-
-            if (erps.Contains(Profile.ERPS))
-                ERPEnabledButton.SelectId((int) Profile.ERPS);
-            else
-                ERPEnabledButton.SelectId((int) erps[1]);
         }
 
         private void UpdateSkinColor()
