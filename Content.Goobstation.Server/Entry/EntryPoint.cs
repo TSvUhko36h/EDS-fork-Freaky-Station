@@ -7,6 +7,7 @@
 
 using Content.Goobstation.Server.Voice;
 using Content.Goobstation.Common.ServerCurrency;
+using Content.Goobstation.Server.IoC;
 using Robust.Shared.ContentPack;
 using Robust.Shared.Timing;
 
@@ -14,51 +15,22 @@ namespace Content.Goobstation.Server.Entry;
 
 public sealed class EntryPoint : GameServer
 {
-    // private IVoiceChatServerManager _voiceManager = default!; // deleted by CorvaxGoob
-    // private ICommonCurrencyManager _curr = default!; // deleted by CorvaxGoob
+    private ICommonCurrencyManager _curr = default!;
 
     public override void Init()
     {
         base.Init();
 
-        // ServerGoobContentIoC.Register(); // deleted by CorvaxGoob
+        ServerGoobContentIoC.Register();
 
         IoCManager.BuildGraph();
-
-        /* deleted by CorvaxGoob
-        _voiceManager = IoCManager.Resolve<IVoiceChatServerManager>();
-
-        IoCManager.Resolve<IJoinQueueManager>().Initialize();
-
-        _curr = IoCManager.Resolve<ICommonCurrencyManager>(); // Goobstation
-        _curr.Initialize(); // Goobstation
-        */
-    }
-
-    /* // deleted by CorvaxGoob
-    public override void PostInit()
-    {
-        base.PostInit();
-    }
-
-    public override void Update(ModUpdateLevel level, FrameEventArgs frameEventArgs)
-    {
-        base.Update(level, frameEventArgs);
-
-        switch (level)
-        {
-            case ModUpdateLevel.PreEngine:
-                _voiceManager.Update();
-                break;
-
-        }
+        _curr = IoCManager.Resolve<ICommonCurrencyManager>();
+        _curr.Initialize();
     }
 
     protected override void Dispose(bool disposing)
     {
         base.Dispose(disposing);
-
-        _curr.Shutdown(); // Goobstation
-        _voiceManager.Shutdown(); // Goobstation
-    }*/
+        _curr.Shutdown();
+    }
 }
