@@ -76,6 +76,11 @@ public sealed partial class LobbyCharacterPreviewPanel : Control
         Summary.Text = value;
     }
 
+    public void SetCharacterSetupVisible(bool visible)
+    {
+        CharacterSetup.Visible = visible;
+    }
+
     public void SetSprite(EntityUid uid)
     {
         if (_previewDummy != null)

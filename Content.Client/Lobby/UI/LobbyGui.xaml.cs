@@ -73,9 +73,12 @@ namespace Content.Client.Lobby.UI
             SetAnchorPreset(Background, LayoutPreset.Wide);
 
             LobbySong.SetMarkup(Loc.GetString("lobby-state-song-no-song-text"));
+            CharacterPreview.SetCharacterSetupVisible(false);
 
             LeaveButton.OnPressed += _ => _consoleHost.ExecuteCommand("disconnect");
             OptionsButton.OnPressed += _ => UserInterfaceManager.GetUIController<OptionsUIController>().ToggleWindow();
+            VotemenuButton.OnPressed += _ => _consoleHost.ExecuteCommand("votemenu");
+            ChangelogButton.OnPressed += _ => UserInterfaceManager.GetUIController<ChangelogUIController>().ToggleWindow();
         }
 
         public void SwitchState(LobbyGuiState state)
@@ -119,3 +122,4 @@ namespace Content.Client.Lobby.UI
         }
     }
 }
+
