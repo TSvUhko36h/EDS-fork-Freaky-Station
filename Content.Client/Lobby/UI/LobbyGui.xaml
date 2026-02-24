@@ -48,9 +48,8 @@
                         </BoxContainer>
                     </PanelContainer>
 
-                    <Control Access="Public" Visible="False" Name="CharacterSetupState" VerticalExpand="True" />
-
                 </Control>
+                <Control Access="Public" Visible="False" Name="CharacterSetupState" VerticalExpand="True" />
             </BoxContainer>
 
             <PanelContainer Name="RightSide" Access="Public" HorizontalAlignment="Right" VerticalExpand="True" VerticalAlignment="Stretch">
