@@ -13,7 +13,7 @@ public sealed partial class ConverterComponent : Component
     /// Value of a regular technology disk.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public int TechnologyDiskPoints = 2000;
+    public int TechnologyDiskPoints = 2500;
 
     /// <summary>
     /// Value of a rare technology disk.

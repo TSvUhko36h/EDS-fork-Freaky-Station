@@ -172,7 +172,7 @@
   - CargoTelepadMachineCircuitboard
   - ShuttleGunKineticCircuitboard
   - SalvageExpeditionsComputerCircuitboard
-  - CargoTelepadMachineCircuitboardTypan
+  # - CargoTelepadMachineCircuitboardTypan
 
 - type: latheRecipePack
   id: TypanCargoBoardsStatic
