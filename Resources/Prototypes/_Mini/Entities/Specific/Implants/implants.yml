@@ -17,7 +17,6 @@
     - Dead
   - type: RattleOnTrigger
     targetUser: true
-    radioChannel: Syndicate
 
 - type: entity
   id: DeathRattleImplanterTypan

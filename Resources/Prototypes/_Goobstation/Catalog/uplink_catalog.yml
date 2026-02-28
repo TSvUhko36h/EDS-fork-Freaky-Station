@@ -694,7 +694,7 @@
   icon: { sprite: /Textures/_Goobstation/Clothing/Hands/Gloves/guerrilla.rsi, state: icon }
   productEntity: ClothingHandsGlovesGuerrilla
   cost:
-    Telecrystal: 20
+    Telecrystal: 15
   categories:
   - UplinkWearables
   conditions:
@@ -1402,6 +1402,9 @@
   - UplinkAmmo
   conditions:
   - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
     blacklist:
       tags:
       - ContractorUplink
@@ -1412,7 +1415,7 @@
   description: uplink-m90-ammo-desc
   productEntity: MagazineRifle
   cost:
-    Telecrystal: 5
+    Telecrystal: 2
   categories:
   - UplinkAmmo
 

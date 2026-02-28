@@ -2,6 +2,7 @@ shared-solution-container-component-on-examine-empty-container = Не содер
 shared-solution-container-component-on-examine-main-text = Содержит [color={ $color }]{ $desc }[/color] { $wordedAmount }
 shared-solution-container-component-on-examine-worded-amount-one-reagent = вещество.
 examinable-solution-recognized = [color={ $color }]{ $chemical }[/color]
+
 examinable-solution-on-examine-volume = Ёмкость { $fillLevel ->
     [exact] содержит [color=white]{$current}/{$max}u[/color].
    *[other] [bold]{ -solution-vague-fill-level(fillLevel: $fillLevel) }[/bold].
@@ -22,7 +23,7 @@ examinable-solution-on-examine-volume-puddle =
        *[mostlyempty] скапливается в лужицы.
         [empty] образует несколько маленьких луж.
     }
-solution-vague-fill-level =
+-solution-vague-fill-level =
     { $fillLevel ->
         [full] [color=white]заполнена[/color]
         [mostlyfull] [color=#DFDFDF]почти заполнена[/color]

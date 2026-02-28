@@ -828,7 +828,7 @@
   description: uplink-mosin-ammo-desc
   productEntity: MagazineBoxLightRifle
   cost:
-    Telecrystal: 2 # goob
+    Telecrystal: 1 # goob
   categories:
   - UplinkAmmo
   #Goobstation
