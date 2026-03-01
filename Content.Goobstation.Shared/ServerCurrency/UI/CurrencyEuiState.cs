@@ -14,8 +14,27 @@ namespace Content.Goobstation.Shared.ServerCurrency.UI
     [Serializable, NetSerializable]
     public sealed class CurrencyEuiState : EuiStateBase
     {
+        public bool HasRouletteResult;
+        public int LastRouletteBet;
+        public int LastRoulettePayout;
+        public float LastRouletteMultiplier;
+        public int LastRouletteSpinId;
 
+        public CurrencyEuiState(
+            bool hasRouletteResult = false,
+            int lastRouletteBet = 0,
+            int lastRoulettePayout = 0,
+            float lastRouletteMultiplier = 0f,
+            int lastRouletteSpinId = 0)
+        {
+            HasRouletteResult = hasRouletteResult;
+            LastRouletteBet = lastRouletteBet;
+            LastRoulettePayout = lastRoulettePayout;
+            LastRouletteMultiplier = lastRouletteMultiplier;
+            LastRouletteSpinId = lastRouletteSpinId;
+        }
     }
+
     public static class CurrencyEuiMsg
     {
         [Serializable, NetSerializable]
@@ -27,6 +46,13 @@ namespace Content.Goobstation.Shared.ServerCurrency.UI
         public sealed class Buy : EuiMessageBase
         {
             public ProtoId<TokenListingPrototype> TokenId;
+        }
+
+        [Serializable, NetSerializable]
+        public sealed class SpinRoulette : EuiMessageBase
+        {
+            public int Bet;
+            public int SpinId;
         }
     }
 }

@@ -63,6 +63,8 @@ SPDX-License-Identifier: AGPL-3.0-or-later
             </PanelContainer>
             <Label Name="ConfirmationMessage" Text="" HorizontalAlignment="Center"/>
             <Label Text="{Loc gs-balanceui-shop-footer}" />
+            <controls:HSpacer Spacing="6" />
+            <Button Name="RouletteMenuButton" Text="{Loc gs-balanceui-roulette-open}" HorizontalAlignment="Center" StyleClasses="ButtonColorRed"/>
         </BoxContainer>
 
         <BoxContainer Name="Admin" Visible="True" Orientation="Vertical">

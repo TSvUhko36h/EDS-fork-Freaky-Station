@@ -7,6 +7,7 @@
 using Content.Client.Eui;
 using Content.Goobstation.Shared.ServerCurrency;
 using Content.Goobstation.Shared.ServerCurrency.UI;
+using Content.Shared.Eui;
 using Robust.Shared.Prototypes;
 
 namespace Content.Goobstation.Client.ServerCurrency.UI
@@ -19,6 +20,7 @@ namespace Content.Goobstation.Client.ServerCurrency.UI
             _window = new CurrencyWindow();
             _window.OnClose += () => SendMessage(new CurrencyEuiMsg.Close());
             _window.OnBuy += OnBuyMsg;
+            _window.OnSpinRoulette += OnSpinRouletteMsg;
         }
 
         private void OnBuyMsg(ProtoId<TokenListingPrototype> tokenId)
@@ -38,6 +40,23 @@ namespace Content.Goobstation.Client.ServerCurrency.UI
         public override void Closed()
         {
             _window.Close();
+        }
+
+        public override void HandleState(EuiStateBase state)
+        {
+            if (state is not CurrencyEuiState cast || !cast.HasRouletteResult)
+                return;
+
+            _window.SetRouletteResult(cast.LastRouletteSpinId, cast.LastRouletteBet, cast.LastRoulettePayout, cast.LastRouletteMultiplier);
+        }
+
+        private void OnSpinRouletteMsg(int bet, int spinId)
+        {
+            SendMessage(new CurrencyEuiMsg.SpinRoulette
+            {
+                Bet = bet,
+                SpinId = spinId
+            });
         }
     }
 }

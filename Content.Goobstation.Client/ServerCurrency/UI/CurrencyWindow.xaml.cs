@@ -28,9 +28,11 @@ namespace Content.Goobstation.Client.ServerCurrency.UI
         [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
         [Dependency] private readonly IPrototypeManager _protoManager = default!;
         public event Action<ProtoId<TokenListingPrototype>>? OnBuy;
+        public event Action<int, int>? OnSpinRoulette;
         private bool _isAdmin;
         private readonly Dictionary<Button, (DateTime LastClick, TokenListingPrototype Listing)> _buttonClickTimes = new();
         private const double DoubleClickTimeWindow = 1.5;
+        private RouletteWindow? _rouletteWindow;
 
         public CurrencyWindow()
         {
@@ -44,8 +46,17 @@ namespace Content.Goobstation.Client.ServerCurrency.UI
             if (!_isAdmin)
                 Admin.Visible = false;
 
-            GiftButton.OnPressed += _ => Transfer(GiftPlayer.Text, int.Parse((string) GiftAmmount.Text));
-            AdminAddButton.OnPressed += _ => AdminAdd(AdminAddPlayer.Text, int.Parse((string) AdminAddAmmount.Text));
+            GiftButton.OnPressed += _ =>
+            {
+                if (TryParsePositiveInt(GiftAmmount.Text, out var amount))
+                    Transfer(GiftPlayer.Text, amount);
+            };
+            AdminAddButton.OnPressed += _ =>
+            {
+                if (TryParsePositiveInt(AdminAddAmmount.Text, out var amount))
+                    AdminAdd(AdminAddPlayer.Text, amount);
+            };
+            RouletteMenuButton.OnPressed += _ => OpenRouletteMenu();
 
             _serverCur.ClientBalanceChange += UpdatePlayerBalance;
 
@@ -135,6 +146,8 @@ namespace Content.Goobstation.Client.ServerCurrency.UI
                 balance = _serverCur.GetBalance();
 
             Header.Text = _serverCur.Stringify(balance.Value);
+            RouletteMenuButton.Disabled = balance.Value <= 0;
+            _rouletteWindow?.SetBalance(balance.Value);
             foreach (var child in TokenListingsContainer.Children)
             {
                 if (child is not Button button)
@@ -157,6 +170,31 @@ namespace Content.Goobstation.Client.ServerCurrency.UI
                 ConfirmationMessage.Visible = false;
                 UpdateButtonStates();
             });
+        }
+
+        public void SetRouletteResult(int spinId, int bet, int payout, float multiplier)
+        {
+            _rouletteWindow?.ApplyResult(spinId, bet, payout, multiplier);
+        }
+
+        private void OpenRouletteMenu()
+        {
+            if (_rouletteWindow == null || _rouletteWindow.Disposed)
+            {
+                _rouletteWindow = new RouletteWindow();
+                _rouletteWindow.SpinRequested += (bet, spinId) => OnSpinRoulette?.Invoke(bet, spinId);
+            }
+
+            _rouletteWindow.SetBalance(_serverCur.GetBalance());
+            _rouletteWindow.OpenCentered();
+        }
+
+        private static bool TryParsePositiveInt(string? value, out int amount)
+        {
+            if (!int.TryParse(value, out amount))
+                return false;
+
+            return amount > 0;
         }
     }
 }
