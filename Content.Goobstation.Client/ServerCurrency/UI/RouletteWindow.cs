@@ -14,6 +14,8 @@ namespace Content.Goobstation.Client.ServerCurrency.UI;
 
 public sealed class RouletteWindow : DefaultWindow
 {
+    private const int MinBet = 10;
+
     [Dependency] private readonly ICommonCurrencyManager _currency = default!;
 
     public event Action<int, int>? SpinRequested;
@@ -124,9 +126,9 @@ public sealed class RouletteWindow : DefaultWindow
         if (_isSpinning)
             return;
 
-        if (!TryParsePositiveInt(_betInput.Text, out var bet))
+        if (!TryParsePositiveInt(_betInput.Text, out var bet) || bet < MinBet)
         {
-            _resultLabel.Text = Loc.GetString("gs-balanceui-roulette-invalid-bet");
+            _resultLabel.Text = Loc.GetString("gs-balanceui-roulette-invalid-bet", ("min", MinBet));
             return;
         }
 

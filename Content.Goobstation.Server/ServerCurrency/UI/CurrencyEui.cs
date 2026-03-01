@@ -5,6 +5,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Common.ServerCurrency;
+using Content.Goobstation.Server.ServerCurrency;
 using Content.Goobstation.Shared.ServerCurrency;
 using Content.Goobstation.Shared.ServerCurrency.UI;
 using Content.Server.Administration.Notes;
@@ -36,10 +37,8 @@ namespace Content.Goobstation.Server.ServerCurrency.UI
         private int _pendingBet;
         private int _pendingSpinId;
 
+        private const int MinRouletteBet = 10;
         private const float SpinResolveDelaySeconds = 2.8f;
-
-        private static readonly object PotLock = new();
-        private static int _serverDepositedCoins;
 
         public CurrencyEui()
         {
@@ -79,8 +78,15 @@ namespace Content.Goobstation.Server.ServerCurrency.UI
 
         private void QueueSpin(int bet, int spinId)
         {
-            if (_spinPending || bet <= 0)
+            if (_spinPending)
                 return;
+
+            if (bet < MinRouletteBet)
+            {
+                SetResult(spinId, bet, 0, 0f);
+                StateDirty();
+                return;
+            }
 
             _spinPending = true;
             _pendingBet = bet;
@@ -112,7 +118,6 @@ namespace Content.Goobstation.Server.ServerCurrency.UI
             }
 
             _currencyMan.RemoveCurrency(userId, bet);
-            AddToServerPot(bet);
 
             var multiplier = RollDynamicMultiplier(out var jackpot);
             var payout = (int) MathF.Floor(bet * multiplier);
@@ -120,11 +125,18 @@ namespace Content.Goobstation.Server.ServerCurrency.UI
             if (payout > 0)
                 _currencyMan.AddCurrency(userId, payout);
 
+            RouletteStats.RecordSpin(bet, payout);
             SetResult(spinId, bet, payout, multiplier);
+
+            if (payout <= 0 && _currencyMan.GetBalance(userId) == 0)
+            {
+                var bustedMessage = Loc.GetString("gs-roulette-busted-notify", ("player", playerName));
+                _chat.DispatchServerAnnouncement(bustedMessage, Color.OrangeRed);
+            }
 
             if (jackpot)
             {
-                var pot = GetServerPot();
+                var pot = RouletteStats.GetAllTimeDepositedCoins();
                 var message = Loc.GetString("gs-roulette-jackpot-notify",
                     ("player", playerName),
                     ("amount", _currencyMan.Stringify(payout)),
@@ -183,22 +195,6 @@ namespace Content.Goobstation.Server.ServerCurrency.UI
         private static float RoundMultiplier(float value)
         {
             return MathF.Round(value * 100f) / 100f;
-        }
-
-        private static void AddToServerPot(int amount)
-        {
-            lock (PotLock)
-            {
-                _serverDepositedCoins += amount;
-            }
-        }
-
-        private static int GetServerPot()
-        {
-            lock (PotLock)
-            {
-                return _serverDepositedCoins;
-            }
         }
 
         private async void BuyToken(ProtoId<TokenListingPrototype> tokenId, ICommonSession playerName)

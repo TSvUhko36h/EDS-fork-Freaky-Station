@@ -1,5 +1,7 @@
 using Content.Server.GameTicking;
 using Content.Goobstation.Common.StationReport;
+using Content.Goobstation.Common.ServerCurrency;
+using Content.Goobstation.Server.ServerCurrency;
 using Content.Shared.Paper;
 using Robust.Shared.GameObjects;
 
@@ -7,6 +9,7 @@ namespace Content.Goobstation.Server.StationReportSystem;
 
 public sealed class StationReportSystem : EntitySystem
 {
+    [Dependency] private readonly ICommonCurrencyManager _currency = default!;
 
     //this is shitcode?
 
@@ -29,6 +32,14 @@ public sealed class StationReportSystem : EntitySystem
             stationReportText = paper.Content;
             break;
         }
+
+        var lost = RouletteStats.GetRoundLostCoins();
+        var rouletteLine = Loc.GetString("gs-roulette-station-report-lost", ("amount", _currency.Stringify(lost)));
+
+        stationReportText = string.IsNullOrWhiteSpace(stationReportText)
+            ? rouletteLine
+            : $"{stationReportText}\n\n{rouletteLine}";
+
         BroadcastStationReport(stationReportText);
     }
 
