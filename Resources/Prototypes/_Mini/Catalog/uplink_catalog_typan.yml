@@ -855,20 +855,20 @@
 #       components:
 #       - SurplusBundle
 
-# - type: listing
-#   id: TypanUplinkSuperSurplusBundle
-#   name: uplink-super-surplus-bundle-name
-#   description: uplink-super-surplus-bundle-desc
-#   productEntity: CrateSyndicateSuperSurplusBundle
-#   cost:
-#     Telecrystal: 65
-#   categories:
-#   - TypanUplinkDisruption
-#   conditions:
-#   - !type:BuyerWhitelistCondition
-#     blacklist:
-#       components:
-#       - SurplusBundle
+- type: listing
+  id: TypanUplinkSuperSurplusBundle
+  name: uplink-super-surplus-bundle-name
+  description: uplink-super-surplus-bundle-desc
+  productEntity: CrateSyndicateSuperSurplusBundle
+  cost:
+    Telecrystal: 100
+  categories:
+  - TypanUplinkDisruption
+  conditions:
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
 
 - type: listing
   id: TypanUplinkSingarityBeacon

@@ -181,17 +181,17 @@
     stackRequirements:
       Plasma: 5
 
-- type: entity
-  id: CargoTelepadMachineCircuitboardTypan
-  parent: BaseMachineCircuitboardTypan
-  name: грузовой телепад (машинная плата)
-  description: Печатная плата грузового телепада.
-  components:
-  - type: MachineBoard
-    prototype: CargoTelepadTypan
-    stackRequirements:
-      Manipulator: 2
-      Steel: 5
+# - type: entity
+#   id: CargoTelepadMachineCircuitboardTypan
+#   parent: BaseMachineCircuitboardTypan
+#   name: грузовой телепад (машинная плата)
+#   description: Печатная плата грузового телепада.
+#   components:
+#   - type: MachineBoard
+#     prototype: CargoTelepadTypan
+#     stackRequirements:
+#       Manipulator: 2
+#       Steel: 5
 
 - type: entity
   id: BiofabricatorMachineCircuitboardTypan
